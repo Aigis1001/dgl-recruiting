@@ -93,29 +93,36 @@
   </header>
 
 <!-- ==========================================
-       ファーストビュー（背景動画）
+       ファーストビュー（YouTube背景動画）
   =========================================== -->
-  <section class="relative w-full h-screen min-h-[650px] pt-20 overflow-hidden flex items-center justify-center border-b border-gray-800 hero-bg-animated">
+  <section class="relative w-full h-screen min-h-[500px] sm:min-h-[650px] pt-16 sm:pt-20 overflow-hidden flex items-center justify-center border-b border-gray-800 hero-bg-animated">
     
-<!-- ファーストビュー背景動画 -->
-<video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
-  <source src="assets/video/bg-video.mp4" type="video/mp4">
-</video>
+    <!-- ファーストビュー背景動画（YouTube埋め込み） -->
+    <div class="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0 opacity-40">
+      <iframe 
+        class="w-[300vw] h-[300vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none object-cover"
+        src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&loop=1&playlist=jfKfPfyJRdk&controls=0&showinfo=0&rel=0&enablejsapi=1" 
+        title="Background Video"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
 
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/60 z-10"></div>
 
-    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-8 w-full flex flex-col justify-between h-full py-12">
-      <div class="my-auto text-center md:text-left pt-12">
-        <span class="inline-block bg-yellow-400 text-black text-xs font-black px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase shadow-md">
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-8 w-full flex flex-col justify-between h-full py-8 sm:py-12">
+      <div class="my-auto text-center md:text-left pt-8 sm:pt-12">
+        <span class="inline-block bg-yellow-400 text-black text-xs font-black px-4 py-1.5 rounded-full mb-4 sm:mb-6 tracking-widest uppercase shadow-md">
           DGL RECRUITING 2026
         </span>
-        <h1 class="font-en font-black text-yellow-400 text-5xl sm:text-7xl md:text-8xl tracking-tight leading-none mb-4 drop-shadow-2xl">
+        <h1 class="font-en font-black text-yellow-400 text-4xl sm:text-7xl md:text-8xl tracking-tight leading-none mb-3 sm:mb-4 drop-shadow-2xl">
           Smile Loop On!
         </h1>
-        <p class="font-en font-bold text-white text-xl sm:text-3xl md:text-4xl mb-6 tracking-tight drop-shadow-lg">
+        <p class="font-en font-bold text-white text-lg sm:text-3xl md:text-4xl mb-4 sm:mb-6 tracking-tight drop-shadow-lg">
           A team that creates happiness.
         </p>
-        <p class="text-gray-200 text-base sm:text-lg font-bold max-w-2xl leading-relaxed drop-shadow mx-auto md:mx-0">
+        <p class="text-gray-200 text-sm sm:text-lg font-bold max-w-2xl leading-relaxed drop-shadow mx-auto md:mx-0">
           関わるすべての人に「うれしい」の連鎖を。業界のイメージと未来を私たちが本気で変えていく、成長と挑戦のエンターテインメント集団。
         </p>
       </div>
