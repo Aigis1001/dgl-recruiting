@@ -52,6 +52,20 @@
       border-radius: 4px;
     }
   </style>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  let player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('hero-video', {
+      events: {
+        'onReady': (e) => { e.target.mute(); e.target.playVideo(); },
+        'onStateChange': (e) => { if (e.data === YT.PlayerState.ENDED) e.target.playVideo(); }
+      }
+    });
+  }
+</script>
+
 </head>
 <body class="antialiased selection:bg-yellow-400 selection:text-black">
 
@@ -100,13 +114,14 @@
     <!-- ファーストビュー背景動画（YouTube埋め込み） -->
     <div class="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0 opacity-40">
       <iframe 
-        class="w-[300vw] h-[300vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none object-cover"
-        src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&loop=1&playlist=jfKfPfyJRdk&controls=0&showinfo=0&rel=0&enablejsapi=1" 
-        title="Background Video"
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
+  id="hero-video"
+  class="w-[300vw] h-[300vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none object-cover"
+  src="https://www.youtube.com/embed/jfKfPfyJRdk?enablejsapi=1&autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=jfKfPfyJRdk&playsinline=1" 
+  title="Background Video"
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe>
     </div>
 
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/60 z-10"></div>
