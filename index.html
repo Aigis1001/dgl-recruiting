@@ -107,21 +107,19 @@
   </header>
 
 <!-- ==========================================
-       ファーストビュー（YouTube背景動画）
+       ファーストビュー（MP4動画）
   =========================================== -->
   <section class="relative w-full h-screen min-h-[500px] sm:min-h-[650px] pt-16 sm:pt-20 overflow-hidden flex items-center justify-center border-b border-gray-800 hero-bg-animated">
     
     <!-- ファーストビュー背景動画（YouTube埋め込み） -->
-    <div class="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0 opacity-40">
-      <iframe 
-  id="hero-video"
+    <video 
   class="w-[300vw] h-[300vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none object-cover"
-  src="https://www.youtube.com/embed/jfKfPfyJRdk?enablejsapi=1&autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=jfKfPfyJRdk&playsinline=1" 
-  title="Background Video"
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-  allowfullscreen>
-</iframe>
+  src="videos/hero-bg.mp4" 
+  autoplay 
+  loop 
+  muted 
+  playsinline>
+</video>
     </div>
 
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/60 z-10"></div>
