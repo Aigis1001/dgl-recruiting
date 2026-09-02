@@ -60,32 +60,37 @@
 </head>
 <body class="antialiased selection:bg-yellow-400 selection:text-black">
 
-  <!-- ヘッダー（右上の4つのタイルボタンを均等＆スマホで見切れないよう最適化） -->
+  <!-- ヘッダー -->
   <header class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
-    <div class="max-w-7xl mx-auto pl-3 sm:pl-8 pr-0 h-16 sm:h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2 group shrink-0 pl-3 sm:pl-0">
-        <img src="assets/images/check-rules-01.png" alt="DAISO 第一総合レジャーグループ" class="h-7 sm:h-10 w-auto object-contain group-hover:opacity-80 transition">
-      </a>
+    <div class="max-w-7xl mx-auto px-0 h-16 sm:h-20 flex items-center justify-between">
+      
+      <!-- 左側のロゴエリア -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start px-4 sm:px-8 h-full">
+        <a href="#" class="flex items-center gap-2 group shrink-0">
+          <img src="assets/images/check-rules-01.png" alt="DAISO 第一総合レジャーグループ" class="h-7 sm:h-10 w-auto object-contain group-hover:opacity-80 transition">
+        </a>
+      </div>
 
-      <!-- 右側の4分割ボタン群：flex-1 と w-1/4 によりスマホでも完全均等＆見切れ防止・日本語1行化 -->
-      <div class="flex h-full w-[58%] sm:w-auto">
-        <a href="tel:0120-000-000" class="bg-blue-600 hover:bg-blue-500 text-white flex-1 sm:flex-initial flex flex-col items-center justify-center px-1 sm:px-6 transition whitespace-nowrap">
+      <!-- 右側の4分割ボタン群 -->
+      <div class="flex h-full w-[60%] sm:w-auto shrink-0">
+        <a href="tel:0120-000-000" class="bg-blue-600 hover:bg-blue-500 text-white flex-1 sm:w-28 flex flex-col items-center justify-center px-1 sm:px-2 transition whitespace-nowrap">
           <span class="font-en font-black text-[11px] sm:text-base italic tracking-wider leading-none mb-1">TEL</span>
           <span class="text-[8px] sm:text-xs font-bold leading-none tracking-tighter sm:tracking-normal">電話問合せ</span>
         </a>
-        <a href="#" class="bg-emerald-600 hover:bg-emerald-500 text-white flex-1 sm:flex-initial flex flex-col items-center justify-center px-1 sm:px-6 transition whitespace-nowrap">
+        <a href="#" class="bg-emerald-600 hover:bg-emerald-500 text-white flex-1 sm:w-28 flex flex-col items-center justify-center px-1 sm:px-2 transition whitespace-nowrap">
           <span class="font-en font-black text-[11px] sm:text-base italic tracking-wider leading-none mb-1">LINE</span>
           <span class="text-[8px] sm:text-xs font-bold leading-none tracking-tighter sm:tracking-normal">LINE相談</span>
         </a>
-        <a href="pages/contact.php" class="bg-yellow-400 hover:bg-yellow-300 text-black flex-1 sm:flex-initial flex flex-col items-center justify-center px-1 sm:px-6 transition whitespace-nowrap">
+        <a href="pages/contact.php" class="bg-yellow-400 hover:bg-yellow-300 text-black flex-1 sm:w-28 flex flex-col items-center justify-center px-1 sm:px-2 transition whitespace-nowrap">
           <span class="font-en font-black text-[11px] sm:text-base italic tracking-wider leading-none mb-1">ENTRY</span>
           <span class="text-[8px] sm:text-xs font-bold leading-none tracking-tighter sm:tracking-normal">エントリー</span>
         </a>
-        <button onclick="toggleMenu()" class="bg-white hover:bg-gray-100 text-black flex-1 sm:flex-initial flex flex-col items-center justify-center px-1 sm:px-6 transition cursor-pointer whitespace-nowrap">
+        <button onclick="toggleMenu()" class="bg-white hover:bg-gray-100 text-black flex-1 sm:w-28 flex flex-col items-center justify-center px-1 sm:px-2 transition cursor-pointer whitespace-nowrap">
           <span class="font-en font-black text-[11px] sm:text-base italic tracking-wider leading-none mb-1">MENU</span>
           <span class="text-[8px] sm:text-xs font-bold leading-none tracking-tighter sm:tracking-normal">メニュー</span>
         </button>
       </div>
+
     </div>
   </header>
 
@@ -134,7 +139,7 @@
     </div>
   </section>
 
-  <!-- テキストスライダー（スマホでも完全に1行で流れるように修正確認済み） -->
+  <!-- テキストスライダー -->
   <div class="bg-yellow-400 text-black py-1.5 sm:py-2.5 overflow-hidden font-en font-black text-[11px] sm:text-base tracking-wider sm:tracking-widest uppercase border-y border-yellow-500 whitespace-nowrap">
     <div class="animate-marquee flex items-center">
       <span class="mx-3 sm:mx-6 shrink-0">DAIICHI GENERAL LEISURE GROUP (DAISO)</span>
@@ -152,133 +157,97 @@
     </div>
   </div>
 
-  <!-- グループ概要 -->
-  <section id="about" class="py-16 sm:py-24 bg-zinc-950 relative border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      
-      <div class="mb-12 sm:mb-16">
-        <div class="flex items-center gap-4 sm:gap-6 mb-4 sm:mb-6">
-          <img src="assets/images/check-rules-02.png" alt="DAISO Symbol" class="h-16 sm:h-24 w-auto object-contain shrink-0">
-          <div>
-            <span class="text-yellow-400 font-en font-bold text-xs sm:text-sm tracking-widest uppercase block mb-1">ABOUT DAISO</span>
-            <h2 class="text-xl sm:text-5xl font-black leading-tight">
-              グループ概要（会社を知る）
-            </h2>
-          </div>
-        </div>
-        <p class="text-gray-300 font-medium leading-relaxed mb-4 sm:mb-6 text-sm sm:text-lg">
-          第一総合レジャーグループ（DAISO）は、お客様・スタッフ・パートナー全員が「笑顔」と「喜び」を共有できる環境づくりを目指す総合レジャー企業です。
-        </p>
-        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 sm:mb-8">
-          従来の業界イメージを根本から刷新し、一人ひとりが誇りを持って挑戦し、確実なキャリアを築けるインフラとサポート体制を構築しています。
-        </p>
-        <a href="pages/about.php" class="inline-flex items-center gap-2 bg-gray-800 hover:bg-yellow-400 hover:text-black text-white font-bold text-xs sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-xl border border-gray-700 transition duration-300">
-          グループ概要・理念を見る ➔
-        </a>
-      </div>
-
-      <!-- DAISOの一週間 -->
-      <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl relative overflow-hidden group hover:border-yellow-400 transition mb-12 sm:mb-16">
-        <div class="max-w-xl">
-          <span class="inline-block bg-black text-yellow-400 font-en font-bold text-xs px-2.5 py-1 rounded tracking-widest uppercase mb-2">WORK STYLE</span>
-          <h3 class="text-2xl sm:text-3xl font-black mb-3">DAISOの一週間</h3>
-          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">オンとオフを全力で楽しむ、DAISOで働くスタッフのリアルな一週間のスケジュールをご紹介します。</p>
-          <a href="pages/works.php" class="inline-flex items-center gap-2 bg-yellow-400 text-black font-bold text-xs sm:text-sm px-6 py-3 rounded-lg hover:bg-yellow-300 transition">一週間の流れを見る ➔</a>
-        </div>
-      </div>
-
-      <!-- 数字で見るDAISO -->
-      <div class="bg-black/50 border border-zinc-800 rounded-2xl p-6 sm:p-12">
-        <div class="flex items-center gap-4 sm:gap-6 mb-8 sm:mb-10">
-          <img src="assets/images/check-rules-02.png" alt="DAISO Symbol" class="h-16 sm:h-24 w-auto object-contain shrink-0">
-          <div>
-            <span class="text-yellow-400 font-en font-bold text-xs sm:text-sm tracking-widest uppercase block mb-1">DATA</span>
-            <h3 class="text-xl sm:text-4xl font-black leading-tight">数字で見るDAISO</h3>
-          </div>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
-          <div class="bg-zinc-900 border border-zinc-800 p-4 sm:p-6 rounded-2xl text-center">
-            <span class="text-gray-400 text-[10px] sm:text-xs font-bold block mb-1">運営店舗数</span>
-            <span class="font-en font-black text-3xl sm:text-5xl text-yellow-400">20<span class="text-base sm:text-xl text-white">拠点+</span></span>
-          </div>
-          <div class="bg-zinc-900 border border-zinc-800 p-4 sm:p-6 rounded-2xl text-center">
-            <span class="text-gray-400 text-[10px] sm:text-xs font-bold block mb-1">グループ在籍数</span>
-            <span class="font-en font-black text-3xl sm:text-5xl text-yellow-400">300<span class="text-base sm:text-xl text-white">名+</span></span>
-          </div>
-          <div class="bg-zinc-900 border border-zinc-800 p-4 sm:p-6 rounded-2xl text-center">
-            <span class="text-gray-400 text-[10px] sm:text-xs font-bold block mb-1">未経験入社率</span>
-            <span class="font-en font-black text-3xl sm:text-5xl text-yellow-400">85<span class="text-base sm:text-xl text-white">%</span></span>
-          </div>
-          <div class="bg-zinc-900 border border-zinc-800 p-4 sm:p-6 rounded-2xl text-center">
-            <span class="text-gray-400 text-[10px] sm:text-xs font-bold block mb-1">平均役職登用</span>
-            <span class="font-en font-black text-3xl sm:text-5xl text-yellow-400">1.5<span class="text-base sm:text-xl text-white">年</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 採用情報 -->
+  <!-- 採用情報 ＆ DAISOの一週間（グリッドカード形式） -->
   <section id="findjob" class="py-16 sm:py-24 bg-black border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-        <span class="text-yellow-400 font-en font-bold text-xs sm:text-sm tracking-widest uppercase">RECRUITMENT</span>
-        <h2 class="text-2xl sm:text-5xl font-black mt-1 sm:mt-2">採用情報</h2>
+        <span class="text-yellow-400 font-en font-bold text-xs sm:text-sm tracking-widest uppercase">RECRUITMENT & CONTENTS</span>
+        <h2 class="text-2xl sm:text-5xl font-black mt-1 sm:mt-2">採用情報・コンテンツ</h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-        <a href="pages/jobs.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
-          <div>
+        <!-- 求人を探す -->
+        <a href="pages/jobs.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/placeholder-jobs.jpg" alt="求人を探す背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
+          </div>
+          <div class="relative z-10">
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">01 / JOB LIST</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">求人を探す</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">全国各地の募集職種・給与条件・勤務形態から自分に合った求人を検索できます。</p>
+            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 group-hover:text-yellow-400 transition">求人を探す</h3>
+            <p class="text-gray-300 text-xs sm:text-sm">全国各地の募集職種・給与条件・勤務形態から自分に合った求人を検索できます。</p>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">求人一覧へ ➔</div>
+          <div class="relative z-10 mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">求人一覧へ ➔</div>
         </a>
 
-        <a href="pages/stores.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
-          <div>
+        <!-- 店舗一覧 -->
+        <a href="pages/stores.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/placeholder-stores.jpg" alt="店舗一覧背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
+          </div>
+          <div class="relative z-10">
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">02 / STORES</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">店舗一覧</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">第一総合レジャーグループが展開する全国各エリアの店舗情報をご紹介。</p>
+            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 group-hover:text-yellow-400 transition">店舗一覧</h3>
+            <p class="text-gray-300 text-xs sm:text-sm">第一総合レジャーグループが展開する全国各エリアの店舗情報をご紹介。</p>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">店舗一覧へ ➔</div>
+          <div class="relative z-10 mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">店舗一覧へ ➔</div>
         </a>
 
-        <a href="pages/career.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
-          <div>
+        <!-- キャリアパス -->
+        <a href="pages/career.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/placeholder-career.jpg" alt="キャリアパス背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
+          </div>
+          <div class="relative z-10">
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">03 / CAREER STEP</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">キャリアパス</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">未経験からのステップアップ制度、評価体系、昇格の実績について解説します。</p>
+            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 group-hover:text-yellow-400 transition">キャリアパス</h3>
+            <p class="text-gray-300 text-xs sm:text-sm">未経験からのステップアップ制度、評価体系、昇格の実績について解説します。</p>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">キャリアを見る ➔</div>
+          <div class="relative z-10 mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">キャリアを見る ➔</div>
         </a>
 
-        <a href="pages/welfare.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
-          <div>
+        <!-- 福利厚生・制度 -->
+        <a href="pages/welfare.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/placeholder-welfare.jpg" alt="福利厚生背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
+          </div>
+          <div class="relative z-10">
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">04 / WELFARE</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">福利厚生・制度</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">寮完備・各種手当・研修制度など、安心して働ける環境を整えています。</p>
+            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 group-hover:text-yellow-400 transition">福利厚生・制度</h3>
+            <p class="text-gray-300 text-xs sm:text-sm">寮完備・各種手当・研修制度など、安心して働ける環境を整えています。</p>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">福利厚生を見る ➔</div>
+          <div class="relative z-10 mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">福利厚生を見る ➔</div>
         </a>
 
-        <a href="pages/flow.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
-          <div>
+        <!-- 選考の流れ -->
+        <a href="pages/flow.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/placeholder-flow.jpg" alt="選考の流れ背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
+          </div>
+          <div class="relative z-10">
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">05 / SELECTION FLOW</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">選考の流れ</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">応募から内定・入社までのスピード感ある選考プロセスをご案内します。</p>
+            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 group-hover:text-yellow-400 transition">選考の流れ</h3>
+            <p class="text-gray-300 text-xs sm:text-sm">応募から内定・入社までのスピード感ある選考プロセスをご案内します。</p>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">選考フローを見る ➔</div>
+          <div class="relative z-10 mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">選考フローを見る ➔</div>
         </a>
 
-        <a href="pages/interview-tips.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
-          <div>
-            <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">06 / INTERVIEW TIPS</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">面接対策ガイド</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">面接でよく聞かれる質問や、好印象を与えるポイントをアドバイス。</p>
+        <!-- DAISOの一週間 -->
+        <a href="pages/works.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/placeholder-works.jpg" alt="DAISOの一週間背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">対策ガイドを見る ➔</div>
+          <div class="relative z-10">
+            <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">06 / WORK STYLE</span>
+            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 group-hover:text-yellow-400 transition">DAISOの一週間</h3>
+            <p class="text-gray-300 text-xs sm:text-sm">オンとオフを全力で楽しむ、DAISOで働くスタッフのリアルな一週間のスケジュールをご紹介。</p>
+          </div>
+          <div class="relative z-10 mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">一週間の流れを見る ➔</div>
         </a>
       </div>
     </div>
@@ -332,8 +301,55 @@
     </div>
   </section>
 
+  <!-- 第一総合レジャーグループとは？ ＆ 数字で見るDAISO（画面いっぱい余なし・横並び2カラム・背景仮画像付き） -->
+  <section id="about" class="py-16 sm:py-24 bg-black border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        <span class="text-yellow-400 font-en font-bold text-xs sm:text-sm tracking-widest uppercase">ABOUT DAISO</span>
+        <h2 class="text-2xl sm:text-5xl font-black mt-1 sm:mt-2">第一総合レジャーグループとは？</h2>
+      </div>
+
+      <!-- 横並び2カラム（画面いっぱいに余白なし・仮画像背景付き） -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        
+        <!-- グループ概要カード -->
+        <a href="pages/about.php" class="group relative bg-zinc-900 border border-zinc-800 p-8 sm:p-12 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[320px]">
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/placeholder-about.jpg" alt="第一総合レジャーグループとは？背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
+          </div>
+          <div class="relative z-10">
+            <span class="font-en text-xs font-bold text-yellow-400 tracking-widest uppercase block mb-2">CONCEPT & PHILOSOPHY</span>
+            <h3 class="text-2xl sm:text-3xl font-black mb-4 group-hover:text-yellow-400 transition">第一総合レジャーグループとは？</h3>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
+              お客様・スタッフ・パートナー全員が「笑顔」と「喜び」を共有できる環境づくりを目指す総合レジャー企業。業界のイメージと未来を私たちが本気で変えていきます。
+            </p>
+          </div>
+          <div class="relative z-10 font-bold text-xs text-yellow-400 flex items-center gap-2">詳しくはコチラ ▶</div>
+        </a>
+
+        <!-- 数字で見るDAISOカード -->
+        <a href="pages/data.php" class="group relative bg-zinc-900 border border-zinc-800 p-8 sm:p-12 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[320px]">
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/placeholder-data.jpg" alt="数字で見るDAISO背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
+          </div>
+          <div class="relative z-10">
+            <span class="font-en text-xs font-bold text-yellow-400 tracking-widest uppercase block mb-2">STATISTICS & DATA</span>
+            <h3 class="text-2xl sm:text-3xl font-black mb-4 group-hover:text-yellow-400 transition">数字で見るDAISO</h3>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
+              運営店舗数20拠点超、グループ在籍数300名超、未経験入社率85%など、実績とデータで分かるDAISOのリアルな姿をご紹介します。
+            </p>
+          </div>
+          <div class="relative z-10 font-bold text-xs text-yellow-400 flex items-center gap-2">詳しくはコチラ ▶</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
   <!-- 動画紹介 (MOVIE) -->
-  <section id="video" class="py-16 sm:py-24 bg-black border-b border-gray-800">
+  <section id="video" class="py-16 sm:py-24 bg-zinc-950 border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
         <span class="text-yellow-400 font-en font-bold text-xs sm:text-sm tracking-widest uppercase">MOVIE</span>
@@ -359,15 +375,15 @@
   </section>
 
   <!-- 新着情報 (NEWS & MEDIA) -->
-  <section id="news" class="py-16 sm:py-24 bg-zinc-950 border-b border-gray-800">
+  <section id="news" class="py-16 sm:py-24 bg-black border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
         <span class="text-yellow-400 font-en font-bold text-xs sm:text-sm tracking-widest uppercase">NEWS & MEDIA</span>
         <h2 class="text-2xl sm:text-5xl font-black mt-1 sm:mt-2">新着情報</h2>
       </div>
 
-      <div class="bg-black border border-zinc-800 rounded-2xl divide-y divide-zinc-800 max-w-4xl mx-auto">
-        <a href="#" class="p-4 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-zinc-900 transition">
+      <div class="bg-zinc-900 border border-zinc-800 rounded-2xl divide-y divide-zinc-800 max-w-4xl mx-auto">
+        <a href="#" class="p-4 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-zinc-800 transition">
           <div class="flex items-center gap-4">
             <span class="text-gray-500 font-en text-xs sm:text-sm">2026.08.15</span>
             <span class="bg-yellow-400 text-black text-[10px] font-bold px-2 py-0.5 rounded">採用情報</span>
@@ -376,7 +392,7 @@
           <span class="text-yellow-400 text-xs font-bold">詳細 ➔</span>
         </a>
 
-        <a href="#" class="p-4 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-zinc-900 transition">
+        <a href="#" class="p-4 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-zinc-800 transition">
           <div class="flex items-center gap-4">
             <span class="text-gray-500 font-en text-xs sm:text-sm">2026.07.01</span>
             <span class="bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded">プレス</span>
@@ -389,7 +405,7 @@
   </section>
 
   <!-- よくある質問 (FAQ) -->
-  <section id="faq" class="py-16 sm:py-24 bg-black border-b border-gray-800">
+  <section id="faq" class="py-16 sm:py-24 bg-zinc-950 border-b border-gray-800">
     <div class="max-w-4xl mx-auto px-4 sm:px-8">
       <div class="text-center mb-10 sm:mb-16">
         <span class="text-yellow-400 font-en font-bold text-xs sm:text-sm tracking-widest uppercase">FAQ</span>
@@ -397,12 +413,12 @@
       </div>
 
       <div class="space-y-4">
-        <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl">
+        <div class="bg-black border border-zinc-800 p-6 rounded-2xl">
           <h3 class="font-bold text-base sm:text-lg text-yellow-400 mb-2">Q. 未経験でも応募可能ですか？</h3>
           <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">はい、85%以上のスタッフが未経験からスタートしています。充実した研修制度がありますのでご安心ください。</p>
         </div>
 
-        <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl">
+        <div class="bg-black border border-zinc-800 p-6 rounded-2xl">
           <h3 class="font-bold text-base sm:text-lg text-yellow-400 mb-2">Q. 寮や住み込みのサポートはありますか？</h3>
           <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">完備しております。家具家電付きの寮を用意していますので、遠方からのご応募も大歓迎です。</p>
         </div>
@@ -411,7 +427,7 @@
   </section>
 
   <!-- 特大エントリーボタン (ENTRY) -->
-  <section class="py-20 sm:py-32 bg-gradient-to-b from-black to-zinc-950 text-center relative overflow-hidden">
+  <section class="py-20 sm:py-32 bg-gradient-to-b from-zinc-950 to-black text-center relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-4 relative z-10">
       <h2 class="text-2xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight tracking-tight">
         さあ、あなたも<span class="inline-block">「うれしい」の輪へ。</span>
@@ -433,7 +449,7 @@
         <div>
           <h4 class="font-bold text-white text-sm mb-4">グループについて</h4>
           <ul class="space-y-2">
-            <li><a href="#about" class="hover:text-yellow-400 transition">グループ概要・理念</a></li>
+            <li><a href="#about" class="hover:text-yellow-400 transition">第一総合レジャーグループとは？</a></li>
             <li><a href="pages/about.php" class="hover:text-yellow-400 transition">会社情報</a></li>
             <li><a href="pages/works.php" class="hover:text-yellow-400 transition">DAISOの一週間</a></li>
           </ul>
@@ -446,7 +462,6 @@
             <li><a href="pages/career.php" class="hover:text-yellow-400 transition">キャリアステップ</a></li>
             <li><a href="pages/welfare.php" class="hover:text-yellow-400 transition">福利厚生・制度</a></li>
             <li><a href="pages/flow.php" class="hover:text-yellow-400 transition">選考の流れ</a></li>
-            <li><a href="pages/interview-tips.php" class="hover:text-yellow-400 transition">面接対策ガイド</a></li>
           </ul>
         </div>
         <div>
