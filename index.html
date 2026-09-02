@@ -278,7 +278,7 @@
     </div>
   </section>
 
-  <!-- 第一総合レジャーグループとは？ ＆ 数字で見るDAISO（画面いっぱい・横並び2カラム・背景仮画像付き） -->
+  <!-- 第一総合レジャーグループとは？ ＆ 数字で見るDAISO -->
   <section id="about" class="py-16 sm:py-24 bg-black border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
@@ -286,7 +286,6 @@
         <h2 class="text-2xl sm:text-5xl font-black mt-1 sm:mt-2">第一総合レジャーグループとは？</h2>
       </div>
 
-      <!-- 横並び2カラム（画面いっぱいに余白なし・仮画像背景付き） -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         
         <!-- グループ概要カード -->
@@ -325,7 +324,7 @@
     </div>
   </section>
 
-  <!-- 動画紹介 (MOVIE) -->
+  <!-- 動画紹介 (MOVIE) - MP4動画再生＆フォールバック対応 -->
   <section id="video" class="py-16 sm:py-24 bg-zinc-950 border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
@@ -334,18 +333,36 @@
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- 1つ目の動画（MP4再生対応：自動再生・ループ・ミュートで確実なインライン再生） -->
         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4">
-          <div class="aspect-video w-full rounded-xl overflow-hidden bg-black mb-4 relative flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="ブランドムービー仮画像" class="absolute inset-0 w-full h-full object-cover opacity-60">
-            <div class="relative z-10 bg-yellow-400 text-black font-bold text-xs px-4 py-2 rounded-full shadow-lg">▶ プレビュー動画</div>
+          <div class="aspect-video w-full rounded-xl overflow-hidden bg-black mb-4 relative">
+            <video 
+              class="w-full h-full object-cover" 
+              autoplay 
+              muted 
+              loop 
+              playsinline
+              poster="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80">
+              <source src="assets/videos/concept.mp4" type="video/mp4">
+              お使いのブラウザは動画タグに対応していません。
+            </video>
           </div>
           <h3 class="font-bold text-sm sm:text-base">【コンセプトPV】Smile Loop On!</h3>
         </div>
 
+        <!-- 2つ目の動画（MP4再生対応） -->
         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4">
-          <div class="aspect-video w-full rounded-xl overflow-hidden bg-black mb-4 relative flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="社員インタビュー仮画像" class="absolute inset-0 w-full h-full object-cover opacity-60">
-            <div class="relative z-10 bg-yellow-400 text-black font-bold text-xs px-4 py-2 rounded-full shadow-lg">▶ プレビュー動画</div>
+          <div class="aspect-video w-full rounded-xl overflow-hidden bg-black mb-4 relative">
+            <video 
+              class="w-full h-full object-cover" 
+              autoplay 
+              muted 
+              loop 
+              playsinline
+              poster="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80">
+              <source src="assets/videos/interview.mp4" type="video/mp4">
+              お使いのブラウザは動画タグに対応していません。
+            </video>
           </div>
           <h3 class="font-bold text-sm sm:text-base">【密着】若手マネージャーの一日</h3>
         </div>
