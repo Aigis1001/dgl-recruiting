@@ -213,68 +213,73 @@
     </div>
   </section>
 
-  <!-- 採用情報 -->
-  <section id="findjob" class="py-16 sm:py-24 bg-black border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+  <!-- 採用情報（PCで横2列×縦3行・左右余白なし） -->
+  <section id="findjob" class="py-16 sm:py-24 bg-black border-b border-gray-800 w-full">
+    <!-- max-w や mx-auto を外し、左右のパディングを 0 にすることで余白をなくす -->
+    <div class="w-full px-0">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16 px-4">
         <span class="text-yellow-400 font-en font-bold text-xs sm:text-sm tracking-widest uppercase">RECRUITMENT</span>
         <h2 class="text-2xl sm:text-5xl font-black mt-1 sm:mt-2">採用情報</h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-        <a href="pages/jobs.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
+      <!-- grid-cols-1 (スマホ: 1列) / sm:grid-cols-2 (PC: 横2つずつ) -->
+      <!-- gap や rounded を調整して端まで綺麗に配置します -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 border-y border-zinc-800">
+        
+        <a href="pages/jobs.php" class="group bg-zinc-900 hover:bg-zinc-800 border-b sm:border-r border-zinc-800 p-8 sm:p-12 transition flex flex-col justify-between">
           <div>
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">01 / JOB LIST</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">求人を探す</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">全国各地の募集職種・給与条件・勤務形態から自分に合った求人を検索できます。</p>
+            <h3 class="text-xl sm:text-3xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">求人を探す</h3>
+            <p class="text-gray-400 text-xs sm:text-base">全国各地の募集職種・給与条件・勤務形態から自分に合った求人を検索できます。</p>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">求人一覧へ ➔</div>
+          <div class="mt-8 font-bold text-xs sm:text-sm text-yellow-400 flex items-center gap-2">求人一覧へ ➔</div>
         </a>
 
-        <a href="pages/stores.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
+        <a href="pages/stores.php" class="group bg-zinc-900 hover:bg-zinc-800 border-b border-zinc-800 p-8 sm:p-12 transition flex flex-col justify-between">
           <div>
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">02 / STORES</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">店舗一覧</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">第一総合レジャーグループが展開する全国各エリアの店舗情報をご紹介。</p>
+            <h3 class="text-xl sm:text-3xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">店舗一覧</h3>
+            <p class="text-gray-400 text-xs sm:text-base">第一総合レジャーグループが展開する全国各エリアの店舗情報をご紹介。</p>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">店舗一覧へ ➔</div>
+          <div class="mt-8 font-bold text-xs sm:text-sm text-yellow-400 flex items-center gap-2">店舗一覧へ ➔</div>
         </a>
 
-        <a href="pages/career.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
+        <a href="pages/career.php" class="group bg-zinc-900 hover:bg-zinc-800 border-b sm:border-r border-zinc-800 p-8 sm:p-12 transition flex flex-col justify-between">
           <div>
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">03 / CAREER STEP</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">キャリアパス</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">未経験からのステップアップ制度、評価体系、昇格の実績について解説します。</p>
+            <h3 class="text-xl sm:text-3xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">キャリアパス</h3>
+            <p class="text-gray-400 text-xs sm:text-base">未経験からのステップアップ制度、評価体系、昇格の実績について解説します。</p>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">キャリアを見る ➔</div>
+          <div class="mt-8 font-bold text-xs sm:text-sm text-yellow-400 flex items-center gap-2">キャリアを見る ➔</div>
         </a>
 
-        <a href="pages/welfare.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
+        <a href="pages/welfare.php" class="group bg-zinc-900 hover:bg-zinc-800 border-b border-zinc-800 p-8 sm:p-12 transition flex flex-col justify-between">
           <div>
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">04 / WELFARE</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">福利厚生・制度</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">寮完備・各種手当・研修制度など、安心して働ける環境を整えています。</p>
+            <h3 class="text-xl sm:text-3xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">福利厚生・制度</h3>
+            <p class="text-gray-400 text-xs sm:text-base">寮完備・各種手当・研修制度など、安心して働ける環境を整えています。</p>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">福利厚生を見る ➔</div>
+          <div class="mt-8 font-bold text-xs sm:text-sm text-yellow-400 flex items-center gap-2">福利厚生を見る ➔</div>
         </a>
 
-        <a href="pages/flow.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
+        <a href="pages/flow.php" class="group bg-zinc-900 hover:bg-zinc-800 border-b sm:border-r sm:border-b-0 border-zinc-800 p-8 sm:p-12 transition flex flex-col justify-between">
           <div>
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">05 / SELECTION FLOW</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">選考の流れ</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">応募から内定・入社までのスピード感ある選考プロセスをご案内します。</p>
+            <h3 class="text-xl sm:text-3xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">選考の流れ</h3>
+            <p class="text-gray-400 text-xs sm:text-base">応募から内定・入社までのスピード感ある選考プロセスをご案内します。</p>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">選考フローを見る ➔</div>
+          <div class="mt-8 font-bold text-xs sm:text-sm text-yellow-400 flex items-center gap-2">選考フローを見る ➔</div>
         </a>
 
-        <a href="pages/interview-tips.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
+        <a href="pages/interview-tips.php" class="group bg-zinc-900 hover:bg-zinc-800 p-8 sm:p-12 transition flex flex-col justify-between">
           <div>
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">06 / INTERVIEW TIPS</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">面接対策ガイド</h3>
-            <p class="text-gray-400 text-xs sm:text-sm">面接でよく聞かれる質問や、好印象を与えるポイントをアドバイス。</p>
+            <h3 class="text-xl sm:text-3xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">面接対策ガイド</h3>
+            <p class="text-gray-400 text-xs sm:text-base">面接でよく聞かれる質問や、好印象を与えるポイントをアドバイス。</p>
           </div>
-          <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">対策ガイドを見る ➔</div>
+          <div class="mt-8 font-bold text-xs sm:text-sm text-yellow-400 flex items-center gap-2">対策ガイドを見る ➔</div>
         </a>
+
       </div>
     </div>
   </section>
