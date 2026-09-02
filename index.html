@@ -67,7 +67,7 @@
       <!-- 左側のロゴエリア -->
       <div class="flex-1 flex items-center justify-center sm:justify-start px-4 sm:px-8 h-full">
         <a href="#" class="flex items-center gap-2 group shrink-0">
-          <img src="assets/images/check-rules-01.png" alt="DAISO 第一総合レジャーグループ" class="h-7 sm:h-10 w-auto object-contain group-hover:opacity-80 transition">
+          <span class="font-en font-black text-xl sm:text-2xl text-yellow-400 tracking-tighter">DAISO RECRUIT</span>
         </a>
       </div>
 
@@ -96,15 +96,6 @@
 
   <!-- ヒーローセクション -->
   <section class="relative w-full h-screen min-h-[500px] sm:min-h-[650px] pt-16 sm:pt-20 overflow-hidden flex items-center justify-center border-b border-gray-800 hero-bg-animated">
-    <video 
-      class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover z-0"
-      src="assets/video/hero-bg.mp4" 
-      autoplay 
-      loop 
-      muted 
-      playsinline>
-    </video>
-
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60 z-10"></div>
 
     <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-8 w-full flex flex-col justify-between h-full py-6 sm:py-12">
@@ -157,7 +148,7 @@
     </div>
   </div>
 
-  <!-- 採用情報 ＆ DAISOの一週間（グリッドカード形式） -->
+  <!-- 採用情報 ＆ コンテンツ（グリッドカード形式・正しい項目のみ） -->
   <section id="findjob" class="py-16 sm:py-24 bg-black border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
@@ -169,7 +160,7 @@
         <!-- 求人を探す -->
         <a href="pages/jobs.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
           <div class="absolute inset-0 z-0">
-            <img src="assets/images/placeholder-jobs.jpg" alt="求人を探す背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="求人を探す背景" class="w-full h-full object-cover opacity-30 group-hover:scale-105 transition duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
           </div>
           <div class="relative z-10">
@@ -183,7 +174,7 @@
         <!-- 店舗一覧 -->
         <a href="pages/stores.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
           <div class="absolute inset-0 z-0">
-            <img src="assets/images/placeholder-stores.jpg" alt="店舗一覧背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="店舗一覧背景" class="w-full h-full object-cover opacity-30 group-hover:scale-105 transition duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
           </div>
           <div class="relative z-10">
@@ -197,7 +188,7 @@
         <!-- キャリアパス -->
         <a href="pages/career.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
           <div class="absolute inset-0 z-0">
-            <img src="assets/images/placeholder-career.jpg" alt="キャリアパス背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="キャリアパス背景" class="w-full h-full object-cover opacity-30 group-hover:scale-105 transition duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
           </div>
           <div class="relative z-10">
@@ -208,28 +199,14 @@
           <div class="relative z-10 mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">キャリアを見る ➔</div>
         </a>
 
-        <!-- 福利厚生・制度 -->
-        <a href="pages/welfare.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
-          <div class="absolute inset-0 z-0">
-            <img src="assets/images/placeholder-welfare.jpg" alt="福利厚生背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
-          </div>
-          <div class="relative z-10">
-            <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">04 / WELFARE</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 group-hover:text-yellow-400 transition">福利厚生・制度</h3>
-            <p class="text-gray-300 text-xs sm:text-sm">寮完備・各種手当・研修制度など、安心して働ける環境を整えています。</p>
-          </div>
-          <div class="relative z-10 mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">福利厚生を見る ➔</div>
-        </a>
-
         <!-- 選考の流れ -->
         <a href="pages/flow.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
           <div class="absolute inset-0 z-0">
-            <img src="assets/images/placeholder-flow.jpg" alt="選考の流れ背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="選考の流れ背景" class="w-full h-full object-cover opacity-30 group-hover:scale-105 transition duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
           </div>
           <div class="relative z-10">
-            <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">05 / SELECTION FLOW</span>
+            <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">04 / SELECTION FLOW</span>
             <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 group-hover:text-yellow-400 transition">選考の流れ</h3>
             <p class="text-gray-300 text-xs sm:text-sm">応募から内定・入社までのスピード感ある選考プロセスをご案内します。</p>
           </div>
@@ -239,11 +216,11 @@
         <!-- DAISOの一週間 -->
         <a href="pages/works.php" class="group relative bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[220px]">
           <div class="absolute inset-0 z-0">
-            <img src="assets/images/placeholder-works.jpg" alt="DAISOの一週間背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="DAISOの一週間背景" class="w-full h-full object-cover opacity-30 group-hover:scale-105 transition duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
           </div>
           <div class="relative z-10">
-            <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">06 / WORK STYLE</span>
+            <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">05 / WORK STYLE</span>
             <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 group-hover:text-yellow-400 transition">DAISOの一週間</h3>
             <p class="text-gray-300 text-xs sm:text-sm">オンとオフを全力で楽しむ、DAISOで働くスタッフのリアルな一週間のスケジュールをご紹介。</p>
           </div>
@@ -267,7 +244,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <a href="pages/member-detail.php?id=1" class="group bg-black border border-zinc-800 rounded-2xl overflow-hidden hover:border-yellow-400 transition">
           <div class="h-56 sm:h-64 bg-zinc-800 overflow-hidden relative">
-            <img src="assets/images/member-01.jpg" alt="佐々木 幹幹" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="佐々木 幹幹" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <span class="absolute bottom-3 left-3 bg-yellow-400 text-black text-[10px] font-black px-2.5 py-1 rounded">店舗マネージャー</span>
           </div>
           <div class="p-6">
@@ -278,7 +255,7 @@
 
         <a href="pages/member-detail.php?id=2" class="group bg-black border border-zinc-800 rounded-2xl overflow-hidden hover:border-yellow-400 transition">
           <div class="h-56 sm:h-64 bg-zinc-800 overflow-hidden relative">
-            <img src="assets/images/member-02.jpg" alt="海上 翔" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="海上 翔" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <span class="absolute bottom-3 left-3 bg-yellow-400 text-black text-[10px] font-black px-2.5 py-1 rounded">エリアマネージャー</span>
           </div>
           <div class="p-6">
@@ -289,7 +266,7 @@
 
         <a href="pages/member-detail.php?id=3" class="group bg-black border border-zinc-800 rounded-2xl overflow-hidden hover:border-yellow-400 transition">
           <div class="h-56 sm:h-64 bg-zinc-800 overflow-hidden relative">
-            <img src="assets/images/member-03.jpg" alt="田中 慎太郎" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="田中 慎太郎" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <span class="absolute bottom-3 left-3 bg-yellow-400 text-black text-[10px] font-black px-2.5 py-1 rounded">フロアスタッフ</span>
           </div>
           <div class="p-6">
@@ -301,7 +278,7 @@
     </div>
   </section>
 
-  <!-- 第一総合レジャーグループとは？ ＆ 数字で見るDAISO（画面いっぱい余なし・横並び2カラム・背景仮画像付き） -->
+  <!-- 第一総合レジャーグループとは？ ＆ 数字で見るDAISO（画面いっぱい・横並び2カラム・背景仮画像付き） -->
   <section id="about" class="py-16 sm:py-24 bg-black border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
@@ -315,7 +292,7 @@
         <!-- グループ概要カード -->
         <a href="pages/about.php" class="group relative bg-zinc-900 border border-zinc-800 p-8 sm:p-12 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[320px]">
           <div class="absolute inset-0 z-0">
-            <img src="assets/images/placeholder-about.jpg" alt="第一総合レジャーグループとは？背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="第一総合レジャーグループとは？背景" class="w-full h-full object-cover opacity-30 group-hover:scale-105 transition duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
           </div>
           <div class="relative z-10">
@@ -331,7 +308,7 @@
         <!-- 数字で見るDAISOカード -->
         <a href="pages/data.php" class="group relative bg-zinc-900 border border-zinc-800 p-8 sm:p-12 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[320px]">
           <div class="absolute inset-0 z-0">
-            <img src="assets/images/placeholder-data.jpg" alt="数字で見るDAISO背景" class="w-full h-full object-cover opacity-25 group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="数字で見るDAISO背景" class="w-full h-full object-cover opacity-30 group-hover:scale-105 transition duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
           </div>
           <div class="relative z-10">
@@ -356,19 +333,21 @@
         <h2 class="text-2xl sm:text-5xl font-black mt-1 sm:mt-2">動画で見るDAISO</h2>
       </div>
 
-      <div class="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 no-scrollbar">
-        <div class="snap-center shrink-0 w-[70%] sm:w-[320px] bg-zinc-900 border border-zinc-800 rounded-2xl p-4">
-          <div class="aspect-[9/16] w-full rounded-xl overflow-hidden bg-black mb-4">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/placeholder1" title="ブランドムービー" frameborder="0" allowfullscreen></iframe>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4">
+          <div class="aspect-video w-full rounded-xl overflow-hidden bg-black mb-4 relative flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="ブランドムービー仮画像" class="absolute inset-0 w-full h-full object-cover opacity-60">
+            <div class="relative z-10 bg-yellow-400 text-black font-bold text-xs px-4 py-2 rounded-full shadow-lg">▶ プレビュー動画</div>
           </div>
           <h3 class="font-bold text-sm sm:text-base">【コンセプトPV】Smile Loop On!</h3>
         </div>
 
-        <div class="snap-center shrink-0 w-[70%] sm:w-[320px] bg-zinc-900 border border-zinc-800 rounded-2xl p-4">
-          <div class="aspect-[9/16] w-full rounded-xl overflow-hidden bg-black mb-4">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/placeholder2" title="社員インタビュー" frameborder="0" allowfullscreen></iframe>
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4">
+          <div class="aspect-video w-full rounded-xl overflow-hidden bg-black mb-4 relative flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="社員インタビュー仮画像" class="absolute inset-0 w-full h-full object-cover opacity-60">
+            <div class="relative z-10 bg-yellow-400 text-black font-bold text-xs px-4 py-2 rounded-full shadow-lg">▶ プレビュー動画</div>
           </div>
-          <h3 class="font-bold text-sm sm:text-base">【密着】若手マネージャーの一日に密着インタビュー</h3>
+          <h3 class="font-bold text-sm sm:text-base">【密着】若手マネージャーの一日</h3>
         </div>
       </div>
     </div>
@@ -460,7 +439,6 @@
             <li><a href="pages/jobs.php" class="hover:text-yellow-400 transition">求人を探す</a></li>
             <li><a href="pages/stores.php" class="hover:text-yellow-400 transition">店舗一覧</a></li>
             <li><a href="pages/career.php" class="hover:text-yellow-400 transition">キャリアステップ</a></li>
-            <li><a href="pages/welfare.php" class="hover:text-yellow-400 transition">福利厚生・制度</a></li>
             <li><a href="pages/flow.php" class="hover:text-yellow-400 transition">選考の流れ</a></li>
           </ul>
         </div>
@@ -485,7 +463,6 @@
 
       <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-4">
-          <img src="assets/images/check-rules-02.png" alt="DAISO Logo" class="h-10 w-auto object-contain">
           <div>
             <p class="text-[10px] text-gray-500 mb-1">※当グループの運営施設は18歳未満の方のご利用・ご応募はできません。（高校生不可）</p>
             <p>© DAIICHI GENERAL LEISURE GROUP All Rights Reserved.</p>
