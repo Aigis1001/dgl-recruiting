@@ -60,30 +60,30 @@
 </head>
 <body class="antialiased selection:bg-yellow-400 selection:text-black">
 
-  <!-- ヘッダー（右上に4つのタイルボタンを配置） -->
+  <!-- ヘッダー（右上の4つのタイルボタンを均等＆スマホで見切れないよう最適化） -->
   <header class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
     <div class="max-w-7xl mx-auto pl-3 sm:pl-8 pr-0 h-16 sm:h-20 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2 group shrink-0 pl-3 sm:pl-0">
         <img src="assets/images/check-rules-01.png" alt="DAISO 第一総合レジャーグループ" class="h-7 sm:h-10 w-auto object-contain group-hover:opacity-80 transition">
       </a>
 
-      <!-- 右側の4分割ボタン群（TEL / LINE / ENTRY / MENU） -->
-      <div class="flex h-full">
-        <a href="tel:0120-000-000" class="bg-blue-600 hover:bg-blue-500 text-white flex flex-col items-center justify-center px-3 sm:px-6 transition">
-          <span class="font-en font-black text-xs sm:text-base italic tracking-wider leading-none mb-1">TEL</span>
-          <span class="text-[9px] sm:text-xs font-bold leading-none">電話問合せ</span>
+      <!-- 右側の4分割ボタン群：flex-1 と w-1/4 によりスマホでも完全均等＆見切れ防止・日本語1行化 -->
+      <div class="flex h-full w-[58%] sm:w-auto">
+        <a href="tel:0120-000-000" class="bg-blue-600 hover:bg-blue-500 text-white flex-1 sm:flex-initial flex flex-col items-center justify-center px-1 sm:px-6 transition whitespace-nowrap">
+          <span class="font-en font-black text-[11px] sm:text-base italic tracking-wider leading-none mb-1">TEL</span>
+          <span class="text-[8px] sm:text-xs font-bold leading-none tracking-tighter sm:tracking-normal">電話問合せ</span>
         </a>
-        <a href="#" class="bg-emerald-600 hover:bg-emerald-500 text-white flex flex-col items-center justify-center px-3 sm:px-6 transition">
-          <span class="font-en font-black text-xs sm:text-base italic tracking-wider leading-none mb-1">LINE</span>
-          <span class="text-[9px] sm:text-xs font-bold leading-none">LINE相談</span>
+        <a href="#" class="bg-emerald-600 hover:bg-emerald-500 text-white flex-1 sm:flex-initial flex flex-col items-center justify-center px-1 sm:px-6 transition whitespace-nowrap">
+          <span class="font-en font-black text-[11px] sm:text-base italic tracking-wider leading-none mb-1">LINE</span>
+          <span class="text-[8px] sm:text-xs font-bold leading-none tracking-tighter sm:tracking-normal">LINE相談</span>
         </a>
-        <a href="pages/contact.php" class="bg-yellow-400 hover:bg-yellow-300 text-black flex flex-col items-center justify-center px-3 sm:px-6 transition">
-          <span class="font-en font-black text-xs sm:text-base italic tracking-wider leading-none mb-1">ENTRY</span>
-          <span class="text-[9px] sm:text-xs font-bold leading-none">エントリー</span>
+        <a href="pages/contact.php" class="bg-yellow-400 hover:bg-yellow-300 text-black flex-1 sm:flex-initial flex flex-col items-center justify-center px-1 sm:px-6 transition whitespace-nowrap">
+          <span class="font-en font-black text-[11px] sm:text-base italic tracking-wider leading-none mb-1">ENTRY</span>
+          <span class="text-[8px] sm:text-xs font-bold leading-none tracking-tighter sm:tracking-normal">エントリー</span>
         </a>
-        <button onclick="toggleMenu()" class="bg-white hover:bg-gray-100 text-black flex flex-col items-center justify-center px-3 sm:px-6 transition cursor-pointer">
-          <span class="font-en font-black text-xs sm:text-base italic tracking-wider leading-none mb-1">MENU</span>
-          <span class="text-[9px] sm:text-xs font-bold leading-none">メニュー</span>
+        <button onclick="toggleMenu()" class="bg-white hover:bg-gray-100 text-black flex-1 sm:flex-initial flex flex-col items-center justify-center px-1 sm:px-6 transition cursor-pointer whitespace-nowrap">
+          <span class="font-en font-black text-[11px] sm:text-base italic tracking-wider leading-none mb-1">MENU</span>
+          <span class="text-[8px] sm:text-xs font-bold leading-none tracking-tighter sm:tracking-normal">メニュー</span>
         </button>
       </div>
     </div>
@@ -134,7 +134,7 @@
     </div>
   </section>
 
-  <!-- テキストスライダー（スマホでも完全に1行で流れるように修正） -->
+  <!-- テキストスライダー（スマホでも完全に1行で流れるように修正確認済み） -->
   <div class="bg-yellow-400 text-black py-1.5 sm:py-2.5 overflow-hidden font-en font-black text-[11px] sm:text-base tracking-wider sm:tracking-widest uppercase border-y border-yellow-500 whitespace-nowrap">
     <div class="animate-marquee flex items-center">
       <span class="mx-3 sm:mx-6 shrink-0">DAIICHI GENERAL LEISURE GROUP (DAISO)</span>
