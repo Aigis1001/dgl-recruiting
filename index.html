@@ -150,7 +150,7 @@
   <section id="about" class="py-16 sm:py-24 bg-zinc-950 relative border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       
-      <!-- グループ概要 -->
+      <!-- グループ概要見出し -->
       <div class="mb-12 sm:mb-16">
         <div class="flex items-center gap-4 sm:gap-6 mb-4 sm:mb-6">
           <img src="assets/images/check-rules-02.png" alt="DAISO Symbol" class="h-16 sm:h-24 w-auto object-contain shrink-0">
@@ -172,21 +172,24 @@
         </a>
       </div>
 
-      <!-- DAISOの一週間（独立バナー） -->
+      <!-- DAISOの一週間（独立したカード・バナー形式） -->
       <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl relative overflow-hidden group hover:border-yellow-400 transition mb-12 sm:mb-16">
-        <span class="text-[10px] sm:text-xs font-bold text-yellow-400 tracking-widest uppercase font-en">WORK STYLE</span>
-        <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-3 sm:mb-4">DAISOの一週間</h3>
-        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">オンとオフを全力で楽しむ、DAISOで働くスタッフのリアルな一週間のスケジュールをご紹介します。</p>
-        <a href="pages/works.php" class="inline-block bg-yellow-400 text-black font-bold text-xs sm:text-sm px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-yellow-300 transition">一週間の流れを見る ➔</a>
+        <div class="max-w-xl">
+          <span class="inline-block bg-black text-yellow-400 font-en font-bold text-xs px-2.5 py-1 rounded tracking-widest uppercase mb-2">WORK STYLE</span>
+          <h3 class="text-2xl sm:text-3xl font-black mb-3">DAISOの一週間</h3>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">オンとオフを全力で楽しむ、DAISOで働くスタッフのリアルな一週間のスケジュールをご紹介します。</p>
+          <a href="pages/works.php" class="inline-flex items-center gap-2 bg-yellow-400 text-black font-bold text-xs sm:text-sm px-6 py-3 rounded-lg hover:bg-yellow-300 transition">一週間の流れを見る ➔</a>
+        </div>
       </div>
 
+      <!-- 数字で見るDAISO -->
       <div class="bg-black/50 border border-zinc-800 rounded-2xl p-6 sm:p-12">
-        <div class="mb-8 sm:mb-10">
-          <div class="flex items-center gap-3 sm:gap-4 mb-2">
-            <img src="assets/images/check-rules-02.png" alt="DAISO Symbol" class="h-8 sm:h-12 w-auto object-contain">
-            <span class="text-yellow-400 font-en font-bold text-xs sm:text-sm tracking-widest uppercase">DATA</span>
+        <div class="flex items-center gap-4 sm:gap-6 mb-8 sm:mb-10">
+          <img src="assets/images/check-rules-02.png" alt="DAISO Symbol" class="h-16 sm:h-24 w-auto object-contain shrink-0">
+          <div>
+            <span class="text-yellow-400 font-en font-bold text-xs sm:text-sm tracking-widest uppercase block mb-1">DATA</span>
+            <h3 class="text-xl sm:text-4xl font-black leading-tight">数字で見るDAISO</h3>
           </div>
-          <h3 class="text-2xl sm:text-5xl font-black text-white">数字で見るDAISO</h3>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
           <div class="bg-zinc-900 border border-zinc-800 p-4 sm:p-6 rounded-2xl text-center">
@@ -240,7 +243,7 @@
         <a href="pages/career.php" class="group bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 p-6 sm:p-8 rounded-2xl transition flex flex-col justify-between">
           <div>
             <span class="font-en text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">03 / CAREER STEP</span>
-            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">キャリアステップ</h3>
+            <h3 class="text-xl sm:text-2xl font-black mt-1 sm:mt-2 mb-2 sm:mb-4 group-hover:text-yellow-400 transition">キャリアパス</h3>
             <p class="text-gray-400 text-xs sm:text-sm">未経験からのステップアップ制度、評価体系、昇格の実績について解説します。</p>
           </div>
           <div class="mt-6 font-bold text-xs text-yellow-400 flex items-center gap-2">キャリアを見る ➔</div>
@@ -332,9 +335,7 @@
         <h2 class="text-2xl sm:text-5xl font-black mt-1 sm:mt-2">動画で見るDAISO</h2>
       </div>
 
-      <!-- 動画横スライダー（縦長動画対応レイアウト） -->
       <div class="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 no-scrollbar">
-        
         <div class="snap-center shrink-0 w-[70%] sm:w-[320px] bg-zinc-900 border border-zinc-800 rounded-2xl p-4">
           <div class="aspect-[9/16] w-full rounded-xl overflow-hidden bg-black mb-4">
             <iframe class="w-full h-full" src="https://www.youtube.com/embed/placeholder1" title="ブランドムービー" frameborder="0" allowfullscreen></iframe>
@@ -348,7 +349,6 @@
           </div>
           <h3 class="font-bold text-sm sm:text-base">【密着】若手マネージャーの一日に密着インタビュー</h3>
         </div>
-
       </div>
     </div>
   </section>
@@ -421,11 +421,9 @@
     </div>
   </section>
 
-  <!-- フッター（サイト目次・SNS・注意書き含む完全版） -->
+  <!-- フッター -->
   <footer class="bg-black text-gray-400 py-16 border-t border-gray-800 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      
-      <!-- サイト目次（フッターナビゲーション） -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 border-b border-zinc-800">
         <div>
           <h4 class="font-bold text-white text-sm mb-4">グループについて</h4>
@@ -465,7 +463,6 @@
         </div>
       </div>
 
-      <!-- 年齢制限注意書き & ロゴ・コピーライト -->
       <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-4">
           <img src="assets/images/check-rules-02.png" alt="DAISO Logo" class="h-10 w-auto object-contain">
@@ -479,7 +476,6 @@
           <a href="#" class="hover:text-white">運営会社概要</a>
         </div>
       </div>
-
     </div>
   </footer>
 
