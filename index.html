@@ -1,0 +1,504 @@
+<main>
+    <style>
+        .home .l-news__conts .lists .item:not(:nth-of-type(-n + 5)) { display: none; }
+        .home .l-findjob .l-findjob__conts .lists .item.storelist .open_elem { background: #ffba00; }
+        .home .l-findjob .l-findjob__conts .lists .item.storelist:before { --bg--color: #ffba00; }
+        .home .l-findjob .l-findjob__conts .lists .item.storelist:after { --bg--item: url("/assets/img/common/bg_arw_yel.png"); }
+        .home .l-findjob .l-findjob__conts .lists .item.local:before { background: url("/assets/img/top/lokal.webp") center / cover no-repeat; }
+        .home .l-findjob .l-findjob__conts .lists .item.storelist .deco {
+            position: absolute;
+            right: -14.8vw;
+            top: -1.9vw;
+            width: 65.33vw;
+            height: auto;
+            z-index: -1;
+        }
+        @media screen and (min-width: 768px) {
+            .home .l-findjob .l-findjob__conts .lists .item.local {
+                width: calc(100% / 2) !important;
+                max-width: initial;
+                padding: 7.1428571429vw 2.8571428571vw 8.5714285714vw 2.8571428571vw;
+            }
+            .home .l-findjob .l-findjob__conts .lists .item.local:before {
+                background: url("assets/img/top/lokal.webp") center / cover no-repeat;
+            }
+            .home .l-findjob .l-findjob__conts .lists .item.storelist .deco {
+                width: 30vw;
+                top: -1.4285714286vw;
+                right: -2.8571428571vw;
+            }
+        }
+    </style>
+
+    <!-- Preload SVG Images for Top Page -->
+    <link rel="preload" href="assets/img/top/member_kaijo_name_en.webp?v=1776058571" as="image" type="image/webp">
+    <link rel="preload" href="assets/img/top/member_sasaki_name_en.svg?v=1771193577" as="image" type="image/svg+xml">
+    <link rel="preload" href="assets/img/top/member_kitamura_name_en.svg?v=1771193577" as="image" type="image/svg+xml">
+    <link rel="preload" href="assets/img/top/member_abe_name_en.svg?v=1771193577" as="image" type="image/svg+xml">
+
+    <section class="l-topest">
+        <div class="inner">
+            <div class="l-topest__logo">
+                <a href="">
+                    <span class="imgflame">
+                        <picture>
+                            <source data-srcset="assets/img/common/header_logo.webp?v=1771193576" type="image/webp">
+                            <source data-srcset="assets/img/common/header_logo.png?v=1771193576" type="image/png">
+                            <img data-src="assets/img/common/header_logo.png?v=1771193576" alt="HAPPINESS GROUP RECRUITING" class="lazyload" width="607" height="40">
+                        </picture>
+                    </span>
+                </a>
+            </div>
+            <ul class="l-topest__lists">
+                <li class="item"><a href=""></a></li>
+                <li class="item"><a href=""></a></li>
+                <li class="item"><a href=""></a></li>
+                <li class="item"><a href=""></a></li>
+                <li class="item last"><a href=""></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="l-mv" id="hide-next">
+        <div class="inner">
+            <div class="l-mv__conts">
+                <span class="imgflame">
+                    <video autoplay muted playsinline preload="auto" class="sp">
+                        <source src="assets/video/mv_sp.mp4" type="video/mp4">
+                        <source src="assets/video/mv_sp.webm" type="video/webm">
+                    </video>
+                    <video autoplay muted playsinline preload="auto" class="pc">
+                        <source src="assets/video/mv.mp4" type="video/mp4">
+                        <source src="assets/video/mv.webm" type="video/webm">
+                    </video>
+                </span>
+                <span class="mv_ttl">
+                    <span class="imgflame">
+                        <picture class="pc">
+                            <source data-srcset="assets/img/top/mv_ttl.webp?v=1771193577" type="image/webp">
+                            <source data-srcset="assets/img/top/mv_ttl.png?v=1771193577" type="image/png">
+                            <img data-src="assets/img/top/mv_ttl.png?v=1771193577" alt="Smile Loop On!" class="lazyload" width="607" height="40">
+                        </picture>
+                        <picture class="sp">
+                            <source data-srcset="assets/img/top/mv_ttl_sp.webp?v=1771193577" type="image/webp">
+                            <source data-srcset="assets/img/top/mv_ttl_sp.png?v=1771193577" type="image/png">
+                            <img data-src="assets/img/top/mv_ttl_sp.png?v=1771193577" alt="Smile Loop On!" width="607" height="40" class="lazyload">
+                        </picture>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- include txtslide -->
+    <div class="p-txtslide en">
+        <div class="wrap">
+            <ul class="lists">
+                <li class="item">
+                    <span class="txt">A team that creates happiness.</span>
+                </li>
+                <li class="item">
+                    <span class="txt">A team that creates happiness.</span>
+                </li>
+            </ul>
+            <ul class="lists">
+                <li class="item">
+                    <span class="txt">A team that creates happiness.</span>
+                </li>
+                <li class="item">
+                    <span class="txt">A team that creates happiness.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- include txtslide -->
+
+    <section class="l-about">
+        <div class="inner inner__mid">
+            <div class="l-about__conts">
+                <div class="ttlconts">
+                    <div class="pc_top">
+                        <div class="top">
+                            <span class="imgflame deco">
+                                <picture>
+                                    <img src="assets/img/top/about_deco01.svg?v=1771193577" alt="WHAT`S HAPPINESS GROUP?" width="245" height="103">
+                                </picture>
+                            </span>
+                            <div class="c-btn__more" ontouchstart>
+                                <a href="about.html">
+                                <div class="mask">
+                                    <div class="txtwrap">
+                                        <span class="txt">詳しくは<br>こちら</span>
+                                    </div>
+                                    <div class="hover_anim pc"></div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mid">
+                            <h3>
+                                <span class="imgflame ttl">
+                                    <img src="assets/img/top/about_ttl.svg?v=1771193577" alt="HAPPINESS GROUPとは?" width="326" height="109">
+                                </span>
+                            </h3>
+                            <h4>
+                                <span class="subttl">
+                                    <span class="subttl-txt">業界の未来を、私たちが変える。</span>
+                                </span>
+                            </h4>
+                            <p class="txt">
+                                全国に展開するソープランドグループ<span class="fc_l-blue">「ハピネスグループ」</span>。お客様・キャスト・スタッフ全員が“嬉しい”を感じられる業界の未来を本気で変えていく、挑戦と成長を続ける集団です。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <span class="imgflame deco">
+                            <picture>
+                                <source data-srcset="assets/img/top/about_deco02.webp?v=1782280507" type="image/webp">
+                                <source data-srcset="assets/img/top/about_deco02.png?v=1782280536" type="image/png">
+                                <img data-src="assets/img/top/about_deco02.webp?v=1782280507" alt="WHAT`S HAPPINESS GROUP?" class="lazyload" width="760" height="1023">
+                            </picture>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="l-findjob">
+        <div class="l-findjob__conts">
+            <ul class="lists">
+                <li class="item findjob common_wrap">
+                    <div class="open_elem"></div>
+                    <span class="cat">FIND JOB</span>
+                    <h3>
+                        <span class="ttl">求人を探す</span>
+                    </h3>
+                    <div class="c-btn__more" ontouchstart>
+                        <a href="archive-findjob.html">
+                        <div class="mask">
+                            <div class="txtwrap">
+                                <span class="txt">詳しくは<br>こちら</span>
+                            </div>
+                            <div class="hover_anim pc"></div>
+                        </div>
+                        </a>
+                    </div>
+                    <span class="imgflame deco hover_scale">
+                        <picture>
+                            <source data-srcset="assets/img/top/findjob_findjob.webp?v=1782280509" type="image/webp">
+                            <source data-srcset="assets/img/top/findjob_findjob.png?v=1782280536" type="image/png">
+                            <img data-src="assets/img/top/findjob_findjob.png?v=1782280536" alt="求人を探す" width="931" height="1683" class="lazyload">
+                        </picture>
+                    </span>
+                </li>
+                <li class="item storelist common_wrap">
+                    <div class="open_elem"></div>
+                    <span class="cat">STORE LIST</span>
+                    <h3>
+                        <span class="ttl">店舗一覧</span>
+                    </h3>
+                    <div class="c-btn__more" ontouchstart>
+                        <a href="storelist.html">
+                        <div class="mask">
+                            <div class="txtwrap">
+                                <span class="txt">詳しくは<br>こちら</span>
+                            </div>
+                            <div class="hover_anim pc"></div>
+                        </div>
+                        </a>
+                    </div>
+                    <span class="imgflame deco hover_scale">
+                        <picture>
+                            <img data-src="assets/img/common/aoki_shadow.png?v=1782282451" alt="STORE LIST 店舗一覧" width="502" height="680" class="lazyload">
+                        </picture>
+                    </span>
+                </li>
+                <li class="item career common_wrap">
+                    <div class="open_elem"></div>
+                    <span class="cat">CAREER PATH</span>
+                    <h3>
+                        <span class="ttl">キャリアパス</span>
+                    </h3>
+                    <div class="c-btn__more" ontouchstart>
+                        <a href="careerpath.html">
+                        <div class="mask">
+                            <div class="txtwrap">
+                                <span class="txt">詳しくは<br>こちら</span>
+                            </div>
+                            <div class="hover_anim pc"></div>
+                        </div>
+                        </a>
+                    </div>
+                    <span class="imgflame deco hover_scale">
+                        <picture>
+                            <img data-src="assets/img/top/careerpath_kaijo.png?v=1778229322" alt="キャリアパス" width="714" height="1326" class="lazyload">
+                        </picture>
+                    </span>
+                </li>
+                <li class="item personal common_wrap">
+                    <div class="open_elem"></div>
+                    <span class="cat">PERSONALITY</span>
+                    <h3>
+                        <span class="ttl">求める人材</span>
+                    </h3>
+                    <div class="c-btn__more" ontouchstart>
+                        <a href="personality.html">
+                        <div class="mask">
+                            <div class="txtwrap">
+                                <span class="txt">詳しくは<br>こちら</span>
+                            </div>
+                            <div class="hover_anim pc"></div>
+                        </div>
+                        </a>
+                    </div>
+                    <span class="imgflame deco hover_scale">
+                        <picture>
+                            <source data-srcset="assets/img/top/findjob_personal.webp?v=1771193577" type="image/webp">
+                            <source data-srcset="assets/img/top/findjob_personal.png?v=1771193577" type="image/png">
+                            <img data-src="assets/img/top/findjob_personal.png?v=1771193577" alt="求める人材" width="502" height="680" class="lazyload">
+                        </picture>
+                    </span>
+                </li>
+                <li class="item local common_wrap">
+                    <div class="open_elem"></div>
+                    <span class="cat">LOCAL</span>
+                    <h3>
+                        <span class="ttl">地方で働く<br>楽しさ</span>
+                    </h3>
+                    <div class="c-btn__more" ontouchstart>
+                        <a href="local.html">
+                        <div class="mask">
+                            <div class="txtwrap">
+                                <span class="txt">詳しくは<br>こちら</span>
+                            </div>
+                            <div class="hover_anim pc"></div>
+                        </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="item works hover_scale common_wrap">
+                    <div class="open_elem"></div>
+                    <span class="cat">WORKS</span>
+                    <h3>
+                        <span class="decotxt">ハピネスグループ</span>
+                        <span class="ttl">HGの一週間</span>
+                    </h3>
+                    <div class="c-btn__more" ontouchstart>
+                        <a href="works.html">
+                        <div class="mask">
+                            <div class="txtwrap">
+                                <span class="txt">詳しくは<br>こちら</span>
+                            </div>
+                            <div class="hover_anim pc"></div>
+                        </div>
+                        </a>
+                    </div>
+                    <span class="imgflame deco hover_scale">
+                        <picture>
+                            <img data-src="assets/img/top/gloft_member.png?v=1771193577" alt="HGの一週間" width="714" height="1326" class="lazyload">
+                        </picture>
+                    </span>
+                </li>
+                <li class="item video common_wrap">
+                    <div class="open_elem"></div>
+                    <div class="ttlconts">
+                        <span class="cat">VIDEO</span>
+                        <h3>
+                            <span class="ttl">動画紹介</span>
+                        </h3>
+                    </div>
+                    <div class="c-btn__more" ontouchstart>
+                        <a href="archive-video.html">
+                        <div class="mask">
+                            <div class="txtwrap">
+                                <span class="txt">詳しくは<br>こちら</span>
+                            </div>
+                            <div class="hover_anim pc"></div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="slider_conts">
+                        <div id="scroll"></div>
+                        <div class="video_slider" id="video_slider">
+                            <div class="video_slider-item slide">
+                                <iframe width="330" height="587" src="https://www.youtube-nocookie.com/embed/_YAQ5jXR6bQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="video_slider-item slide">
+                                <iframe width="330" height="587" src="https://www.youtube-nocookie.com/embed/GybSksUocJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="video_slider-item slide">
+                                <iframe width="330" height="587" src="https://www.youtube-nocookie.com/embed/e4mXcRD8RFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="video_slider-item slide">
+                                <iframe width="330" height="587" src="https://www.youtube-nocookie.com/embed/_oAI6NCGncA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="deco pc imgflame bound_img">
+                        <picture>
+                            <source data-srcset="assets/img/top/findjob_video_deco_pc.webp?v=1782280511" type="image/webp">
+                            <source data-srcset="assets/img/top/findjob_video_deco_pc.png?v=1782280536" type="image/png">
+                            <img data-src="assets/img/top/findjob_video_deco_pc.png?v=1782280536" alt="詳しくはこちら" width="540" height="1399" class="lazyload">
+                        </picture>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="l-member">
+        <div class="l-member__conts">
+            <div class="top">
+                <div class="ttlconts">
+                    <h4>
+                        <span class="subttl scroll_up">MEMBER INTERVIEW</span>
+                    </h4>
+                    <h3>
+                        <span class="imgflame ttl scroll_up">
+                            <picture>
+                                <img src="assets/img/top/member_ttl.svg?v=1771193577" alt="Smileな社員たち" width="361" height="49">
+                            </picture>
+                        </span>
+                    </h3>
+                </div>
+                <div class="subttlconts">
+                    <span class="imgflame sp scroll_up">
+                        <picture>
+                            <source data-srcset="assets/img/top/member_deco_txt.webp?v=1771193577" type="image/webp">
+                            <source data-srcset="assets/img/top/member_deco_txt.png?v=1771193577" type="image/png">
+                            <img data-src="assets/img/top/member_deco_txt.png?v=1771193577" alt="Smile Loop On !!!!!!!!!!" width="808" height="294" class="lazyload">
+                        </picture>
+                    </span>
+                    <span class="imgflame pc scroll_up">
+                        <picture>
+                           <span class="imgflame pc scroll_up">
+                        <picture>
+                            <source data-srcset="assets/img/top/member_deco_txt.webp?v=1771193577" type="image/webp">
+                            <source data-srcset="assets/img/top/member_deco_txt.png?v=1771193577" type="image/png">
+                            <img data-src="assets/img/top/member_deco_txt.png?v=1771193577" alt="Smile Loop On !!!!!!!!!!" width="808" height="294" class="lazyload">
+                        </picture>
+                    </span>
+                </div>
+            </div>
+            <ul class="lists">
+                <li class="item hover_scale">
+                    <a href="kaijo.html">
+                        <span class="imgflame bg">
+                            <picture>
+                                <source data-srcset="assets/img/top/member_kaijo.webp?v=1776058571" type="image/webp">
+                                <source data-srcset="assets/img/top/member_kaijo.png?v=1776058571" type="image/png">
+                                <img data-src="assets/img/top/member_kaijo.png?v=1776058571" alt="海上 航" width="670" height="836" class="lazyload">
+                            </picture>
+                        </span>
+                        <div class="txtconts">
+                            <span class="en">
+                                <picture>
+                                    <source data-srcset="assets/img/top/member_kaijo_name_en.webp?v=1776058571" type="image/webp">
+                                    <source data-srcset="assets/img/top/member_kaijo_name_en.png?v=1776058571" type="image/png">
+                                    <img data-src="assets/img/top/member_kaijo_name_en.png?v=1776058571" alt="Wataru Kaijo" width="223" height="15" class="lazyload">
+                                </picture>
+                            </span>
+                            <span class="ja">
+                                海上 航
+                                <span class="position">統括部長</span>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item hover_scale">
+                    <a href="sasaki.html">
+                        <span class="imgflame bg">
+                            <picture>
+                                <source data-srcset="assets/img/top/member_sasaki.webp?v=1771193577" type="image/webp">
+                                <source data-srcset="assets/img/top/member_sasaki.png?v=1771193577" type="image/png">
+                                <img data-src="assets/img/top/member_sasaki.png?v=1771193577" alt="佐々木 千晴" width="670" height="836" class="lazyload">
+                            </picture>
+                        </span>
+                        <div class="txtconts">
+                            <span class="en">
+                                <picture>
+                                    <img data-src="assets/img/top/member_sasaki_name_en.svg?v=1771193577" alt="Chiharu Sasaki" width="223" height="15" class="lazyload">
+                                </picture>
+                            </span>
+                            <span class="ja">
+                                佐々木 千晴
+                                <span class="position">店長</span>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item hover_scale">
+                    <a href="kitamura.html">
+                        <span class="imgflame bg">
+                            <picture>
+                                <source data-srcset="assets/img/top/member_kitamura.webp?v=1771193577" type="image/webp">
+                                <source data-srcset="assets/img/top/member_kitamura.png?v=1771193577" type="image/png">
+                                <img data-src="assets/img/top/member_kitamura.png?v=1771193577" alt="北村 芽依" width="670" height="836" class="lazyload">
+                            </picture>
+                        </span>
+                        <div class="txtconts">
+                            <span class="en">
+                                <picture>
+                                    <img data-src="assets/img/top/member_kitamura_name_en.svg?v=1771193577" alt="Mei Kitamura" width="223" height="15" class="lazyload">
+                                </picture>
+                            </span>
+                            <span class="ja">
+                                北村 芽依
+                                <span class="position">フロント</span>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item hover_scale">
+                    <a href="abe.html">
+                        <span class="imgflame bg">
+                            <picture>
+                                <source data-srcset="assets/img/top/member_abe.webp?v=1771193577" type="image/webp">
+                                <source data-srcset="assets/img/top/member_abe.png?v=1771193577" type="image/png">
+                                <img data-src="assets/img/top/member_abe.png?v=1771193577" alt="安部 涼華" width="670" height="836" class="lazyload">
+                            </picture>
+                        </span>
+                        <div class="txtconts">
+                            <span class="en">
+                                <picture>
+                                    <img data-src="assets/img/top/member_abe_name_en.svg?v=1771193577" alt="Suzuka Abe" width="223" height="15" class="lazyload">
+                                </picture>
+                            </span>
+                            <span class="ja">
+                                安部 涼華
+                                <span class="position">店舗スタッフ</span>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item hover_scale">
+                    <a href="yoshida.html">
+                        <span class="imgflame bg">
+                            <picture>
+                                <source data-srcset="assets/img/top/member_yoshida.webp?v=1771193577" type="image/webp">
+                                <source data-srcset="assets/img/top/member_yoshida.png?v=1771193577" type="image/png">
+                                <img data-src="assets/img/top/member_yoshida.png?v=1771193577" alt="吉田 準人" width="670" height="836" class="lazyload">
+                            </picture>
+                        </span>
+                        <div class="txtconts">
+                            <span class="en">
+                                <picture>
+                                    <source data-srcset="assets/img/top/member_yoshida_name_en.webp?v=1771193577" type="image/webp">
+                                    <source data-srcset="assets/img/top/member_yoshida_name_en.png?v=1771193577" type="image/png">
+                                    <img data-src="assets/img/top/member_yoshida_name_en.png?v=1771193577" alt="Hayato Yoshida" width="223" height="15" class="lazyload">
+                                </picture>
+                            </span>
+                            <span class="ja">
+                                吉田 準人
+                                <span class="position">幹部候補</span>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+</body>
+</html>
