@@ -67,35 +67,36 @@
 <body class="antialiased selection:bg-yellow-400 selection:text-black">
 
   <!-- HEADER -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-  <div class="max-w-7xl mx-auto h-28 sm:h-32 px-2 sm:px-6 flex items-center">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
 
-    <!-- ロゴエリア -->
-    <div class="flex-1 min-w-0 h-full flex items-center justify-center overflow-hidden pr-1 sm:pr-0">
+  <div class="max-w-7xl mx-auto h-24 sm:h-28 px-2 sm:px-6 flex items-center justify-between">
+
+    <!-- ロゴ -->
+    <div class="h-full flex-1 min-w-0 flex items-center justify-center sm:justify-start">
       <a
         href="index.html"
-        class="w-full h-full flex items-center justify-center min-w-0"
+        class="h-full w-full flex items-center justify-center sm:justify-start"
       >
         <img
           src="assets/images/check-rules-01.png"
           alt="DAISO RECRUIT"
-          class="block max-w-full max-h-[76px] sm:max-h-[100px] w-auto h-auto object-contain"
+          class="block max-w-full max-h-[68px] sm:max-h-[88px] w-auto h-auto object-contain"
         >
       </a>
     </div>
 
-    <!-- 右側4ボタン -->
-    <div class="shrink-0 h-full flex items-center">
+    <!-- PC：右側固定ボタン -->
+    <div class="hidden sm:flex h-full shrink-0 items-center">
 
       <!-- TEL -->
       <a
         href="tel:0120-000-000"
-        class="h-24 sm:h-28 w-[72px] sm:w-[120px] flex flex-col items-center justify-center bg-blue-600 hover:bg-blue-500 transition text-white leading-none"
+        class="h-20 sm:h-24 w-[105px] sm:w-[125px] flex flex-col items-center justify-center bg-blue-600 hover:bg-blue-500 transition text-white leading-none"
       >
-        <span class="font-en font-black italic text-[20px] sm:text-3xl whitespace-nowrap">
+        <span class="font-en font-black italic text-2xl sm:text-3xl whitespace-nowrap">
           TEL
         </span>
-        <span class="mt-2 text-[10px] sm:text-sm font-bold whitespace-nowrap">
+        <span class="mt-2 text-xs sm:text-sm font-bold whitespace-nowrap">
           電話問合せ
         </span>
       </a>
@@ -103,12 +104,12 @@
       <!-- LINE -->
       <a
         href="#"
-        class="h-24 sm:h-28 w-[72px] sm:w-[120px] flex flex-col items-center justify-center bg-emerald-500 hover:bg-emerald-400 transition text-white leading-none"
+        class="h-20 sm:h-24 w-[105px] sm:w-[125px] flex flex-col items-center justify-center bg-emerald-500 hover:bg-emerald-400 transition text-white leading-none"
       >
-        <span class="font-en font-black italic text-[18px] sm:text-3xl whitespace-nowrap">
+        <span class="font-en font-black italic text-2xl sm:text-3xl whitespace-nowrap">
           LINE
         </span>
-        <span class="mt-2 text-[10px] sm:text-sm font-bold whitespace-nowrap">
+        <span class="mt-2 text-xs sm:text-sm font-bold whitespace-nowrap">
           LINE相談
         </span>
       </a>
@@ -116,12 +117,12 @@
       <!-- ENTRY -->
       <a
         href="pages/contact.html"
-        class="h-24 sm:h-28 w-[78px] sm:w-[130px] flex flex-col items-center justify-center bg-yellow-400 hover:bg-yellow-300 transition text-black leading-none"
+        class="h-20 sm:h-24 w-[120px] sm:w-[140px] flex flex-col items-center justify-center bg-yellow-400 hover:bg-yellow-300 transition text-black leading-none"
       >
-        <span class="font-en font-black italic text-[18px] sm:text-3xl whitespace-nowrap">
+        <span class="font-en font-black italic text-2xl sm:text-3xl whitespace-nowrap">
           ENTRY
         </span>
-        <span class="mt-2 text-[10px] sm:text-sm font-bold whitespace-nowrap">
+        <span class="mt-2 text-xs sm:text-sm font-bold whitespace-nowrap">
           エントリー
         </span>
       </a>
@@ -130,18 +131,78 @@
       <button
         type="button"
         onclick="toggleMenu()"
-        class="h-24 sm:h-28 w-[78px] sm:w-[130px] flex flex-col items-center justify-center bg-white hover:bg-zinc-200 transition text-black leading-none"
+        class="h-20 sm:h-24 w-[120px] sm:w-[140px] flex flex-col items-center justify-center bg-white hover:bg-zinc-200 transition text-black leading-none"
       >
-        <span class="font-en font-black italic text-[18px] sm:text-3xl whitespace-nowrap">
+        <span class="font-en font-black italic text-2xl sm:text-3xl whitespace-nowrap">
           MENU
         </span>
-        <span class="mt-2 text-[10px] sm:text-sm font-bold whitespace-nowrap">
+        <span class="mt-2 text-xs sm:text-sm font-bold whitespace-nowrap">
           メニュー
         </span>
       </button>
 
     </div>
+
   </div>
+
+  <!-- スマホ：画面下固定4ボタン -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-[60] h-[72px] flex">
+
+    <!-- TEL -->
+    <a
+      href="tel:0120-000-000"
+      class="flex-1 min-w-0 flex flex-col items-center justify-center bg-blue-600 active:bg-blue-500 text-white leading-none"
+    >
+      <span class="font-en font-black italic text-lg whitespace-nowrap">
+        TEL
+      </span>
+      <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
+        電話問合せ
+      </span>
+    </a>
+
+    <!-- LINE -->
+    <a
+      href="#"
+      class="flex-1 min-w-0 flex flex-col items-center justify-center bg-emerald-500 active:bg-emerald-400 text-white leading-none"
+    >
+      <span class="font-en font-black italic text-[17px] whitespace-nowrap">
+        LINE
+      </span>
+      <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
+        LINE相談
+      </span>
+    </a>
+
+    <!-- ENTRY -->
+    <a
+      href="pages/contact.html"
+      class="flex-1 min-w-0 flex flex-col items-center justify-center bg-yellow-400 active:bg-yellow-300 text-black leading-none"
+    >
+      <span class="font-en font-black italic text-[17px] whitespace-nowrap">
+        ENTRY
+      </span>
+      <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
+        エントリー
+      </span>
+    </a>
+
+    <!-- MENU -->
+    <button
+      type="button"
+      onclick="toggleMenu()"
+      class="flex-1 min-w-0 flex flex-col items-center justify-center bg-white active:bg-zinc-200 text-black leading-none"
+    >
+      <span class="font-en font-black italic text-[17px] whitespace-nowrap">
+        MENU
+      </span>
+      <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
+        メニュー
+      </span>
+    </button>
+
+  </div>
+
 </header>
 
 
