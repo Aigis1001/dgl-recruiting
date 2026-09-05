@@ -67,36 +67,123 @@
 <body class="antialiased selection:bg-yellow-400 selection:text-black">
 
   <!-- HEADER -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+  <header class="fixed top-0 left-0 right-0 z-50">
 
-  <div class="max-w-7xl mx-auto h-24 sm:h-28 px-2 sm:px-6 flex items-center justify-between">
+  <!-- =========================
+       PC HEADER
+       ========================= -->
+  <div class="hidden sm:block bg-black/90 backdrop-blur-md border-b border-white/10">
 
-    <!-- ロゴ -->
-    <div class="h-full flex-1 min-w-0 flex items-center justify-center sm:justify-start">
+    <div class="w-full h-28 flex items-center">
+
+      <!-- ロゴ -->
+      <div class="flex-1 min-w-0 h-full flex items-center pl-6 lg:pl-10">
+        <a
+          href="index.html"
+          class="h-full flex items-center"
+        >
+          <img
+            src="assets/images/check-rules-01.png"
+            alt="DAISO RECRUIT"
+            class="block max-w-full max-h-[88px] w-auto h-auto object-contain"
+          >
+        </a>
+      </div>
+
+      <!-- 右端固定ボタン -->
+      <div class="h-full shrink-0 flex items-stretch ml-auto">
+
+        <!-- TEL -->
+        <a
+          href="tel:0120-000-000"
+          class="w-[125px] h-full flex flex-col items-center justify-center bg-blue-600 hover:bg-blue-500 transition text-white leading-none"
+        >
+          <span class="font-en font-black italic text-3xl whitespace-nowrap">
+            TEL
+          </span>
+          <span class="mt-2 text-sm font-bold whitespace-nowrap">
+            電話問合せ
+          </span>
+        </a>
+
+        <!-- LINE -->
+        <a
+          href="#"
+          class="w-[125px] h-full flex flex-col items-center justify-center bg-emerald-500 hover:bg-emerald-400 transition text-white leading-none"
+        >
+          <span class="font-en font-black italic text-3xl whitespace-nowrap">
+            LINE
+          </span>
+          <span class="mt-2 text-sm font-bold whitespace-nowrap">
+            LINE相談
+          </span>
+        </a>
+
+        <!-- ENTRY -->
+        <a
+          href="pages/contact.html"
+          class="w-[140px] h-full flex flex-col items-center justify-center bg-yellow-400 hover:bg-yellow-300 transition text-black leading-none"
+        >
+          <span class="font-en font-black italic text-3xl whitespace-nowrap">
+            ENTRY
+          </span>
+          <span class="mt-2 text-sm font-bold whitespace-nowrap">
+            エントリー
+          </span>
+        </a>
+
+        <!-- MENU -->
+        <button
+          type="button"
+          onclick="toggleMenu()"
+          class="w-[140px] h-full flex flex-col items-center justify-center bg-white hover:bg-zinc-200 transition text-black leading-none"
+        >
+          <span class="font-en font-black italic text-3xl whitespace-nowrap">
+            MENU
+          </span>
+          <span class="mt-2 text-sm font-bold whitespace-nowrap">
+            メニュー
+          </span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================
+       SMARTPHONE HEADER
+       ========================= -->
+  <div class="sm:hidden">
+
+    <!-- 上部ロゴ -->
+    <div class="h-24 bg-black/90 backdrop-blur-md border-b border-white/10 flex items-center justify-center px-4">
+
       <a
         href="index.html"
-        class="h-full w-full flex items-center justify-center sm:justify-start"
+        class="w-full h-full flex items-center justify-center"
       >
         <img
           src="assets/images/check-rules-01.png"
           alt="DAISO RECRUIT"
-          class="block max-w-full max-h-[68px] sm:max-h-[88px] w-auto h-auto object-contain"
+          class="block max-w-full max-h-[70px] w-auto h-auto object-contain"
         >
       </a>
+
     </div>
 
-    <!-- PC：右側固定ボタン -->
-    <div class="hidden sm:flex h-full shrink-0 items-center">
+    <!-- 下部固定ナビ -->
+    <div class="fixed bottom-0 left-0 right-0 z-[60] w-full h-[72px] flex">
 
       <!-- TEL -->
       <a
         href="tel:0120-000-000"
-        class="h-20 sm:h-24 w-[105px] sm:w-[125px] flex flex-col items-center justify-center bg-blue-600 hover:bg-blue-500 transition text-white leading-none"
+        class="flex-1 min-w-0 h-full flex flex-col items-center justify-center bg-blue-600 active:bg-blue-500 text-white leading-none"
       >
-        <span class="font-en font-black italic text-2xl sm:text-3xl whitespace-nowrap">
+        <span class="font-en font-black italic text-lg whitespace-nowrap">
           TEL
         </span>
-        <span class="mt-2 text-xs sm:text-sm font-bold whitespace-nowrap">
+        <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
           電話問合せ
         </span>
       </a>
@@ -104,12 +191,12 @@
       <!-- LINE -->
       <a
         href="#"
-        class="h-20 sm:h-24 w-[105px] sm:w-[125px] flex flex-col items-center justify-center bg-emerald-500 hover:bg-emerald-400 transition text-white leading-none"
+        class="flex-1 min-w-0 h-full flex flex-col items-center justify-center bg-emerald-500 active:bg-emerald-400 text-white leading-none"
       >
-        <span class="font-en font-black italic text-2xl sm:text-3xl whitespace-nowrap">
+        <span class="font-en font-black italic text-[17px] whitespace-nowrap">
           LINE
         </span>
-        <span class="mt-2 text-xs sm:text-sm font-bold whitespace-nowrap">
+        <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
           LINE相談
         </span>
       </a>
@@ -117,12 +204,12 @@
       <!-- ENTRY -->
       <a
         href="pages/contact.html"
-        class="h-20 sm:h-24 w-[120px] sm:w-[140px] flex flex-col items-center justify-center bg-yellow-400 hover:bg-yellow-300 transition text-black leading-none"
+        class="flex-1 min-w-0 h-full flex flex-col items-center justify-center bg-yellow-400 active:bg-yellow-300 text-black leading-none"
       >
-        <span class="font-en font-black italic text-2xl sm:text-3xl whitespace-nowrap">
+        <span class="font-en font-black italic text-[17px] whitespace-nowrap">
           ENTRY
         </span>
-        <span class="mt-2 text-xs sm:text-sm font-bold whitespace-nowrap">
+        <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
           エントリー
         </span>
       </a>
@@ -131,75 +218,17 @@
       <button
         type="button"
         onclick="toggleMenu()"
-        class="h-20 sm:h-24 w-[120px] sm:w-[140px] flex flex-col items-center justify-center bg-white hover:bg-zinc-200 transition text-black leading-none"
+        class="flex-1 min-w-0 h-full flex flex-col items-center justify-center bg-white active:bg-zinc-200 text-black leading-none"
       >
-        <span class="font-en font-black italic text-2xl sm:text-3xl whitespace-nowrap">
+        <span class="font-en font-black italic text-[17px] whitespace-nowrap">
           MENU
         </span>
-        <span class="mt-2 text-xs sm:text-sm font-bold whitespace-nowrap">
+        <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
           メニュー
         </span>
       </button>
 
     </div>
-
-  </div>
-
-  <!-- スマホ：画面下固定4ボタン -->
-  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-[60] h-[72px] flex">
-
-    <!-- TEL -->
-    <a
-      href="tel:0120-000-000"
-      class="flex-1 min-w-0 flex flex-col items-center justify-center bg-blue-600 active:bg-blue-500 text-white leading-none"
-    >
-      <span class="font-en font-black italic text-lg whitespace-nowrap">
-        TEL
-      </span>
-      <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
-        電話問合せ
-      </span>
-    </a>
-
-    <!-- LINE -->
-    <a
-      href="#"
-      class="flex-1 min-w-0 flex flex-col items-center justify-center bg-emerald-500 active:bg-emerald-400 text-white leading-none"
-    >
-      <span class="font-en font-black italic text-[17px] whitespace-nowrap">
-        LINE
-      </span>
-      <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
-        LINE相談
-      </span>
-    </a>
-
-    <!-- ENTRY -->
-    <a
-      href="pages/contact.html"
-      class="flex-1 min-w-0 flex flex-col items-center justify-center bg-yellow-400 active:bg-yellow-300 text-black leading-none"
-    >
-      <span class="font-en font-black italic text-[17px] whitespace-nowrap">
-        ENTRY
-      </span>
-      <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
-        エントリー
-      </span>
-    </a>
-
-    <!-- MENU -->
-    <button
-      type="button"
-      onclick="toggleMenu()"
-      class="flex-1 min-w-0 flex flex-col items-center justify-center bg-white active:bg-zinc-200 text-black leading-none"
-    >
-      <span class="font-en font-black italic text-[17px] whitespace-nowrap">
-        MENU
-      </span>
-      <span class="mt-1 text-[9px] font-bold whitespace-nowrap">
-        メニュー
-      </span>
-    </button>
 
   </div>
 
