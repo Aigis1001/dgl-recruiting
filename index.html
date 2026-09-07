@@ -11,17 +11,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800;1,900&family=Noto+Sans+JP:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800;1,900&family=Noto+Sans+JP:wght@500;700;800;900&display=block" rel="stylesheet">
 
   <style>
-
-html {
-  visibility: hidden;
-}
-
-html.fonts-loaded {
-  visibility: visible;
-}
 
     body {
       font-family: 'Noto Sans JP', sans-serif;
@@ -30,8 +22,8 @@ html.fonts-loaded {
     }
 
     .font-en {
-  font-family: 'Barlow Condensed', sans-serif;
-}
+      font-family: 'Barlow Condensed', sans-serif;
+    }
 
     @keyframes marquee {
       0% {
@@ -260,12 +252,11 @@ html.fonts-loaded {
     <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 text-center">
 >
 
-      <div class="inline-flex items-center gap-2 border border-yellow-400/70 bg-black/50 px-4 py-2 mb-5">
-        <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
-        <span class="font-en italic font-black text-yellow-400 text-xs sm:text-sm tracking-widest">
-          DAISO RECRUITING
-        </span>
-      </div>
+      <div class="inline-flex items-center justify-center border border-yellow-400/70 bg-black/50 px-5 py-2.5 mb-5 w-[200px] sm:w-[250px]">
+  <span class="font-en italic font-black text-yellow-400 text-base sm:text-lg md:text-xl tracking-widest whitespace-nowrap">
+    DAISO RECRUITING
+  </span>
+</div>
 
       <h1 class="font-en italic font-black text-yellow-400 text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-none tracking-tight">
         Smile Loop On!
@@ -1198,12 +1189,6 @@ html.fonts-loaded {
       });
     });
   </script>
-
-<script>
-  document.fonts.ready.then(() => {
-    document.documentElement.classList.add('fonts-loaded');
-  });
-</script>
 
 </body>
 </html>
