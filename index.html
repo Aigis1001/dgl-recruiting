@@ -14,6 +14,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800;1,900&family=Noto+Sans+JP:wght@500;700;800;900&display=swap" rel="stylesheet">
 
   <style>
+
+html {
+  visibility: hidden;
+}
+
+html.fonts-loaded {
+  visibility: visible;
+}
+
     body {
       font-family: 'Noto Sans JP', sans-serif;
       background-color: #0b0c10;
@@ -236,19 +245,20 @@
   <section class="relative h-screen min-h-[500px] sm:min-h-[650px] flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
 
     <video
-      class="absolute inset-0 w-full h-full object-cover"
-      autoplay
-      muted
-      loop
-      playsinline
-      poster="assets/images/check-rules-01.png"
-    >
-      <source src="assets/video/hero-bg.mp4" type="video/mp4">
-    </video>
+  class="absolute inset-0 w-full h-full object-cover bg-black opacity-0 transition-opacity duration-300"
+  autoplay
+  muted
+  loop
+  playsinline
+  onloadeddata="this.classList.remove('opacity-0')"
+>
+  <source src="assets/video/hero-bg.mp4" type="video/mp4">
+</video>
 
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60"></div>
 
     <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 text-center">
+>
 
       <div class="inline-flex items-center gap-2 border border-yellow-400/70 bg-black/50 px-4 py-2 mb-5">
         <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
@@ -1188,6 +1198,12 @@
       });
     });
   </script>
+
+<script>
+  document.fonts.ready.then(() => {
+    document.documentElement.classList.add('fonts-loaded');
+  });
+</script>
 
 </body>
 </html>
