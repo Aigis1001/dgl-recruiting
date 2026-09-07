@@ -1,0 +1,203 @@
+/* =========================
+   STORES SECTION
+   ========================= */
+
+.stores-section {
+  background: #0b0c10;
+  color: #ffffff;
+  border-bottom: 1px solid #27272a;
+}
+
+.stores-inner {
+  width: 100%;
+}
+
+
+/* =========================
+   STORE BLOCK
+   ========================= */
+
+.store-block {
+  width: 100%;
+  padding: 72px 20px;
+  border-bottom: 1px solid #27272a;
+}
+
+.store-block:last-child {
+  border-bottom: none;
+}
+
+.store-heading {
+  max-width: 1280px;
+  margin: 0 auto 32px;
+}
+
+.store-number {
+  color: #facc15;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+
+.store-heading h2 {
+  margin-top: 4px;
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================
+   STORE MAIN IMAGE
+   ========================= */
+
+.store-main-image {
+  width: 100%;
+  max-width: 1280px;
+  height: 360px;
+  margin: 0 auto;
+  border: 1px solid #27272a;
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      135deg,
+      #18181b 0%,
+      #09090b 100%
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #52525b;
+  font-size: 24px;
+  letter-spacing: 0.16em;
+}
+
+
+/* =========================
+   CAST LIST
+   ========================= */
+
+.cast-list {
+  width: 100%;
+  max-width: 1280px;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.cast-card {
+  min-width: 0;
+}
+
+.cast-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      135deg,
+      #18181b 0%,
+      #09090b 100%
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #52525b;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+}
+
+.cast-card p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+
+/* =========================
+   STORE LINK
+   ========================= */
+
+.store-link {
+  display: flex;
+  width: fit-content;
+  margin: 28px auto 0;
+  padding: 13px 24px;
+  border: 1px solid #3f3f46;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 900;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.store-link span {
+  margin-left: 10px;
+}
+
+.store-link:hover {
+  background: #facc15;
+  color: #000000;
+  border-color: #facc15;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 639px) {
+
+  .store-block {
+    padding: 52px 16px;
+  }
+
+  .store-heading {
+    margin-bottom: 22px;
+  }
+
+  .store-number {
+    font-size: 12px;
+  }
+
+  .store-heading h2 {
+    font-size: 2.35rem;
+    line-height: 1.05;
+  }
+
+  .store-main-image {
+    height: 210px;
+    border-radius: 14px;
+    font-size: 18px;
+  }
+
+  .cast-list {
+    gap: 7px;
+    margin-top: 16px;
+  }
+
+  .cast-image {
+    border-radius: 8px;
+    font-size: 10px;
+  }
+
+  .cast-card p {
+    margin-top: 7px;
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  .store-link {
+    margin-top: 22px;
+    padding: 11px 18px;
+    font-size: 13px;
+  }
+
+}
