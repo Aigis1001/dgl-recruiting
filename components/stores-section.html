@@ -1,261 +1,145 @@
-<section id="stores" class="stores-section">
+document.addEventListener('DOMContentLoaded', function () {
 
-  <div class="stores-inner">
+  const container = document.getElementById('stores-container');
 
-    <!-- 01 The White -->
-    <article class="store-block">
-      <div class="store-heading">
-        <p class="store-number font-en">01 / STORE</p>
-        <h2>The White</h2>
-      </div>
+  if (!container) {
+    return;
+  }
 
-      <div class="store-main-image">
-        <span class="font-en">STORE IMAGE</span>
-      </div>
+  const stores = [
+    {
+      name: 'The White',
+      topUrl: 'https://www.cityheaven.net/hyogo/A2801/A280101/the_white/',
+      girlUrl: 'https://www.cityheaven.net/hyogo/A2801/A280101/the_white/girllist/'
+    },
+    {
+      name: 'KOBE GOLD',
+      topUrl: 'https://www.cityheaven.net/hyogo/A2801/A280102/kobe_gold/',
+      girlUrl: 'https://www.cityheaven.net/hyogo/A2801/A280102/kobe_gold/girllist/'
+    },
+    {
+      name: 'モンテクラブ',
+      topUrl: 'https://www.cityheaven.net/hyogo/A2801/A280102/monte/',
+      girlUrl: 'https://www.cityheaven.net/hyogo/A2801/A280102/monte/girllist/'
+    },
+    {
+      name: 'プラチナ本館',
+      topUrl: 'https://www.cityheaven.net/fukui/A1801/A180101/hot-heaven/',
+      girlUrl: 'https://www.cityheaven.net/fukui/A1801/A180101/hot-heaven/girllist/'
+    },
+    {
+      name: 'プラチナ別館',
+      topUrl: 'https://www.cityheaven.net/fukui/A1801/A180101/hien_b/',
+      girlUrl: 'https://www.cityheaven.net/fukui/A1801/A180101/hien_b/girllist/'
+    },
+    {
+      name: 'ホワイト宮殿',
+      topUrl: 'https://www.cityheaven.net/shiga/A2501/A250101/ogoto_otemachi/',
+      girlUrl: 'https://www.cityheaven.net/shiga/A2501/A250101/ogoto_otemachi/girllist/'
+    },
+    {
+      name: 'パリス宮殿',
+      topUrl: 'https://www.cityheaven.net/shiga/A2501/A250101/ogoto_men/',
+      girlUrl: 'https://www.cityheaven.net/shiga/A2501/A250101/ogoto_men/girllist/'
+    },
+    {
+      name: 'ダイヤモンド宮殿',
+      topUrl: 'https://www.cityheaven.net/kumamoto/A4301/A430101/marin_premium_k/',
+      girlUrl: 'https://www.cityheaven.net/kumamoto/A4301/A430101/marin_premium_k/girllist/'
+    },
+    {
+      name: 'ダイヤモンド宮殿別館',
+      topUrl: 'https://www.cityheaven.net/kumamoto/A4301/A430101/churippu_girls/',
+      girlUrl: 'https://www.cityheaven.net/kumamoto/A4301/A430101/churippu_girls/girllist/'
+    }
+  ];
 
-      <div class="cast-list">
+  let html = `
+    <section id="stores" class="stores-section">
+      <div class="stores-inner">
+  `;
 
-        <div class="cast-card">
-          <div class="cast-image">
-            <span class="font-en">CAST</span>
-          </div>
-          <p>CAST NAME</p>
+  stores.forEach(function (store, index) {
+
+    const number = String(index + 1).padStart(2, '0');
+
+    html += `
+      <article class="store-block">
+
+        <div class="store-heading">
+          <span class="store-number font-en">
+            ${number}
+          </span>
+
+          <h2>
+            ${store.name}
+          </h2>
         </div>
 
-        <div class="cast-card">
-          <div class="cast-image">
-            <span class="font-en">CAST</span>
-          </div>
-          <p>CAST NAME</p>
+        <div class="store-main-image">
+          <span class="font-en">
+            STORE IMAGE
+          </span>
         </div>
 
-        <div class="cast-card">
-          <div class="cast-image">
-            <span class="font-en">CAST</span>
+        <div class="cast-list">
+
+          <div class="cast-card">
+            <div class="cast-image">
+              CAST 01
+            </div>
+            <p>CAST NAME</p>
           </div>
-          <p>CAST NAME</p>
+
+          <div class="cast-card">
+            <div class="cast-image">
+              CAST 02
+            </div>
+            <p>CAST NAME</p>
+          </div>
+
+          <div class="cast-card">
+            <div class="cast-image">
+              CAST 03
+            </div>
+            <p>CAST NAME</p>
+          </div>
+
+          <div class="cast-card">
+            <div class="cast-image">
+              CAST 04
+            </div>
+            <p>CAST NAME</p>
+          </div>
+
+          <div class="cast-card">
+            <div class="cast-image">
+              CAST 05
+            </div>
+            <p>CAST NAME</p>
+          </div>
+
         </div>
 
-        <div class="cast-card">
-          <div class="cast-image">
-            <span class="font-en">CAST</span>
-          </div>
-          <p>CAST NAME</p>
-        </div>
+        <a
+          href="${store.topUrl}"
+          class="store-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ${store.name} 詳細を見る ➔
+        </a>
 
-        <div class="cast-card">
-          <div class="cast-image">
-            <span class="font-en">CAST</span>
-          </div>
-          <p>CAST NAME</p>
-        </div>
+      </article>
+    `;
 
+  });
+
+  html += `
       </div>
+    </section>
+  `;
 
-      <a href="pages/stores.html" class="store-link">
-        The Whiteを見る <span>➔</span>
-      </a>
-    </article>
+  container.innerHTML = html;
 
-
-    <!-- 02 KOBE GOLD -->
-    <article class="store-block">
-      <div class="store-heading">
-        <p class="store-number font-en">02 / STORE</p>
-        <h2>KOBE GOLD</h2>
-      </div>
-
-      <div class="store-main-image">
-        <span class="font-en">STORE IMAGE</span>
-      </div>
-
-      <div class="cast-list">
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-      </div>
-
-      <a href="pages/stores.html" class="store-link">
-        KOBE GOLDを見る <span>➔</span>
-      </a>
-    </article>
-
-
-    <!-- 03 モンテクラブ -->
-    <article class="store-block">
-      <div class="store-heading">
-        <p class="store-number font-en">03 / STORE</p>
-        <h2>モンテクラブ</h2>
-      </div>
-
-      <div class="store-main-image">
-        <span class="font-en">STORE IMAGE</span>
-      </div>
-
-      <div class="cast-list">
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-      </div>
-
-      <a href="pages/stores.html" class="store-link">
-        モンテクラブを見る <span>➔</span>
-      </a>
-    </article>
-
-
-    <!-- 04 プラチナ本館 -->
-    <article class="store-block">
-      <div class="store-heading">
-        <p class="store-number font-en">04 / STORE</p>
-        <h2>プラチナ本館</h2>
-      </div>
-
-      <div class="store-main-image">
-        <span class="font-en">STORE IMAGE</span>
-      </div>
-
-      <div class="cast-list">
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-      </div>
-
-      <a href="pages/stores.html" class="store-link">
-        プラチナ本館を見る <span>➔</span>
-      </a>
-    </article>
-
-
-    <!-- 05 プラチナ別館 -->
-    <article class="store-block">
-      <div class="store-heading">
-        <p class="store-number font-en">05 / STORE</p>
-        <h2>プラチナ別館</h2>
-      </div>
-
-      <div class="store-main-image">
-        <span class="font-en">STORE IMAGE</span>
-      </div>
-
-      <div class="cast-list">
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-      </div>
-
-      <a href="pages/stores.html" class="store-link">
-        プラチナ別館を見る <span>➔</span>
-      </a>
-    </article>
-
-
-    <!-- 06 ホワイト宮殿 -->
-    <article class="store-block">
-      <div class="store-heading">
-        <p class="store-number font-en">06 / STORE</p>
-        <h2>ホワイト宮殿</h2>
-      </div>
-
-      <div class="store-main-image">
-        <span class="font-en">STORE IMAGE</span>
-      </div>
-
-      <div class="cast-list">
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-      </div>
-
-      <a href="pages/stores.html" class="store-link">
-        ホワイト宮殿を見る <span>➔</span>
-      </a>
-    </article>
-
-
-    <!-- 07 パリス宮殿 -->
-    <article class="store-block">
-      <div class="store-heading">
-        <p class="store-number font-en">07 / STORE</p>
-        <h2>パリス宮殿</h2>
-      </div>
-
-      <div class="store-main-image">
-        <span class="font-en">STORE IMAGE</span>
-      </div>
-
-      <div class="cast-list">
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-      </div>
-
-      <a href="pages/stores.html" class="store-link">
-        パリス宮殿を見る <span>➔</span>
-      </a>
-    </article>
-
-
-    <!-- 08 ダイヤモンド宮殿 -->
-    <article class="store-block">
-      <div class="store-heading">
-        <p class="store-number font-en">08 / STORE</p>
-        <h2>ダイヤモンド宮殿</h2>
-      </div>
-
-      <div class="store-main-image">
-        <span class="font-en">STORE IMAGE</span>
-      </div>
-
-      <div class="cast-list">
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-      </div>
-
-      <a href="pages/stores.html" class="store-link">
-        ダイヤモンド宮殿を見る <span>➔</span>
-      </a>
-    </article>
-
-
-    <!-- 09 ダイヤモンド宮殿別館 -->
-    <article class="store-block">
-      <div class="store-heading">
-        <p class="store-number font-en">09 / STORE</p>
-        <h2>ダイヤモンド宮殿別館</h2>
-      </div>
-
-      <div class="store-main-image">
-        <span class="font-en">STORE IMAGE</span>
-      </div>
-
-      <div class="cast-list">
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-        <div class="cast-card"><div class="cast-image"><span class="font-en">CAST</span></div><p>CAST NAME</p></div>
-      </div>
-
-      <a href="pages/stores.html" class="store-link">
-        ダイヤモンド宮殿別館を見る <span>➔</span>
-      </a>
-    </article>
-
-  </div>
-</section>
+});

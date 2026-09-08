@@ -1,0 +1,237 @@
+/* ========================================
+   RECRUITMENT SECTION
+   ======================================== */
+
+.recruit-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+
+.recruit-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 390px;
+  overflow: hidden;
+  border-radius: 22px;
+  text-decoration: none;
+  box-sizing: border-box;
+  isolation: isolate;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.recruit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* COLORS */
+
+.recruit-card-yellow {
+  background: #f7d94c;
+}
+
+.recruit-card-blue {
+  background: #72c7ed;
+}
+
+.recruit-card-pink {
+  background: #f3a3bd;
+}
+
+.recruit-card-green {
+  background: #a9dc72;
+}
+
+
+/* TEXT */
+
+.recruit-card-text {
+  position: relative;
+  z-index: 3;
+  width: 58%;
+  padding: 42px 40px;
+  box-sizing: border-box;
+}
+
+.recruit-label {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #111;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.recruit-title {
+  margin: 24px 0 0;
+  color: #111;
+  font-size: clamp(42px, 4vw, 70px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.recruit-description {
+  margin: 22px 0 0;
+  color: #111;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.recruit-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 30px;
+  padding: 14px 25px;
+  background: #fff;
+  color: #111;
+  border-radius: 999px;
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.recruit-arrow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.recruit-arrow span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
+  color: #111;
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  line-height: 1;
+}
+
+/* ========================================
+   PERSON
+   ======================================== */
+
+.recruit-person {
+  position: absolute;
+  z-index: 2;
+
+  /* カード右側に固定 */
+  right: -2%;
+  top: 0;
+
+  width: 48%;
+  height: 100%;
+
+  /* ここが人物の表示窓 */
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.recruit-person img {
+  position: absolute;
+
+  /* 人物を右寄りに配置 */
+  left: 58%;
+  top: -2%;
+
+  width: auto;
+
+  /* 人物をかなり大きくする */
+  height: 155%;
+
+  max-width: none;
+
+  object-fit: contain;
+  object-position: top center;
+
+  /* 初期状態 */
+  transform: translateX(-50%);
+}
+
+
+/* ========================================
+   PERSON ANIMATION
+   ======================================== */
+
+.recruit-card .reveal-pop {
+  opacity: 0;
+
+  transform:
+    translateY(110px)
+    scale(0.96);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.recruit-card .reveal-pop.is-visible {
+  opacity: 1;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 767px) {
+
+  .recruit-card-text {
+    width: 66%;
+    padding: 28px 24px;
+  }
+
+  .recruit-label {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .recruit-title {
+    margin-top: 18px;
+    font-size: 40px;
+  }
+
+  .recruit-description {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .recruit-arrow {
+    margin-top: 22px;
+    padding: 11px 20px;
+    font-size: 17px;
+    gap: 7px;
+  }
+
+  .recruit-arrow span {
+    font-size: 21px;
+  }
+}

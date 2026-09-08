@@ -62,7 +62,347 @@
       background: #ffba00;
       border-radius: 4px;
     }
-  </style>
+
+
+<style>
+
+/* ========================================
+   RECRUITMENT CARDS
+   ======================================== */
+
+.recruit-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 0 18px;
+}
+
+.recruit-card {
+  position: relative;
+  display: block;
+  min-height: 390px;
+  overflow: hidden;
+  border-radius: 22px;
+  text-decoration: none;
+  isolation: isolate;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.recruit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* カードカラー */
+
+.recruit-card-yellow {
+  background: #f7d94c;
+}
+
+.recruit-card-blue {
+  background: #72c7ed;
+}
+
+.recruit-card-pink {
+  background: #f3a3bd;
+}
+
+.recruit-card-green {
+  background: #a9dc72;
+}
+
+
+/* テキスト */
+
+.recruit-card-text {
+  position: relative;
+  z-index: 3;
+  width: 62%;
+  padding: 42px 40px 36px;
+}
+
+.recruit-label {
+  display: inline-block;
+  padding: 8px 14px 7px;
+  background: #111;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.recruit-title {
+  margin-top: 20px;
+  color: #111;
+  font-size: clamp(34px, 3.2vw, 58px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.recruit-description {
+  margin-top: 20px;
+  color: #111;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+
+/* 詳細を見る */
+
+.recruit-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+  color: #111;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.recruit-arrow span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.recruit-card:hover .recruit-arrow span {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   PERSON
+   ======================================== */
+
+.recruit-person {
+  position: absolute;
+  z-index: 2;
+  right: -10px;
+  bottom: -10px;
+  width: 48%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.recruit-person img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 105%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 767px) {
+
+  .recruit-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 0 12px;
+  }
+
+  .recruit-card {
+    min-height: 330px;
+    border-radius: 18px;
+  }
+
+  .recruit-card-text {
+    width: 68%;
+    padding: 28px 24px 26px;
+  }
+
+  .recruit-label {
+    padding: 7px 11px 6px;
+    font-size: 15px;
+  }
+
+  .recruit-title {
+    margin-top: 15px;
+    font-size: 34px;
+  }
+
+  .recruit-description {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .recruit-arrow {
+    margin-top: 18px;
+    gap: 9px;
+    font-size: 13px;
+  }
+
+  .recruit-arrow span {
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+  }
+
+  .recruit-person {
+    right: -5px;
+    bottom: -5px;
+    width: 45%;
+    height: 100%;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+   ======================================== */
+
+@media (max-width: 420px) {
+
+  .recruit-card {
+    min-height: 300px;
+  }
+
+  .recruit-card-text {
+    width: 70%;
+    padding: 24px 20px;
+  }
+
+  .recruit-title {
+    font-size: 30px;
+  }
+
+  .recruit-description {
+    font-size: 13px;
+  }
+
+  .recruit-person {
+    width: 46%;
+  }
+
+}
+
+
+
+  /* ========================================
+     SCROLL REVEAL
+     ======================================== */
+
+  .reveal-pop {
+    opacity: 0;
+    transform: translateY(90px) scale(0.94);
+    transition:
+      opacity 0.55s ease,
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-pop.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-45px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(45px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+
+  /* 少し遅れて表示 */
+
+  .reveal-delay-1 {
+    transition-delay: 0.12s;
+  }
+
+  .reveal-delay-2 {
+    transition-delay: 0.24s;
+  }
+
+  .reveal-delay-3 {
+    transition-delay: 0.36s;
+  }
+
+
+  /* スマホでは少し控えめ */
+
+  @media (max-width: 639px) {
+
+    .reveal-pop {
+      transform: translateY(55px) scale(0.96);
+    }
+
+    .reveal-left,
+    .reveal-right {
+      transform: translateY(30px);
+    }
+
+    .reveal-pop.is-visible,
+    .reveal-left.is-visible,
+    .reveal-right.is-visible {
+      transform: translateY(0) scale(1);
+    }
+
+  }
+
+</style>
 </head>
 
 <body class="antialiased selection:bg-yellow-400 selection:text-black">
@@ -347,188 +687,190 @@
   <div id="stores-container"></div>
 
   <link rel="stylesheet" href="components/stores-section.css">
-  <script src="components/stores-section.js"></script>
+<link rel="stylesheet" href="components/recruitment.css">
+<script src="components/stores-data.js"></script>
+<script src="components/stores-section.js"></script>
 
 
   <!-- RECRUITMENT -->
-  <section id="findjob" class="bg-black border-b border-zinc-800 py-16 sm:py-24">
+<section id="findjob" class="bg-white py-16 sm:py-24 overflow-hidden">
 
-    <div class="max-w-7xl mx-auto px-5 sm:px-6">
+  <div class="w-full">
 
-      <div class="mb-10 sm:mb-14">
-        <p class="font-en italic font-black text-yellow-400 text-sm sm:text-base tracking-widest">
-          RECRUITMENT &amp; CONTENTS
-        </p>
+    <!-- SECTION TITLE -->
+    <div class="px-5 sm:px-8 lg:px-12 mb-10 sm:mb-14">
 
-        <h2 class="text-3xl sm:text-5xl md:text-6xl font-black mt-2">
-          採用情報・コンテンツ
-        </h2>
-      </div>
+      <p class="font-en italic font-black text-black text-sm sm:text-base tracking-widest">
+        RECRUITMENT &amp; CONTENTS
+      </p>
 
-      <div class="grid md:grid-cols-2 gap-5 sm:gap-6">
+      <h2 class="text-3xl sm:text-5xl md:text-6xl font-black mt-2 text-black">
+        採用情報・コンテンツ
+      </h2>
 
-        <!-- 01 -->
-        <a
-          href="pages/jobs.html"
-          class="group relative overflow-hidden min-h-[220px] rounded-2xl border border-zinc-800 bg-zinc-950 p-6 sm:p-8 flex flex-col justify-end"
-        >
-          <div
-            class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:scale-105 transition-transform duration-500"
-            style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80')"
-          ></div>
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
-
-          <div class="relative z-10">
-            <p class="font-en italic font-black text-yellow-400 text-sm tracking-widest">
-              01 / JOB LIST
-            </p>
-
-            <h3 class="text-2xl sm:text-3xl font-black mt-1">
-              求人を探す
-            </h3>
-
-            <p class="text-sm text-zinc-300 mt-3 leading-relaxed max-w-xl">
-              全国各地の募集職種・給与条件・勤務形態から自分に合った求人を検索できます。
-            </p>
-
-            <div class="mt-5 font-black">
-              求人一覧へ ➔
-            </div>
-          </div>
-        </a>
-
-
-        <!-- 02 -->
-        <a
-          href="pages/stores.html"
-          class="group relative overflow-hidden min-h-[220px] rounded-2xl border border-zinc-800 bg-zinc-950 p-6 sm:p-8 flex flex-col justify-end"
-        >
-          <div
-            class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:scale-105 transition-transform duration-500"
-            style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80')"
-          ></div>
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
-
-          <div class="relative z-10">
-            <p class="font-en italic font-black text-yellow-400 text-sm tracking-widest">
-              02 / STORES
-            </p>
-
-            <h3 class="text-2xl sm:text-3xl font-black mt-1">
-              店舗一覧
-            </h3>
-
-            <p class="text-sm text-zinc-300 mt-3 leading-relaxed">
-              第一総合レジャーグループが展開する全国各エリアの店舗情報をご紹介。
-            </p>
-
-            <div class="mt-5 font-black">
-              店舗一覧へ ➔
-            </div>
-          </div>
-        </a>
-
-
-        <!-- 03 -->
-        <a
-          href="pages/career.html"
-          class="group relative overflow-hidden min-h-[220px] rounded-2xl border border-zinc-800 bg-zinc-950 p-6 sm:p-8 flex flex-col justify-end"
-        >
-          <div
-            class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:scale-105 transition-transform duration-500"
-            style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80')"
-          ></div>
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
-
-          <div class="relative z-10">
-            <p class="font-en italic font-black text-yellow-400 text-sm tracking-widest">
-              03 / CAREER STEP
-            </p>
-
-            <h3 class="text-2xl sm:text-3xl font-black mt-1">
-              キャリアパス
-            </h3>
-
-            <p class="text-sm text-zinc-300 mt-3 leading-relaxed">
-              未経験からのステップアップ制度、評価体系、昇格の実績について解説します。
-            </p>
-
-            <div class="mt-5 font-black">
-              キャリアを見る ➔
-            </div>
-          </div>
-        </a>
-
-
-        <!-- 04 -->
-        <a
-          href="pages/flow.html"
-          class="group relative overflow-hidden min-h-[220px] rounded-2xl border border-zinc-800 bg-zinc-950 p-6 sm:p-8 flex flex-col justify-end"
-        >
-          <div
-            class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:scale-105 transition-transform duration-500"
-            style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80')"
-          ></div>
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
-
-          <div class="relative z-10">
-            <p class="font-en italic font-black text-yellow-400 text-sm tracking-widest">
-              04 / SELECTION FLOW
-            </p>
-
-            <h3 class="text-2xl sm:text-3xl font-black mt-1">
-              選考の流れ
-            </h3>
-
-            <p class="text-sm text-zinc-300 mt-3 leading-relaxed">
-              応募から内定・入社までのスピード感ある選考プロセスをご案内します。
-            </p>
-
-            <div class="mt-5 font-black">
-              選考フローを見る ➔
-            </div>
-          </div>
-        </a>
-
-
-        <!-- 05 -->
-        <a
-          href="pages/works.html"
-          class="group relative overflow-hidden min-h-[220px] rounded-2xl border border-zinc-800 bg-zinc-950 p-6 sm:p-8 flex flex-col justify-end md:col-span-2"
-        >
-          <div
-            class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:scale-105 transition-transform duration-500"
-            style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80')"
-          ></div>
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
-
-          <div class="relative z-10">
-            <p class="font-en italic font-black text-yellow-400 text-sm tracking-widest">
-              05 / WORK STYLE
-            </p>
-
-            <h3 class="text-2xl sm:text-3xl font-black mt-1">
-              DAISOの一週間
-            </h3>
-
-            <p class="text-sm text-zinc-300 mt-3 leading-relaxed max-w-3xl">
-              オンとオフを全力で楽しむ、DAISOで働くスタッフのリアルな一週間のスケジュールをご紹介。
-            </p>
-
-            <div class="mt-5 font-black">
-              一週間の流れを見る ➔
-            </div>
-          </div>
-        </a>
-
-      </div>
     </div>
-  </section>
+
+
+    <!-- CARDS -->
+    <div class="recruit-grid">
+
+
+      <!-- 01 求人を探す -->
+      <a
+        href="pages/jobs.html"
+        class="recruit-card recruit-card-yellow"
+      >
+
+        <div class="recruit-card-text">
+
+          <span class="recruit-label reveal-up">
+            JOB LIST
+          </span>
+
+          <h3 class="recruit-title reveal-up reveal-delay-1">
+            求人を探す
+          </h3>
+
+          <p class="recruit-description reveal-up reveal-delay-2">
+            自分に合った仕事を<br>
+            見つけよう。
+          </p>
+
+          <span class="recruit-arrow reveal-up reveal-delay-3">
+            <span>→</span>
+            詳しく見る
+          </span>
+
+        </div>
+
+        <div class="recruit-person reveal-pop">
+          <img
+            src="assets/images/recruit/recruit-person-01.png"
+            alt=""
+          >
+        </div>
+
+      </a>
+
+
+      <!-- 02 キャリアパス -->
+      <a
+        href="pages/career.html"
+        class="recruit-card recruit-card-blue"
+      >
+
+        <div class="recruit-card-text">
+
+          <span class="recruit-label reveal-up">
+            CAREER PATH
+          </span>
+
+          <h3 class="recruit-title reveal-up reveal-delay-1">
+            キャリアパス
+          </h3>
+
+          <p class="recruit-description reveal-up reveal-delay-2">
+            あなたの未来を<br>
+            一緒に描きましょう。
+          </p>
+
+          <span class="recruit-arrow reveal-up reveal-delay-3">
+            <span>→</span>
+            詳しく見る
+          </span>
+
+        </div>
+
+        <div class="recruit-person reveal-pop">
+          <img
+            src="assets/images/recruit/recruit-person-02.png"
+            alt=""
+          >
+        </div>
+
+      </a>
+
+
+      <!-- 03 選考の流れ -->
+      <a
+        href="pages/flow.html"
+        class="recruit-card recruit-card-pink"
+      >
+
+        <div class="recruit-card-text">
+
+          <span class="recruit-label reveal-up">
+            FLOW
+          </span>
+
+          <h3 class="recruit-title reveal-up reveal-delay-1">
+            選考の流れ
+          </h3>
+
+          <p class="recruit-description reveal-up reveal-delay-2">
+            応募から内定までの<br>
+            ステップをご紹介します。
+          </p>
+
+          <span class="recruit-arrow reveal-up reveal-delay-3">
+            <span>→</span>
+            詳しく見る
+          </span>
+
+        </div>
+
+        <div class="recruit-person reveal-pop">
+          <img
+            src="assets/images/recruit/recruit-person-03.png"
+            alt=""
+          >
+        </div>
+
+      </a>
+
+
+      <!-- 04 DAISOの一週間 -->
+      <a
+        href="pages/works.html"
+        class="recruit-card recruit-card-green"
+      >
+
+        <div class="recruit-card-text">
+
+          <span class="recruit-label reveal-up">
+            DAISO WEEK
+          </span>
+
+          <h3 class="recruit-title reveal-up reveal-delay-1">
+            DAISOの一週間
+          </h3>
+
+          <p class="recruit-description reveal-up reveal-delay-2">
+            働く環境や1週間の<br>
+            スケジュールをご紹介します。
+          </p>
+
+          <span class="recruit-arrow reveal-up reveal-delay-3">
+            <span>→</span>
+            詳しく見る
+          </span>
+
+        </div>
+
+        <div class="recruit-person reveal-pop">
+          <img
+            src="assets/images/recruit/recruit-person-04.png"
+            alt=""
+          >
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
 
   <!-- MEMBERS -->
@@ -1196,6 +1538,8 @@
       });
     });
   </script>
+
+<script src="components/scroll-effects.js"></script>
 
 </body>
 </html>
