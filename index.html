@@ -121,8 +121,8 @@
 .recruit-card-text {
   position: relative;
   z-index: 3;
-  width: 62%;
-  padding: 42px 40px 36px;
+  width: 68%;
+  padding: 42px 32px 36px;
 }
 
 .recruit-label {
@@ -398,6 +398,18 @@
     .reveal-left.is-visible,
     .reveal-right.is-visible {
       transform: translateY(0) scale(1);
+    }
+
+  }
+
+  /* ========================================
+     RECRUITMENT PC ONLY
+     ======================================== */
+
+  @media (min-width: 768px) {
+
+    .recruit-title {
+      white-space: nowrap;
     }
 
   }
