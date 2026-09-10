@@ -3,31 +3,8 @@ const storesData = {
   'The White': {
     topUrl: 'https://www.cityheaven.net/hyogo/A2801/A280101/the_white/',
     girlUrl: 'https://www.cityheaven.net/hyogo/A2801/A280101/the_white/girllist/',
-
     mainImage: '',
-
-    casts: [
-      {
-        name: 'りん',
-        image: ''
-      },
-      {
-        name: 'はつこい',
-        image: ''
-      },
-      {
-        name: 'にこ',
-        image: ''
-      },
-      {
-        name: 'りぼん',
-        image: ''
-      },
-      {
-        name: 'ひな',
-        image: ''
-      }
-    ]
+    casts: []
   },
 
   'KOBE GOLD': {

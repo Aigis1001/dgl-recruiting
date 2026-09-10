@@ -205,6 +205,100 @@
 
 ```css
 @media (max-width: 767px) {
+  .recruit-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 0 12px;
+  }
+
+  .recruit-card {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 10 / 5;
+    border-radius: 18px;
+  }
+
+  .recruit-card-text {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+
+  .recruit-label {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .recruit-title {
+    margin-top: 16px;
+    max-width: none;
+    width: auto;
+    font-size: 40px;
+    line-height: 1.08;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  }
+
+  .recruit-description {
+    display: none;
+  }
+
+  .recruit-arrow {
+    margin-top: 20px;
+    padding: 11px 20px;
+    font-size: 17px;
+    gap: 7px;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  }
+
+  .recruit-arrow span {
+    font-size: 21px;
+  }
+
+  .recruit-person {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 80%;
+    right: auto;
+    width: 330px;
+    height: 360px;
+    overflow: visible;
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
+
+  .recruit-person img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 330px;
+    height: 360px;
+    max-width: none;
+    object-fit: contain;
+    object-position: center top;
+    transform: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .recruit-card {
+    aspect-ratio: 10 / 5;
+  }
+
+  .recruit-card-text {
+    padding: 20px;
+  }
+
+  .recruit-title {
+    font-size: 36px;
+  }
+}
 
   /* ========================================
      MOBILE RECRUITMENT CARDS
