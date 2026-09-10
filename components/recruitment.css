@@ -204,6 +204,12 @@
 
 @media (max-width: 767px) {
 
+  .recruit-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 0 12px;
+  }
+
   .recruit-card-text {
     width: 66%;
     padding: 28px 24px;
