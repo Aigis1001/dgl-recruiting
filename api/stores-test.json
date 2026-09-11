@@ -1,0 +1,35 @@
+[
+  {
+    "name": "The White",
+    "topUrl": "https://www.cityheaven.net/hyogo/A2801/A280101/the_white/",
+    "girlUrl": "https://fuzoku.jp/fukuharawhite/girllist/",
+    "mainImage": "https://img2.cityheaven.net/img/shop/kh/the_white/shps2710022449_1_20260829182809pc.jpeg?cache02=1&imgopt=y",
+    "casts": [
+      {
+        "name": "おもち",
+        "image": "https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/20260904013556546.jpg?height=400&quality=80&type=resize&width=300",
+        "girlUrl": "https://fuzoku.jp/fukuharawhite/girl/2/"
+      },
+      {
+        "name": "みるく",
+        "image": "https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/2026082316440183.jpg?height=400&quality=80&type=resize&width=300",
+        "girlUrl": "https://fuzoku.jp/fukuharawhite/girl/877/"
+      },
+      {
+        "name": "りん",
+        "image": "https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/20250502123343941.jpg?height=400&quality=80&type=resize&width=300",
+        "girlUrl": "https://fuzoku.jp/fukuharawhite/girl/17/"
+      },
+      {
+        "name": "はつこい",
+        "image": "https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/2026090401361815.jpg?height=400&quality=80&type=resize&width=300",
+        "girlUrl": "https://fuzoku.jp/fukuharawhite/girl/578/"
+      },
+      {
+        "name": "ことり",
+        "image": "https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/20260904013625476.jpg?height=400&quality=80&type=resize&width=300",
+        "girlUrl": "https://fuzoku.jp/fukuharawhite/girl/597/"
+      }
+    ]
+  }
+]

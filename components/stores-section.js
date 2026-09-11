@@ -74,28 +74,78 @@ document.addEventListener('DOMContentLoaded', async function () {
    * GitHub PagesではPHPが動作しないため、
    * API取得に失敗した場合は下記の仮表示へ戻す。
    */
-  let liveStores = null;
+        let liveStores = null;
 
-  try {
+  /*
+   * ローカルの file:// 環境では
+   * PHP APIを呼び出せないため、
+   * 現在確認済みのThe Whiteを使用する。
+   *
+   * HTTP環境では api/stores.php を使用する。
+   */
 
-    const response = await fetch('/api/stores.php', {
-      method: 'GET',
-      cache: 'no-store'
-    });
+  if (location.protocol === 'file:') {
 
-    if (response.ok) {
-      const data = await response.json();
-
-      if (Array.isArray(data)) {
-        liveStores = data;
+    liveStores = [
+      {
+        name: 'The White',
+        topUrl: 'https://www.cityheaven.net/hyogo/A2801/A280101/the_white/',
+        girlUrl: 'https://fuzoku.jp/fukuharawhite/girllist/',
+        mainImage: 'https://img2.cityheaven.net/img/shop/kh/the_white/shps2710022449_1_20260829182809pc.jpeg?cache02=1&imgopt=y',
+        casts: [
+          {
+            name: 'おもち',
+            image: 'https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/20260904013556546.jpg?height=400&quality=80&type=resize&width=300'
+          },
+          {
+            name: 'みるく',
+            image: 'https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/20260904013603456.jpg?height=400&quality=80&type=resize&width=300'
+          },
+          {
+            name: 'りん',
+            image: 'https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/20260904013610379.jpg?height=400&quality=80&type=resize&width=300'
+          },
+          {
+            name: 'はつこい',
+            image: 'https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/2026090401361815.jpg?height=400&quality=80&type=resize&width=300'
+          },
+          {
+            name: 'ことり',
+            image: 'https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/20260904013625476.jpg?height=400&quality=80&type=resize&width=300'
+          }
+        ]
       }
+    ];
+
+  } else {
+
+    try {
+
+      const response = await fetch(
+        './api/stores.php',
+        {
+          method: 'GET',
+          cache: 'no-store'
+        }
+      );
+
+      if (response.ok) {
+
+        const data = await response.json();
+
+        if (Array.isArray(data)) {
+          liveStores = data;
+        }
+
+      }
+
+    } catch (error) {
+
+      console.log(
+        'Store live data is not available.'
+      );
+
     }
-
-  } catch (error) {
-
-    console.log(
-      'Store live data is not available yet. Using placeholder data.'
-    );
 
   }
 
