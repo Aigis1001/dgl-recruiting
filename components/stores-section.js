@@ -157,13 +157,64 @@ document.addEventListener('DOMContentLoaded', async function () {
    * それ以外
    * → 仮データを使用
    */
-  const displayStores =
+    const displayStores =
     Array.isArray(liveStores) && liveStores.length > 0
       ? liveStores
       : stores;
 
 
-  renderStores(displayStores);
+  /*
+   * The Whiteだけは今回用意した
+   * ローカル画像を使用する。
+   *
+   * APIから取得した場合でも、
+   * The Whiteの画像だけはこちらを優先する。
+   */
+    const displayStoresWithLocalWhite = displayStores.map(function (store) {
+
+    if (store.name !== 'The White') {
+      return store;
+    }
+
+    return {
+      ...store,
+
+      mainImage:
+        'assets/images/stores/the-white/store-main.jpg',
+
+      casts: [
+        {
+          name: 'おもち',
+          image:
+            'assets/images/stores/the-white/cast-01.jpg'
+        },
+        {
+          name: 'みるく',
+          image:
+            'assets/images/stores/the-white/cast-02.jpg'
+        },
+        {
+          name: 'りん',
+          image:
+            'assets/images/stores/the-white/cast-03.jpg'
+        },
+        {
+          name: 'はつこい',
+          image:
+            'assets/images/stores/the-white/cast-04.jpg'
+        },
+        {
+          name: 'ことり',
+          image:
+            'assets/images/stores/the-white/cast-05.jpg'
+        }
+      ]
+    };
+
+  });
+
+
+  renderStores(displayStoresWithLocalWhite);
 
 
   /*

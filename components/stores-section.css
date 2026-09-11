@@ -82,9 +82,9 @@
   display: block;
   width: 100%;
   max-width: 1280px;
-  height: auto;
+  height: 360px;
   margin: 0 auto;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   border: 1px solid #27272a;
   border-radius: 18px;
