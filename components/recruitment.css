@@ -240,6 +240,7 @@
     font-size: 40px;
     line-height: 1.08;
     color: #fff;
+    white-space: nowrap;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
   }
 
@@ -282,6 +283,16 @@
     max-width: none;
     object-fit: contain;
     object-position: center top;
+    transform: none;
+  }
+
+  .recruit-person.reveal-pop {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+
+  .recruit-arrow.reveal-up {
+    opacity: 1;
     transform: none;
   }
 }
