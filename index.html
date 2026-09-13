@@ -364,9 +364,10 @@
   }
 
   .group-about-copy h2 {
-    max-width: none;
-    font-size: clamp(2.5rem, 11vw, 3.7rem);
-    line-height: 1.02;
+  max-width: none;
+  width: auto;
+  font-size: clamp(2.5rem, 11vw, 3.7rem);
+  line-height: 1.02;
   }
 
   .group-about-line {
@@ -391,10 +392,10 @@
   position: absolute;
   z-index: 10;
 
-  top: auto;
+  top: 20px;
   right: 18px;
   left: auto;
-  bottom: 22px;
+  bottom: auto;
 
   width: 92px;
   height: 92px;
@@ -447,11 +448,12 @@
 }
 
 .group-about-person {
-  right: 56%;
+  left: 50%;
+  right: auto;
   bottom: 0;
   height: 100%;
   width: auto;
-  transform: translateX(50%);
+  transform: translateX(-50%);
 }
 
 
