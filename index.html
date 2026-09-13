@@ -207,7 +207,7 @@
 .group-about-copy {
   position: relative;
   z-index: 3;
-  width: 57%;
+  width: 90%;
   min-height: 975px;
   display: flex;
   flex-direction: column;
@@ -226,8 +226,9 @@
 
 .group-about-copy h2 {
   margin: 0;
-  max-width: 760px;
-  font-size: clamp(3rem, 5.2vw, 5.8rem);
+  max-width: 1000px;
+  width: 1000px;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
   line-height: 1.02;
   font-weight: 900;
   letter-spacing: -0.045em;
@@ -736,53 +737,49 @@
 
 <!-- GROUP ABOUT -->
 <section id="group-about" class="group-about-section">
-
   <div class="group-about-inner">
 
     <div class="group-about-copy">
 
-      <p class="group-about-en font-en">
-        ABOUT DAISO
-      </p>
+      <p class="group-about-en font-en">BEYOND ENTERTAINMENT.</p>
 
       <h2>
-        第一総合レジャー<br class="sm:hidden">
-        グループとは？
+        まだ、エンターテインメントに<br class="sm:hidden">
+        できることがある。
       </h2>
 
       <div class="group-about-line"></div>
 
       <p class="group-about-lead">
-        関わるすべての人に<br>
-        「うれしい」の連鎖を。
+        楽しさをつくる。<br>
+        その先まで、仕事にする。
       </p>
 
       <p class="group-about-text">
-        私たちは、エンターテインメントを通じて
-        人と人とのつながりを生み出し、<br>
-        業界のイメージと未来を
-        本気で変えていくグループです。
-      </p>
+  第一総合レジャーグループは、<br>
+  レジャーをもっと自由に、もっと面白くするために、<br>
+  変化を恐れず新しい価値をつくり続けるグループです。
+  <br><br>
+  目の前のサービスだけではなく、<br>
+  そこで生まれる時間や体験までデザインする。<br>
+  そんな仕事の可能性を、私たちは追いかけています。
+</p>
+
       <a href="pages/about.html" class="group-about-more">
         <span>詳しくはコチラ▶</span>
       </a>
 
     </div>
 
-
     <div class="group-about-visual">
-
-
       <img
         src="assets/images/about/about-person.png"
         alt=""
         class="group-about-person"
       >
-
     </div>
 
   </div>
-
 </section>
 
 
@@ -1108,49 +1105,73 @@
       <div class="grid md:grid-cols-2 gap-5 sm:gap-6">
 
         <a
-          href="pages/about.html"
-          class="group relative overflow-hidden min-h-[320px] rounded-2xl border border-zinc-800 p-8 sm:p-12 flex flex-col justify-end"
-        >
-          <div
-            class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:scale-105 transition-transform duration-500"
-            style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80')"
-          ></div>
+  href="pages/about.html"
+  class="group relative bg-zinc-900 border border-zinc-800 p-8 sm:p-12 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[320px]"
+>
+  <div class="absolute inset-0 z-0">
+    <img
+      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+      alt=""
+      class="w-full h-full object-cover opacity-30 group-hover:scale-105 transition duration-500"
+    >
+    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
+  </div>
 
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
+  <div class="relative z-10">
+    <span class="font-en text-xs font-bold text-yellow-400 tracking-widest uppercase block mb-2">
+      ABOUT DAISO
+    </span>
 
-          <div class="relative z-10">
-            <h3 class="text-2xl sm:text-3xl font-black">
-              第一総合レジャーグループとは？
-            </h3>
+    <h3 class="text-2xl sm:text-3xl font-black mb-4 group-hover:text-yellow-400 transition">
+      第一総合レジャーグループとは？
+    </h3>
 
-            <p class="text-sm text-zinc-300 mt-4 leading-relaxed">
-              お客様・スタッフ・パートナー全員が「笑顔」と「喜び」を共有できる環境づくりを目指す総合レジャー企業。業界のイメージと未来を私たちが本気で変えていきます。
-            </p>
-          </div>
-        </a>
+    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
+      お客様・スタッフ・パートナー全員が「笑顔」と「喜び」を共有できる環境づくりを目指す総合レジャー企業。
+      業界のイメージと未来を私たちが本気で変えていきます。
+    </p>
+  </div>
+
+  <div class="relative z-10 font-bold text-xs text-yellow-400 flex items-center gap-2">
+    詳しくはコチラ ▶
+  </div>
+</a>
 
 
-        <a
-          href="pages/numbers.html"
-          class="group relative overflow-hidden min-h-[320px] rounded-2xl border border-zinc-800 p-8 sm:p-12 flex flex-col justify-end"
-        >
-          <div
-            class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:scale-105 transition-transform duration-500"
-            style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80')"
-          ></div>
+<a
+  href="pages/data.html"
+  class="group relative bg-zinc-900 border border-zinc-800 p-8 sm:p-12 rounded-2xl overflow-hidden transition flex flex-col justify-between min-h-[320px]"
+>
+  <div class="absolute inset-0 z-0">
+    <img
+      src="assets/images/about/data-bg.jpg"
+      alt=""
+      class="w-full h-full object-cover opacity-30 group-hover:scale-105 transition duration-500"
+    >
+    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
+  </div>
 
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
+  <div class="relative z-10">
+    <span class="font-en text-xs font-bold text-yellow-400 tracking-widest uppercase block mb-2">
+      DAISO DATA
+    </span>
 
-          <div class="relative z-10">
-            <h3 class="text-2xl sm:text-3xl font-black">
-              数字で見るDAISO
-            </h3>
+    <h3 class="text-2xl sm:text-3xl font-black mb-4 group-hover:text-yellow-400 transition">
+      数字から見る、私たちの現在地。
+    </h3>
 
-            <p class="text-sm text-zinc-300 mt-4 leading-relaxed">
-              運営店舗数20拠点超、グループ在籍数300名超、未経験入社率85%など、実績とデータで分かるDAISOのリアルな姿をご紹介します。
-            </p>
-          </div>
-        </a>
+    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
+      店舗数やスタッフ数、働き方に関するデータなど、
+      数字を通してグループの今を紹介します。
+      知っているようで知らないDAISOの姿を、
+      さまざまな角度からご覧ください。
+    </p>
+  </div>
+
+  <div class="relative z-10 font-bold text-xs text-yellow-400 flex items-center gap-2">
+    詳しくはコチラ ▶
+  </div>
+</a>
 
       </div>
     </div>
