@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async function () {
+document.addEventListener('DOMContentLoaded', function () {
 
   const container = document.getElementById('stores-container');
 
@@ -6,215 +6,317 @@ document.addEventListener('DOMContentLoaded', async function () {
     return;
   }
 
+
   /*
-   * 9店舗の基本情報
+   * 店舗情報
    *
-   * 店舗メイン画像
-   * → City Heaven TOP
+   * メイン画像
+   * → store-main.jpg
    *
-   * 女の子5名
-   * → 風俗じゃぱん /girllist/
+   * キャスト画像
+   * → cast-01.jpg ～ cast-05.jpg
    *
-   * 本館・別館がある場合は、
-   * 女の子取得URLを本館と共有する。
+   * キャスト名だけ後から変更すればOK。
    */
   const stores = [
+
+    /*
+     * 01 The White
+     */
     {
       name: 'The White',
       topUrl: 'https://www.cityheaven.net/hyogo/A2801/A280101/the_white/',
-      girlUrl: 'https://fuzoku.jp/fukuharawhite/girllist/'
-    },
-    {
-      name: 'KOBE GOLD',
-      topUrl: 'https://www.cityheaven.net/hyogo/A2801/A280102/kobe_gold/',
-      girlUrl: 'https://fuzoku.jp/kobegoldff/girllist/'
-    },
-    {
-      name: 'モンテクラブ',
-      topUrl: 'https://www.cityheaven.net/hyogo/A2801/A280102/monte/',
-      girlUrl: 'https://fuzoku.jp/soapsakura/girllist/'
-    },
-    {
-      name: 'プラチナ本館',
-      topUrl: 'https://www.cityheaven.net/fukui/A1801/A180101/hot-heaven/',
-      girlUrl: 'https://fuzoku.jp/hot2009/girllist/'
-    },
-    {
-      name: 'プラチナ別館',
-      topUrl: 'https://www.cityheaven.net/fukui/A1801/A180101/hien_b/',
-      girlUrl: 'https://fuzoku.jp/hot2009/girllist/'
-    },
-    {
-      name: 'ホワイト宮殿',
-      topUrl: 'https://www.cityheaven.net/shiga/A2501/A250101/ogoto_otemachi/',
-      girlUrl: 'https://fuzoku.jp/ogotoogoto/girllist/'
-    },
-    {
-      name: 'パリス宮殿',
-      topUrl: 'https://www.cityheaven.net/shiga/A2501/A250101/ogoto_men/',
-      girlUrl: 'https://fuzoku.jp/mensspa/girllist/'
-    },
-    {
-      name: 'ダイヤモンド宮殿',
-      topUrl: 'https://www.cityheaven.net/kumamoto/A4301/A430101/marin_premium_k/',
-      girlUrl: 'https://fuzoku.jp/Diamondkyuden/girllist/'
-    },
-    {
-      name: 'ダイヤモンド宮殿別館',
-      topUrl: 'https://www.cityheaven.net/kumamoto/A4301/A430101/churippu_girls/',
-      girlUrl: 'https://fuzoku.jp/Diamondkyuden/girllist/'
-    }
-  ];
-
-
-  /*
-   * 本番サーバーにAPIが存在する場合のみ
-   * 最新データを取得する。
-   *
-   * GitHub PagesではPHPが動作しないため、
-   * API取得に失敗した場合は下記の仮表示へ戻す。
-   */
-        let liveStores = null;
-
-  /*
-   * ローカルの file:// 環境では
-   * PHP APIを呼び出せないため、
-   * 現在確認済みのThe Whiteを使用する。
-   *
-   * HTTP環境では api/stores.php を使用する。
-   */
-
-  if (location.protocol === 'file:') {
-
-    liveStores = [
-      {
-        name: 'The White',
-        topUrl: 'https://www.cityheaven.net/hyogo/A2801/A280101/the_white/',
-        girlUrl: 'https://fuzoku.jp/fukuharawhite/girllist/',
-        mainImage: 'https://img2.cityheaven.net/img/shop/kh/the_white/shps2710022449_1_20260829182809pc.jpeg?cache02=1&imgopt=y',
-        casts: [
-          {
-            name: 'おもち',
-            image: 'https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/20260904013556546.jpg?height=400&quality=80&type=resize&width=300'
-          },
-          {
-            name: 'みるく',
-            image: 'https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/20260904013603456.jpg?height=400&quality=80&type=resize&width=300'
-          },
-          {
-            name: 'りん',
-            image: 'https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/20260904013610379.jpg?height=400&quality=80&type=resize&width=300'
-          },
-          {
-            name: 'はつこい',
-            image: 'https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/2026090401361815.jpg?height=400&quality=80&type=resize&width=300'
-          },
-          {
-            name: 'ことり',
-            image: 'https://d33zyvzp273vlc.cloudfront.net/img/shop/fukuharawhite/gimg/20260904013625476.jpg?height=400&quality=80&type=resize&width=300'
-          }
-        ]
-      }
-    ];
-
-  } else {
-
-    try {
-
-      const response = await fetch(
-        './api/stores.php',
-        {
-          method: 'GET',
-          cache: 'no-store'
-        }
-      );
-
-      if (response.ok) {
-
-        const data = await response.json();
-
-        if (Array.isArray(data)) {
-          liveStores = data;
-        }
-
-      }
-
-    } catch (error) {
-
-      console.log(
-        'Store live data is not available.'
-      );
-
-    }
-
-  }
-
-
-  /*
-   * 本番サーバーから正常なデータが返ってきた場合
-   * → 実データを使用
-   *
-   * それ以外
-   * → 仮データを使用
-   */
-    const displayStores =
-    Array.isArray(liveStores) && liveStores.length > 0
-      ? liveStores
-      : stores;
-
-
-  /*
-   * The Whiteだけは今回用意した
-   * ローカル画像を使用する。
-   *
-   * APIから取得した場合でも、
-   * The Whiteの画像だけはこちらを優先する。
-   */
-    const displayStoresWithLocalWhite = displayStores.map(function (store) {
-
-    if (store.name !== 'The White') {
-      return store;
-    }
-
-    return {
-      ...store,
-
-      mainImage:
-        'assets/images/stores/the-white/store-main.jpg',
-
+      girlUrl: 'https://fuzoku.jp/fukuharawhite/girllist/',
+      mainImage: 'assets/images/stores/the-white/store-main.jpg',
       casts: [
         {
           name: 'おもち',
-          image:
-            'assets/images/stores/the-white/cast-01.jpg'
+          image: 'assets/images/stores/the-white/cast-01.jpg'
         },
         {
           name: 'みるく',
-          image:
-            'assets/images/stores/the-white/cast-02.jpg'
+          image: 'assets/images/stores/the-white/cast-02.jpg'
         },
         {
           name: 'りん',
-          image:
-            'assets/images/stores/the-white/cast-03.jpg'
+          image: 'assets/images/stores/the-white/cast-03.jpg'
         },
         {
           name: 'はつこい',
-          image:
-            'assets/images/stores/the-white/cast-04.jpg'
+          image: 'assets/images/stores/the-white/cast-04.jpg'
         },
         {
           name: 'ことり',
-          image:
-            'assets/images/stores/the-white/cast-05.jpg'
+          image: 'assets/images/stores/the-white/cast-05.jpg'
         }
       ]
-    };
-
-  });
+    },
 
 
-  renderStores(displayStoresWithLocalWhite);
+    /*
+     * 02 KOBE GOLD
+     */
+    {
+      name: 'KOBE GOLD',
+      topUrl: 'https://www.cityheaven.net/hyogo/A2801/A280102/kobe_gold/',
+      girlUrl: 'https://fuzoku.jp/kobegoldff/girllist/',
+      mainImage: 'assets/images/stores/kobe-gold/store-main.jpg',
+      casts: [
+        {
+          name: '誘-いざな-リョウ',
+          image: 'assets/images/stores/kobe-gold/cast-01.jpg'
+        },
+        {
+          name: '霧島 明日香',
+          image: 'assets/images/stores/kobe-gold/cast-02.jpg'
+        },
+        {
+          name: '小川 陽花里',
+          image: 'assets/images/stores/kobe-gold/cast-03.jpg'
+        },
+        {
+          name: '月乃 澪',
+          image: 'assets/images/stores/kobe-gold/cast-04.jpg'
+        },
+        {
+          name: '白雪 めいぷる',
+          image: 'assets/images/stores/kobe-gold/cast-05.jpg'
+        }
+      ]
+    },
+
+
+    /*
+     * 03 モンテクラブ
+     */
+    {
+      name: 'モンテクラブ',
+      topUrl: 'https://www.cityheaven.net/hyogo/A2801/A280102/monte/',
+      girlUrl: 'https://fuzoku.jp/soapsakura/girllist/',
+      mainImage: 'assets/images/stores/monte-club/store-main.jpg',
+      casts: [
+        {
+          name: '水瀬 すい',
+          image: 'assets/images/stores/monte-club/cast-01.jpg'
+        },
+        {
+          name: '月島 らむ',
+          image: 'assets/images/stores/monte-club/cast-02.jpg'
+        },
+        {
+          name: '美竹 ゆりあ',
+          image: 'assets/images/stores/monte-club/cast-03.jpg'
+        },
+        {
+          name: '朝比奈 梨央',
+          image: 'assets/images/stores/monte-club/cast-04.jpg'
+        },
+        {
+          name: '長澤 せな',
+          image: 'assets/images/stores/monte-club/cast-05.jpg'
+        }
+      ]
+    },
+
+
+    /*
+     * 04 プラチナ本館
+     */
+    {
+      name: 'プラチナ本館',
+      topUrl: 'https://www.cityheaven.net/fukui/A1801/A180101/hot-heaven/',
+      girlUrl: 'https://fuzoku.jp/hot2009/girllist/',
+      mainImage: 'assets/images/stores/platinum-main/store-main.jpg',
+      casts: [
+        {
+          name: 'えま',
+          image: 'assets/images/stores/platinum-main/cast-01.jpg'
+        },
+        {
+          name: 'かほ',
+          image: 'assets/images/stores/platinum-main/cast-02.jpg'
+        },
+        {
+          name: 'ありあ',
+          image: 'assets/images/stores/platinum-main/cast-03.jpg'
+        },
+        {
+          name: '†˚ʚ大天使るちɞ˚†',
+          image: 'assets/images/stores/platinum-main/cast-04.jpg'
+        },
+        {
+          name: 'みみ',
+          image: 'assets/images/stores/platinum-main/cast-05.jpg'
+        }
+      ]
+    },
+
+
+    /*
+     * 05 プラチナ別館
+     */
+    {
+      name: 'プラチナ別館',
+      topUrl: 'https://www.cityheaven.net/fukui/A1801/A180101/hien_b/',
+      girlUrl: 'https://fuzoku.jp/hot2009/girllist/',
+      mainImage: 'assets/images/stores/platinum-annex/store-main.jpg',
+      casts: [
+        {
+          name: 'ことね',
+          image: 'assets/images/stores/platinum-annex/cast-01.jpg'
+        },
+        {
+          name: 'ちむ',
+          image: 'assets/images/stores/platinum-annex/cast-02.jpg'
+        },
+        {
+          name: 'サツキ',
+          image: 'assets/images/stores/platinum-annex/cast-03.jpg'
+        },
+        {
+          name: 'まゆ',
+          image: 'assets/images/stores/platinum-annex/cast-04.jpg'
+        },
+        {
+          name: 'れいん',
+          image: 'assets/images/stores/platinum-annex/cast-05.jpg'
+        }
+      ]
+    },
+
+
+    /*
+     * 06 ホワイト宮殿
+     */
+    {
+      name: 'ホワイト宮殿',
+      topUrl: 'https://www.cityheaven.net/shiga/A2501/A250101/ogoto_otemachi/',
+      girlUrl: 'https://fuzoku.jp/ogotoogoto/girllist/',
+      mainImage: 'assets/images/stores/white-palace/store-main.jpg',
+      casts: [
+        {
+          name: 'みひろ',
+          image: 'assets/images/stores/white-palace/cast-01.jpg'
+        },
+        {
+          name: 'おこめ♥',
+          image: 'assets/images/stores/white-palace/cast-02.jpg'
+        },
+        {
+          name: 'あり',
+          image: 'assets/images/stores/white-palace/cast-03.jpg'
+        },
+        {
+          name: 'まみ',
+          image: 'assets/images/stores/white-palace/cast-04.jpg'
+        },
+        {
+          name: 'なこ',
+          image: 'assets/images/stores/white-palace/cast-05.jpg'
+        }
+      ]
+    },
+
+
+    /*
+     * 07 パリス宮殿
+     */
+    {
+      name: 'パリス宮殿',
+      topUrl: 'https://www.cityheaven.net/shiga/A2501/A250101/ogoto_men/',
+      girlUrl: 'https://fuzoku.jp/mensspa/girllist/',
+      mainImage: 'assets/images/stores/paris-palace/store-main.jpg',
+      casts: [
+        {
+          name: '美波 かな',
+          image: 'assets/images/stores/paris-palace/cast-01.jpg'
+        },
+        {
+          name: 'ドMのめい♡',
+          image: 'assets/images/stores/paris-palace/cast-02.jpg'
+        },
+        {
+          name: 'こあ',
+          image: 'assets/images/stores/paris-palace/cast-03.jpg'
+        },
+        {
+          name: 'まゆか',
+          image: 'assets/images/stores/paris-palace/cast-04.jpg'
+        },
+        {
+          name: 'みかづき女王',
+          image: 'assets/images/stores/paris-palace/cast-05.jpg'
+        }
+      ]
+    },
+
+
+    /*
+     * 08 ダイヤモンド宮殿
+     */
+    {
+      name: 'ダイヤモンド宮殿',
+      topUrl: 'https://www.cityheaven.net/kumamoto/A4301/A430101/marin_premium_k/',
+      girlUrl: 'https://fuzoku.jp/Diamondkyuden/girllist/',
+      mainImage: 'assets/images/stores/diamond-palace/store-main.jpg',
+      casts: [
+        {
+          name: 'ゆいり',
+          image: 'assets/images/stores/diamond-palace/cast-01.jpg'
+        },
+        {
+          name: 'あお',
+          image: 'assets/images/stores/diamond-palace/cast-02.jpg'
+        },
+        {
+          name: 'おこめ',
+          image: 'assets/images/stores/diamond-palace/cast-03.jpg'
+        },
+        {
+          name: 'もも',
+          image: 'assets/images/stores/diamond-palace/cast-04.jpg'
+        },
+        {
+          name: 'かすみ',
+          image: 'assets/images/stores/diamond-palace/cast-05.jpg'
+        }
+      ]
+    },
+
+
+    /*
+     * 09 ダイヤモンド宮殿別館
+     */
+    {
+      name: 'ダイヤモンド宮殿別館',
+      topUrl: 'https://www.cityheaven.net/kumamoto/A4301/A430101/churippu_girls/',
+      girlUrl: 'https://fuzoku.jp/Diamondkyuden/girllist/',
+      mainImage: 'assets/images/stores/diamond-palace-annex/store-main.jpg',
+      casts: [
+        {
+          name: 'らぶ',
+          image: 'assets/images/stores/diamond-palace-annex/cast-01.jpg'
+        },
+        {
+          name: 'あいす',
+          image: 'assets/images/stores/diamond-palace-annex/cast-02.jpg'
+        },
+        {
+          name: 'ゆあな',
+          image: 'assets/images/stores/diamond-palace-annex/cast-03.jpg'
+        },
+        {
+          name: 'あやね',
+          image: 'assets/images/stores/diamond-palace-annex/cast-04.jpg'
+        },
+        {
+          name: 'みやび',
+          image: 'assets/images/stores/diamond-palace-annex/cast-05.jpg'
+        }
+      ]
+    }
+
+  ];
 
 
   /*
@@ -224,7 +326,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     let html = `
       <section id="stores" class="stores-section">
-
         <div class="stores-inner">
     `;
 
@@ -238,124 +339,48 @@ document.addEventListener('DOMContentLoaded', async function () {
       /*
        * 店舗メイン画像
        */
-      const mainImage = store.mainImage
-        ? `
-          <img
-            src="${store.mainImage}"
-            alt="${store.name}"
-            class="store-main-image-content"
-            loading="lazy"
-          >
-        `
-        : `
-          <div class="store-main-image">
-
-            <span class="font-en">
-              STORE IMAGE
-            </span>
-
-          </div>
-        `;
+      const mainImage = `
+        <img
+          src="${store.mainImage}"
+          alt="${store.name}"
+          class="store-main-image-content"
+          loading="lazy"
+        >
+      `;
 
 
       /*
-       * 女の子5名
+       * キャスト5名
        */
-      let castHtml = '';
+      const castHtml = store.casts
+        .slice(0, 5)
+        .map(function (cast) {
 
+          return `
+            <div class="cast-card">
 
-      if (
-        Array.isArray(store.casts) &&
-        store.casts.length > 0
-      ) {
+              <img
+                src="${cast.image}"
+                alt="${cast.name}"
+                class="cast-image-content"
+                loading="lazy"
+              >
 
-        castHtml = store.casts
-          .slice(0, 5)
-          .map(function (cast) {
+              <p>
+                ${cast.name}
+              </p>
 
-            const image = cast.image
-              ? `
-                <img
-                  src="${cast.image}"
-                  alt="${cast.name}"
-                  class="cast-image-content"
-                  loading="lazy"
-                >
-              `
-              : `
-                <div class="cast-image">
-                  CAST
-                </div>
-              `;
-
-
-            return `
-              <div class="cast-card">
-
-                ${image}
-
-                <p>
-                  ${cast.name}
-                </p>
-
-              </div>
-            `;
-
-          })
-          .join('');
-
-
-      } else {
-
-        /*
-         * API未接続時の仮表示
-         */
-        castHtml = `
-
-          <div class="cast-card">
-            <div class="cast-image">
-              CAST 01
             </div>
-            <p>CAST NAME</p>
-          </div>
+          `;
 
-          <div class="cast-card">
-            <div class="cast-image">
-              CAST 02
-            </div>
-            <p>CAST NAME</p>
-          </div>
-
-          <div class="cast-card">
-            <div class="cast-image">
-              CAST 03
-            </div>
-            <p>CAST NAME</p>
-          </div>
-
-          <div class="cast-card">
-            <div class="cast-image">
-              CAST 04
-            </div>
-            <p>CAST NAME</p>
-          </div>
-
-          <div class="cast-card">
-            <div class="cast-image">
-              CAST 05
-            </div>
-            <p>CAST NAME</p>
-          </div>
-
-        `;
-      }
+        })
+        .join('');
 
 
       /*
        * 店舗ブロック
        */
       html += `
-
         <article class="store-block">
 
           <div class="store-heading">
@@ -389,23 +414,22 @@ document.addEventListener('DOMContentLoaded', async function () {
           </a>
 
         </article>
-
       `;
 
     });
 
 
     html += `
-
         </div>
-
       </section>
-
     `;
 
 
     container.innerHTML = html;
 
   }
+
+
+  renderStores(stores);
 
 });
