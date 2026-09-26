@@ -942,10 +942,37 @@
   position: absolute;
   z-index: 6;
   right: 4%;
-  bottom: 8%;
+  bottom: 1%;
 
-  width: 118px;
-  height: 118px;
+  width: 148px;
+  height: 148px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  border: 4px solid #111111;
+  border-radius: 50%;
+
+  background: #facc15;
+  color: #111111;
+
+  font-size: 17px;
+  line-height: 1.15;
+  font-weight: 900;
+  text-align: center;
+
+  box-shadow: 8px 8px 0 #111111;
+
+  transform: rotate(-6deg);
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+}
 
   display: flex;
   flex-direction: column;
@@ -1097,10 +1124,19 @@
 
     .recruit-v2-arrow {
   right: 4%;
-  bottom: 7%;
+  bottom: 1%;
 
   width: 86px;
   height: 86px;
+
+  border-width: 3px;
+  box-shadow: 5px 5px 0 #111111;
+
+  font-size: 11px;
+  gap: 3px;
+
+  transform: rotate(-6deg);
+}
 
   border-width: 3px;
   box-shadow: 5px 5px 0 #111111;
