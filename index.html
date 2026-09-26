@@ -780,198 +780,259 @@
 <section id="findjob" class="recruit-v2">
 
   <style>
-    .recruit-v2 {
-      width: 100%;
-      background: #ffffff;
-      overflow: hidden;
-    }
+  .recruit-v2 {
+    width: 100%;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .recruit-v2-header {
+    padding: 64px 48px 52px;
+  }
+
+  .recruit-v2-en {
+    margin: 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    color: #111111;
+  }
+
+  .recruit-v2-title {
+    margin: 8px 0 0;
+    font-size: clamp(32px, 4vw, 64px);
+    line-height: 1.05;
+    font-weight: 900;
+    color: #111111;
+  }
+
+  .recruit-v2-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .recruit-v2-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 5 / 2.8;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .recruit-v2-card-yellow {
+    background: #facc15;
+  }
+
+  .recruit-v2-card-blue {
+    background: #60a5fa;
+  }
+
+  .recruit-v2-card-pink {
+    background: #f472b6;
+  }
+
+  .recruit-v2-card-green {
+    background: #86efac;
+  }
+
+  /* カード内テキスト */
+  .recruit-v2-text {
+    position: absolute;
+    z-index: 3;
+    left: 7%;
+    right: 3%;
+    top: 50%;
+    width: auto;
+    transform: translateY(-50%);
+    color: #ffffff;
+  }
+
+  /* JOB LIST / CAREER PATH 等 */
+  .recruit-v2-label {
+    display: inline-block;
+    margin-bottom: 13px;
+    padding: 6px 11px 5px;
+    border: 2px solid #ffffff;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(14px, 1.25vw, 21px);
+    line-height: 1;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  /* タイトルは絶対に折り返さない */
+  .recruit-v2-heading {
+    margin: 0;
+    width: max-content;
+    max-width: none;
+    font-size: clamp(34px, 3.4vw, 58px);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  /* 説明文 */
+  .recruit-v2-description {
+    margin: 18px 0 0;
+    font-size: clamp(16px, 1.35vw, 23px);
+    line-height: 1.6;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  /* 詳しく見るボタン */
+  .recruit-v2-arrow {
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    bottom: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-width: 145px;
+    height: 48px;
+    padding: 0 20px;
+
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 900;
+
+    backdrop-filter: blur(4px);
+
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .recruit-v2-arrow-mark {
+    font-size: 1.35em;
+    line-height: 0.7;
+  }
+
+  .recruit-v2-card:hover .recruit-v2-arrow {
+    background: #ffffff;
+    color: #111111;
+    transform: translateY(-3px);
+  }
+
+  .recruit-v2-card:hover .recruit-v2-person img {
+    transform: scale(1.03);
+    transition: transform 0.35s ease;
+  }
+
+  /* 人物画像 */
+  .recruit-v2-person {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 52%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .recruit-v2-person img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+  }
+
+  /* =========================
+     MOBILE
+     ========================= */
+  @media (max-width: 767px) {
 
     .recruit-v2-header {
-      padding: 64px 48px 52px;
+      padding: 48px 20px 36px;
     }
 
     .recruit-v2-en {
-      margin: 0;
-      font-family: "Barlow Condensed", sans-serif;
-      font-style: italic;
-      font-weight: 900;
-      font-size: 16px;
-      letter-spacing: 0.12em;
-      color: #111111;
+      font-size: 13px;
     }
 
     .recruit-v2-title {
-      margin: 8px 0 0;
-      font-size: clamp(32px, 4vw, 64px);
-      line-height: 1.05;
-      font-weight: 900;
-      color: #111111;
+      font-size: 32px;
     }
 
     .recruit-v2-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      width: 100%;
+      grid-template-columns: 1fr;
     }
 
     .recruit-v2-card {
-      position: relative;
-      display: block;
-      width: 100%;
-      aspect-ratio: 5 / 3;
-      overflow: hidden;
-      text-decoration: none;
+      aspect-ratio: 5 / 2.8;
     }
 
-    .recruit-v2-card-yellow {
-      background: #facc15;
-    }
-
-    .recruit-v2-card-blue {
-      background: #60a5fa;
-    }
-
-    .recruit-v2-card-pink {
-      background: #f472b6;
-    }
-
-    .recruit-v2-card-green {
-      background: #86efac;
-    }
-
+    /* 横幅を右端まで使用 */
     .recruit-v2-text {
-      position: absolute;
-      z-index: 3;
-      left: 8%;
-      top: 50%;
-      width: 48%;
-      transform: translateY(-50%);
-      color: #111111;
+      left: 7%;
+      right: 3%;
+      width: auto;
     }
 
     .recruit-v2-label {
-      display: block;
-      margin-bottom: 12px;
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: clamp(14px, 1.3vw, 22px);
-      line-height: 1;
-      font-style: italic;
-      font-weight: 900;
-      letter-spacing: 0.12em;
+      margin-bottom: 9px;
+      padding: 5px 8px 4px;
+      border-width: 2px;
+      font-size: 12px;
     }
 
+    /* スマホでもタイトルは絶対に1行 */
     .recruit-v2-heading {
-      margin: 0;
-      font-size: clamp(30px, 3vw, 52px);
-      line-height: 1.05;
-      font-weight: 900;
-      letter-spacing: 0.02em;
+      width: max-content;
+      max-width: none;
+      font-size: 29px;
+      white-space: nowrap;
     }
 
     .recruit-v2-description {
-      margin: 18px 0 0;
-      font-size: clamp(15px, 1.25vw, 22px);
-      line-height: 1.65;
-      font-weight: 700;
+      margin-top: 11px;
+      font-size: 14px;
+      line-height: 1.55;
     }
 
     .recruit-v2-arrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 22px;
-      font-size: clamp(14px, 1.1vw, 19px);
-      line-height: 1;
-      font-weight: 900;
+      right: 0;
+      bottom: 0;
+      min-width: 118px;
+      height: 40px;
+      padding: 0 15px;
+      gap: 7px;
+      font-size: 12px;
     }
 
     .recruit-v2-arrow-mark {
-      font-size: 1.7em;
-      line-height: 0.7;
+      font-size: 1.25em;
     }
 
     .recruit-v2-person {
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      right: 0;
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
+      width: 53%;
     }
-
-    .recruit-v2-person img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: right bottom;
-    }
-
-    .recruit-v2-card:hover .recruit-v2-person img {
-      transform: scale(1.03);
-      transition: transform 0.35s ease;
-    }
-
-    .recruit-v2-card:hover .recruit-v2-arrow-mark {
-      transform: translateX(6px);
-      transition: transform 0.25s ease;
-    }
-
-    @media (max-width: 767px) {
-
-      .recruit-v2-header {
-        padding: 48px 20px 36px;
-      }
-
-      .recruit-v2-en {
-        font-size: 13px;
-      }
-
-      .recruit-v2-title {
-        font-size: 32px;
-      }
-
-      .recruit-v2-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .recruit-v2-card {
-        aspect-ratio: 5 / 3;
-      }
-
-      .recruit-v2-text {
-        left: 7%;
-        width: 50%;
-      }
-
-      .recruit-v2-label {
-        margin-bottom: 9px;
-        font-size: 12px;
-      }
-
-      .recruit-v2-heading {
-        font-size: 27px;
-      }
-
-      .recruit-v2-description {
-        margin-top: 12px;
-        font-size: 13px;
-        line-height: 1.6;
-      }
-
-      .recruit-v2-arrow {
-        margin-top: 15px;
-        font-size: 12px;
-      }
-
-      .recruit-v2-person {
-        width: 50%;
-      }
-    }
-  </style>
+  }
+</style>
 
 
   <!-- SECTION TITLE -->
