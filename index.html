@@ -821,7 +821,12 @@
     aspect-ratio: 5 / 2.8;
     overflow: hidden;
     text-decoration: none;
+    isolation: isolate;
   }
+
+  /* =========================
+     CARD COLORS
+     ========================= */
 
   .recruit-v2-card-yellow {
     background: #facc15;
@@ -839,24 +844,65 @@
     background: #86efac;
   }
 
-  /* カード内テキスト */
+  /* =========================
+     POP PATTERN
+     ========================= */
+
+  .recruit-v2-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.28;
+  }
+
+  .recruit-v2-card-yellow::before {
+    background-image:
+      radial-gradient(circle, #fff3a3 2px, transparent 2.5px);
+    background-size: 18px 18px;
+  }
+
+  .recruit-v2-card-blue::before {
+    background-image:
+      radial-gradient(circle, #bfdbfe 2px, transparent 2.5px);
+    background-size: 18px 18px;
+  }
+
+  .recruit-v2-card-pink::before {
+    background-image:
+      radial-gradient(circle, #fbcfe8 2px, transparent 2.5px);
+    background-size: 18px 18px;
+  }
+
+  .recruit-v2-card-green::before {
+    background-image:
+      radial-gradient(circle, #d9f99d 2px, transparent 2.5px);
+    background-size: 18px 18px;
+  }
+
+  /* =========================
+     TEXT
+     ========================= */
+
   .recruit-v2-text {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     left: 7%;
-    right: 3%;
+    right: 1%;
     top: 50%;
     width: auto;
     transform: translateY(-50%);
     color: #ffffff;
   }
 
-  /* JOB LIST / CAREER PATH 等 */
+  /* 英字ラベル */
   .recruit-v2-label {
     display: inline-block;
     margin-bottom: 13px;
     padding: 6px 11px 5px;
-    border: 2px solid #ffffff;
+    border: 2px solid #111111;
+    background: #111111;
     font-family: "Barlow Condensed", sans-serif;
     font-size: clamp(14px, 1.25vw, 21px);
     line-height: 1;
@@ -867,7 +913,6 @@
     white-space: nowrap;
   }
 
-  /* タイトルは絶対に折り返さない */
   .recruit-v2-heading {
     margin: 0;
     width: max-content;
@@ -878,9 +923,9 @@
     letter-spacing: 0.02em;
     color: #ffffff;
     white-space: nowrap;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   }
 
-  /* 説明文 */
   .recruit-v2-description {
     margin: 18px 0 0;
     font-size: clamp(16px, 1.35vw, 23px);
@@ -889,57 +934,75 @@
     color: #ffffff;
   }
 
-  /* 詳しく見るボタン */
+  /* =========================
+     POP BUTTON
+     ========================= */
+
   .recruit-v2-arrow {
     position: absolute;
-    z-index: 5;
+    z-index: 6;
     right: 0;
     bottom: 0;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 9px;
+    gap: 10px;
 
-    min-width: 145px;
-    height: 48px;
-    padding: 0 20px;
+    min-width: 154px;
+    height: 52px;
+    padding: 0 21px;
 
-    border: 2px solid #ffffff;
-    border-radius: 999px;
+    border: 3px solid #111111;
+    border-radius: 0;
 
-    background: rgba(255, 255, 255, 0.12);
-    color: #ffffff;
+    background: #ffffff;
+    color: #111111;
 
     font-size: 15px;
     line-height: 1;
     font-weight: 900;
 
-    backdrop-filter: blur(4px);
+    box-shadow: 5px 5px 0 #111111;
 
+    transform: translate(-5px, -5px);
     transition:
-      background 0.25s ease,
-      color 0.25s ease,
-      transform 0.25s ease;
+      transform 0.18s ease,
+      box-shadow 0.18s ease,
+      background 0.18s ease;
   }
 
   .recruit-v2-arrow-mark {
-    font-size: 1.35em;
-    line-height: 0.7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+    background: #111111;
+    color: #ffffff;
+
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 900;
   }
 
   .recruit-v2-card:hover .recruit-v2-arrow {
-    background: #ffffff;
-    color: #111111;
-    transform: translateY(-3px);
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 #111111;
+    background: #facc15;
   }
 
   .recruit-v2-card:hover .recruit-v2-person img {
     transform: scale(1.03);
-    transition: transform 0.35s ease;
   }
 
-  /* 人物画像 */
+  /* =========================
+     PERSON
+     ========================= */
+
   .recruit-v2-person {
     position: absolute;
     z-index: 2;
@@ -951,6 +1014,8 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+
+    pointer-events: none;
   }
 
   .recruit-v2-person img {
@@ -959,11 +1024,14 @@
     height: 100%;
     object-fit: contain;
     object-position: right bottom;
+
+    transition: transform 0.35s ease;
   }
 
   /* =========================
      MOBILE
      ========================= */
+
   @media (max-width: 767px) {
 
     .recruit-v2-header {
@@ -986,10 +1054,9 @@
       aspect-ratio: 5 / 2.8;
     }
 
-    /* 横幅を右端まで使用 */
     .recruit-v2-text {
       left: 7%;
-      right: 3%;
+      right: 1%;
       width: auto;
     }
 
@@ -1000,7 +1067,6 @@
       font-size: 12px;
     }
 
-    /* スマホでもタイトルは絶対に1行 */
     .recruit-v2-heading {
       width: max-content;
       max-width: none;
@@ -1015,17 +1081,22 @@
     }
 
     .recruit-v2-arrow {
-      right: 0;
-      bottom: 0;
-      min-width: 118px;
-      height: 40px;
+      min-width: 125px;
+      height: 42px;
       padding: 0 15px;
       gap: 7px;
+
+      border-width: 2px;
+      box-shadow: 4px 4px 0 #111111;
+
       font-size: 12px;
+      transform: translate(-4px, -4px);
     }
 
     .recruit-v2-arrow-mark {
-      font-size: 1.25em;
+      width: 21px;
+      height: 21px;
+      font-size: 13px;
     }
 
     .recruit-v2-person {
