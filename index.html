@@ -262,54 +262,87 @@
 
   left: auto;
   right: 40%;
-  bottom: 40%;
-  transform: translateY(50%);
 
-  width: 230px;
-  height: 230px;
+  /* 左側テキスト下の黄色ラインと
+     ボタン外周上端を揃える */
+  top: 48%;
+
+  width: 148px;
+  height: 148px;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 4px;
 
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+
+  border: 4px solid #111111;
+  border-radius: 50%;
 
   background: #facc15;
   color: #111111;
 
-  border-radius: 50%;
-
-  text-align: center;
-  font-size: 1.25rem;
-  line-height: 1.2;
+  font-size: 17px;
+  line-height: 1.15;
   font-weight: 900;
+  text-align: center;
 
   white-space: normal;
   writing-mode: horizontal-tb;
 
+  box-shadow: 8px 8px 0 #111111;
+
+  transform: rotate(-6deg);
+
   transition:
-    transform 0.2s ease,
-    background-color 0.2s ease;
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
 }
 
 .group-about-more span {
   display: block;
-  white-space: normal;
+  white-space: nowrap;
   writing-mode: horizontal-tb;
 }
 
 .group-about-more:hover {
-  background: #111111;
-  color: #ffffff;
-  transform: translateY(50%) scale(1.05);
+  background: #ffffff;
+  color: #111111;
+  transform: rotate(0deg) translate(3px, 3px);
+  box-shadow: 3px 3px 0 #111111;
 }
 
 .group-about-more-arrow {
-  position: absolute;
-  right: 26px;
-  bottom: 27px;
-  font-size: 1.2rem;
+  position: static;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #111111;
+  color: #ffffff;
+
+  font-size: 18px;
   line-height: 1;
+  font-weight: 900;
+  text-align: center;
+
+  box-sizing: border-box;
 }
 
 
