@@ -886,15 +886,21 @@
      ========================= */
 
   .recruit-v2-text {
-    position: absolute;
-    z-index: 4;
-    left: 7%;
-    right: 1%;
-    top: 50%;
-    width: auto;
-    transform: translateY(-50%);
-    color: #ffffff;
-  }
+  position: absolute;
+  z-index: 4;
+  left: 7%;
+  right: 1%;
+  top: 0;
+  bottom: 0;
+  width: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  color: #ffffff;
+}
 
   /* 英字ラベル */
   .recruit-v2-label {
