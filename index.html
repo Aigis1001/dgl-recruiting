@@ -777,180 +777,371 @@
 
 
   <!-- RECRUITMENT -->
-<section id="findjob" class="bg-white py-16 sm:py-24 overflow-hidden">
+<section id="findjob" class="recruit-v2">
 
-  <div class="w-full">
+  <style>
+    .recruit-v2 {
+      width: 100%;
+      background: #ffffff;
+      overflow: hidden;
+    }
 
-    <!-- SECTION TITLE -->
-    <div class="px-5 sm:px-8 lg:px-12 mb-10 sm:mb-14">
+    .recruit-v2-header {
+      padding: 64px 48px 52px;
+    }
 
-      <p class="font-en italic font-black text-black text-sm sm:text-base tracking-widest">
-        RECRUITMENT &amp; CONTENTS
-      </p>
+    .recruit-v2-en {
+      margin: 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 16px;
+      letter-spacing: 0.12em;
+      color: #111111;
+    }
 
-      <h2 class="text-3xl sm:text-5xl md:text-6xl font-black mt-2 text-black">
-        採用情報・コンテンツ
-      </h2>
+    .recruit-v2-title {
+      margin: 8px 0 0;
+      font-size: clamp(32px, 4vw, 64px);
+      line-height: 1.05;
+      font-weight: 900;
+      color: #111111;
+    }
 
-    </div>
+    .recruit-v2-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+
+    .recruit-v2-card {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 5 / 3;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .recruit-v2-card-yellow {
+      background: #facc15;
+    }
+
+    .recruit-v2-card-blue {
+      background: #60a5fa;
+    }
+
+    .recruit-v2-card-pink {
+      background: #f472b6;
+    }
+
+    .recruit-v2-card-green {
+      background: #86efac;
+    }
+
+    .recruit-v2-text {
+      position: absolute;
+      z-index: 3;
+      left: 8%;
+      top: 50%;
+      width: 48%;
+      transform: translateY(-50%);
+      color: #111111;
+    }
+
+    .recruit-v2-label {
+      display: block;
+      margin-bottom: 12px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(14px, 1.3vw, 22px);
+      line-height: 1;
+      font-style: italic;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+    }
+
+    .recruit-v2-heading {
+      margin: 0;
+      font-size: clamp(30px, 3vw, 52px);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+
+    .recruit-v2-description {
+      margin: 18px 0 0;
+      font-size: clamp(15px, 1.25vw, 22px);
+      line-height: 1.65;
+      font-weight: 700;
+    }
+
+    .recruit-v2-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 22px;
+      font-size: clamp(14px, 1.1vw, 19px);
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .recruit-v2-arrow-mark {
+      font-size: 1.7em;
+      line-height: 0.7;
+    }
+
+    .recruit-v2-person {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    .recruit-v2-person img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: right bottom;
+    }
+
+    .recruit-v2-card:hover .recruit-v2-person img {
+      transform: scale(1.03);
+      transition: transform 0.35s ease;
+    }
+
+    .recruit-v2-card:hover .recruit-v2-arrow-mark {
+      transform: translateX(6px);
+      transition: transform 0.25s ease;
+    }
+
+    @media (max-width: 767px) {
+
+      .recruit-v2-header {
+        padding: 48px 20px 36px;
+      }
+
+      .recruit-v2-en {
+        font-size: 13px;
+      }
+
+      .recruit-v2-title {
+        font-size: 32px;
+      }
+
+      .recruit-v2-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .recruit-v2-card {
+        aspect-ratio: 5 / 3;
+      }
+
+      .recruit-v2-text {
+        left: 7%;
+        width: 50%;
+      }
+
+      .recruit-v2-label {
+        margin-bottom: 9px;
+        font-size: 12px;
+      }
+
+      .recruit-v2-heading {
+        font-size: 27px;
+      }
+
+      .recruit-v2-description {
+        margin-top: 12px;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .recruit-v2-arrow {
+        margin-top: 15px;
+        font-size: 12px;
+      }
+
+      .recruit-v2-person {
+        width: 50%;
+      }
+    }
+  </style>
 
 
-    <!-- CARDS -->
-    <div class="recruit-grid">
+  <!-- SECTION TITLE -->
+  <div class="recruit-v2-header">
+
+    <p class="recruit-v2-en">
+      RECRUITMENT &amp; CONTENTS
+    </p>
+
+    <h2 class="recruit-v2-title">
+      採用情報・コンテンツ
+    </h2>
+
+  </div>
 
 
-      <!-- 01 求人を探す -->
-      <a
-        href="pages/jobs.html"
-        class="recruit-card recruit-card-yellow"
-      >
-
-        <div class="recruit-card-text">
-
-          <span class="recruit-label reveal-up">
-            JOB LIST
-          </span>
-
-          <h3 class="recruit-title reveal-up reveal-delay-1">
-            求人を探す
-          </h3>
-
-          <p class="recruit-description reveal-up reveal-delay-2">
-            自分に合った仕事を<br>
-            見つけよう。
-          </p>
-
-          <span class="recruit-arrow reveal-up reveal-delay-3">
-            <span>→</span>
-            詳しく見る
-          </span>
-
-        </div>
-
-        <div class="recruit-person reveal-pop">
-          <img
-            src="assets/images/recruit/recruit-person-01.png"
-            alt=""
-          >
-        </div>
-
-      </a>
+  <!-- CARDS -->
+  <div class="recruit-v2-grid">
 
 
-      <!-- 02 キャリアパス -->
-      <a
-        href="pages/career.html"
-        class="recruit-card recruit-card-blue"
-      >
+    <!-- 01 求人を探す -->
+    <a
+      href="pages/jobs.html"
+      class="recruit-v2-card recruit-v2-card-yellow"
+    >
 
-        <div class="recruit-card-text">
+      <div class="recruit-v2-text">
 
-          <span class="recruit-label reveal-up">
-            CAREER PATH
-          </span>
+        <span class="recruit-v2-label">
+          JOB LIST
+        </span>
 
-          <h3 class="recruit-title reveal-up reveal-delay-1">
-            キャリアパス
-          </h3>
+        <h3 class="recruit-v2-heading">
+          求人を探す
+        </h3>
 
-          <p class="recruit-description reveal-up reveal-delay-2">
-            あなたの未来を<br>
-            一緒に描きましょう。
-          </p>
+        <p class="recruit-v2-description">
+          自分に合った仕事を<br>
+          見つけよう。
+        </p>
 
-          <span class="recruit-arrow reveal-up reveal-delay-3">
-            <span>→</span>
-            詳しく見る
-          </span>
+        <span class="recruit-v2-arrow">
+          <span class="recruit-v2-arrow-mark">→</span>
+          詳しく見る
+        </span>
 
-        </div>
+      </div>
 
-        <div class="recruit-person reveal-pop">
-          <img
-            src="assets/images/recruit/recruit-person-02.png"
-            alt=""
-          >
-        </div>
+      <div class="recruit-v2-person">
+        <img
+          src="assets/images/recruit/recruit-person-01.png"
+          alt=""
+        >
+      </div>
 
-      </a>
-
-
-      <!-- 03 選考の流れ -->
-      <a
-        href="pages/flow.html"
-        class="recruit-card recruit-card-pink"
-      >
-
-        <div class="recruit-card-text">
-
-          <span class="recruit-label reveal-up">
-            FLOW
-          </span>
-
-          <h3 class="recruit-title reveal-up reveal-delay-1">
-            選考の流れ
-          </h3>
-
-          <p class="recruit-description reveal-up reveal-delay-2">
-            応募から内定までの<br>
-            ステップをご紹介します。
-          </p>
-
-          <span class="recruit-arrow reveal-up reveal-delay-3">
-            <span>→</span>
-            詳しく見る
-          </span>
-
-        </div>
-
-        <div class="recruit-person reveal-pop">
-          <img
-            src="assets/images/recruit/recruit-person-03.png"
-            alt=""
-          >
-        </div>
-
-      </a>
+    </a>
 
 
-      <!-- 04 DAISOの一週間 -->
-      <a
-        href="pages/works.html"
-        class="recruit-card recruit-card-green"
-      >
+    <!-- 02 キャリアパス -->
+    <a
+      href="pages/career.html"
+      class="recruit-v2-card recruit-v2-card-blue"
+    >
 
-        <div class="recruit-card-text">
+      <div class="recruit-v2-text">
 
-          <span class="recruit-label reveal-up">
-            DAISO WEEK
-          </span>
+        <span class="recruit-v2-label">
+          CAREER PATH
+        </span>
 
-          <h3 class="recruit-title reveal-up reveal-delay-1">
-            DAISOの一週間
-          </h3>
+        <h3 class="recruit-v2-heading">
+          キャリアパス
+        </h3>
 
-          <p class="recruit-description reveal-up reveal-delay-2">
-            働く環境や1週間の<br>
-            スケジュールをご紹介します。
-          </p>
+        <p class="recruit-v2-description">
+          あなたの未来を<br>
+          一緒に描きましょう。
+        </p>
 
-          <span class="recruit-arrow reveal-up reveal-delay-3">
-            <span>→</span>
-            詳しく見る
-          </span>
+        <span class="recruit-v2-arrow">
+          <span class="recruit-v2-arrow-mark">→</span>
+          詳しく見る
+        </span>
 
-        </div>
+      </div>
 
-        <div class="recruit-person reveal-pop">
-          <img
-            src="assets/images/recruit/recruit-person-04.png"
-            alt=""
-          >
-        </div>
+      <div class="recruit-v2-person">
+        <img
+          src="assets/images/recruit/recruit-person-02.png"
+          alt=""
+        >
+      </div>
 
-      </a>
+    </a>
 
-    </div>
+
+    <!-- 03 選考の流れ -->
+    <a
+      href="pages/flow.html"
+      class="recruit-v2-card recruit-v2-card-pink"
+    >
+
+      <div class="recruit-v2-text">
+
+        <span class="recruit-v2-label">
+          FLOW
+        </span>
+
+        <h3 class="recruit-v2-heading">
+          選考の流れ
+        </h3>
+
+        <p class="recruit-v2-description">
+          応募から内定までの<br>
+          ステップをご紹介します。
+        </p>
+
+        <span class="recruit-v2-arrow">
+          <span class="recruit-v2-arrow-mark">→</span>
+          詳しく見る
+        </span>
+
+      </div>
+
+      <div class="recruit-v2-person">
+        <img
+          src="assets/images/recruit/recruit-person-03.png"
+          alt=""
+        >
+      </div>
+
+    </a>
+
+
+    <!-- 04 DAISOの一週間 -->
+    <a
+      href="pages/works.html"
+      class="recruit-v2-card recruit-v2-card-green"
+    >
+
+      <div class="recruit-v2-text">
+
+        <span class="recruit-v2-label">
+          DAISO WEEK
+        </span>
+
+        <h3 class="recruit-v2-heading">
+          DAISOの一週間
+        </h3>
+
+        <p class="recruit-v2-description">
+          働く環境や1週間の<br>
+          スケジュールをご紹介します。
+        </p>
+
+        <span class="recruit-v2-arrow">
+          <span class="recruit-v2-arrow-mark">→</span>
+          詳しく見る
+        </span>
+
+      </div>
+
+      <div class="recruit-v2-person">
+        <img
+          src="assets/images/recruit/recruit-person-04.png"
+          alt=""
+        >
+      </div>
+
+    </a>
 
   </div>
 
