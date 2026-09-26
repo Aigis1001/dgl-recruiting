@@ -886,35 +886,39 @@
      ========================= */
 
   .recruit-v2-text {
-  position: absolute;
-  z-index: 4;
-  left: 7%;
-  right: 1%;
-  top: 0;
-  bottom: 0;
-  width: auto;
+    position: absolute;
+    z-index: 4;
+    left: 7%;
+    right: 1%;
+    top: 0;
+    bottom: 0;
+    width: auto;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
-  color: #ffffff;
-}
+    color: #ffffff;
+  }
 
   /* 英字ラベル */
+
   .recruit-v2-label {
     display: inline-block;
     margin-bottom: 13px;
     padding: 6px 11px 5px;
+
     border: 2px solid #111111;
     background: #111111;
+
     font-family: "Barlow Condensed", sans-serif;
     font-size: clamp(14px, 1.25vw, 21px);
     line-height: 1;
     font-style: italic;
     font-weight: 900;
     letter-spacing: 0.12em;
+
     color: #ffffff;
     white-space: nowrap;
   }
@@ -923,139 +927,108 @@
     margin: 0;
     width: max-content;
     max-width: none;
+
     font-size: clamp(34px, 3.4vw, 58px);
     line-height: 1.05;
     font-weight: 900;
     letter-spacing: 0.02em;
+
     color: #ffffff;
     white-space: nowrap;
+
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   }
 
   .recruit-v2-description {
     margin: 18px 0 0;
+
     font-size: clamp(16px, 1.35vw, 23px);
     line-height: 1.6;
     font-weight: 700;
+
     color: #ffffff;
   }
 
   /* =========================
-   COMMON POP CIRCLE BUTTON
-   ========================= */
+     POP CIRCLE BUTTON
+     ========================= */
 
-.recruit-v2-arrow {
-  position: absolute;
-  z-index: 6;
-  right: 4%;
-  bottom: 1%;
+  .recruit-v2-arrow {
+    position: absolute;
+    z-index: 6;
 
-  width: 148px;
-  height: 148px;
+    right: 4%;
+    bottom: 1%;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
+    width: 148px;
+    height: 148px;
 
-  border: 4px solid #111111;
-  border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 
-  background: #facc15;
-  color: #111111;
+    border: 4px solid #111111;
+    border-radius: 50%;
 
-  font-size: 17px;
-  line-height: 1.15;
-  font-weight: 900;
-  text-align: center;
+    background: #facc15;
+    color: #111111;
 
-  box-shadow: 8px 8px 0 #111111;
+    font-size: 17px;
+    line-height: 1.15;
+    font-weight: 900;
+    text-align: center;
 
-  transform: rotate(-6deg);
+    box-shadow: 8px 8px 0 #111111;
 
-  transition:
-    transform 0.22s ease,
-    box-shadow 0.22s ease,
-    background 0.22s ease;
-}
+    transform: rotate(-6deg);
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
+    transition:
+      transform 0.22s ease,
+      box-shadow 0.22s ease,
+      background 0.22s ease;
+  }
 
-  border: 4px solid #111111;
-  border-radius: 50%;
+  /* 矢印を囲む黒丸 */
 
-  background: #facc15;
-  color: #111111;
+  .recruit-v2-arrow-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  font-size: 14px;
-  line-height: 1.15;
-  font-weight: 900;
-  text-align: center;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
 
-  box-shadow: 7px 7px 0 #111111;
+    margin: 0;
+    padding: 0;
 
-  transform: rotate(-6deg);
+    border: none;
+    border-radius: 50%;
 
-  transition:
-    transform 0.22s ease,
-    box-shadow 0.22s ease,
-    background 0.22s ease;
-}
+    background: #111111;
+    color: #ffffff;
 
-.recruit-v2-arrow .recruit-v2-arrow-mark {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 900;
+    text-align: center;
 
-  flex: 0 0 30px !important;
-  width: 30px !important;
-  min-width: 30px !important;
-  max-width: 30px !important;
-  height: 30px !important;
-  min-height: 30px !important;
-  max-height: 30px !important;
+    box-sizing: border-box;
+  }
 
-  margin: 2px 0 0 !important;
-  padding: 0 !important;
+  .recruit-v2-card:hover .recruit-v2-arrow {
+    transform: rotate(0deg) translate(3px, 3px);
+    box-shadow: 3px 3px 0 #111111;
+    background: #ffffff;
+  }
 
-  border: 0 !important;
-  border-radius: 50% !important;
-
-  background: #111111 !important;
-  color: #ffffff !important;
-
-  font-size: 18px !important;
-  line-height: 30px !important;
-  font-weight: 900 !important;
-  text-align: center !important;
-
-  box-sizing: border-box !important;
-
-  transition:
-    transform 0.22s ease,
-    background 0.22s ease,
-    color 0.22s ease !important;
-}
-
-.recruit-v2-card:hover .recruit-v2-arrow {
-  transform: rotate(0deg) translate(3px, 3px);
-  box-shadow: 3px 3px 0 #111111;
-  background: #ffffff;
-}
-
-.recruit-v2-card:hover .recruit-v2-arrow-mark {
-  transform: rotate(-8deg);
-  background: #111111;
-  color: #ffffff;
-}
-
-  .recruit-v2-card:hover .recruit-v2-person img {
-    transform: scale(1.03);
+  .recruit-v2-card:hover .recruit-v2-arrow-mark {
+    transform: rotate(-8deg);
+    background: #111111;
+    color: #ffffff;
   }
 
   /* =========================
@@ -1065,8 +1038,10 @@
   .recruit-v2-person {
     position: absolute;
     z-index: 2;
+
     top: 0;
     right: 0;
+
     width: 52%;
     height: 100%;
 
@@ -1079,12 +1054,18 @@
 
   .recruit-v2-person img {
     display: block;
+
     width: 100%;
     height: 100%;
+
     object-fit: contain;
     object-position: right bottom;
 
     transition: transform 0.35s ease;
+  }
+
+  .recruit-v2-card:hover .recruit-v2-person img {
+    transform: scale(1.03);
   }
 
   /* =========================
@@ -1116,68 +1097,56 @@
     .recruit-v2-text {
       left: 7%;
       right: 1%;
-      width: auto;
     }
 
     .recruit-v2-label {
       margin-bottom: 9px;
       padding: 5px 8px 4px;
+
       border-width: 2px;
+
       font-size: 12px;
     }
 
     .recruit-v2-heading {
       width: max-content;
       max-width: none;
+
       font-size: 29px;
       white-space: nowrap;
     }
 
     .recruit-v2-description {
       margin-top: 11px;
+
       font-size: 14px;
       line-height: 1.55;
     }
 
     .recruit-v2-arrow {
-  right: 4%;
-  bottom: 1%;
+      right: 4%;
+      bottom: 1%;
 
-  width: 86px;
-  height: 86px;
+      width: 86px;
+      height: 86px;
 
-  border-width: 3px;
-  box-shadow: 5px 5px 0 #111111;
+      border-width: 3px;
+      box-shadow: 5px 5px 0 #111111;
 
-  font-size: 11px;
-  gap: 3px;
+      font-size: 11px;
+      gap: 3px;
 
-  transform: rotate(-6deg);
-}
+      transform: rotate(-6deg);
+    }
 
-  border-width: 3px;
-  box-shadow: 5px 5px 0 #111111;
+    .recruit-v2-arrow-mark {
+      width: 23px;
+      height: 23px;
+      min-width: 23px;
+      min-height: 23px;
 
-  font-size: 11px;
-  gap: 3px;
-
-  transform: rotate(-6deg);
-}
-
-.recruit-v2-arrow .recruit-v2-arrow-mark {
-  flex-basis: 23px !important;
-  width: 23px !important;
-  min-width: 23px !important;
-  max-width: 23px !important;
-  height: 23px !important;
-  min-height: 23px !important;
-  max-height: 23px !important;
-
-  margin-top: 1px !important;
-
-  font-size: 14px !important;
-  line-height: 23px !important;
-}
+      font-size: 14px;
+    }
 
     .recruit-v2-person {
       width: 53%;
