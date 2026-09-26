@@ -1007,28 +1007,39 @@
     background 0.22s ease;
 }
 
-.recruit-v2-arrow-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.recruit-v2-arrow .recruit-v2-arrow-mark {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 
-  width: 30px;
-  height: 30px;
+  flex: 0 0 30px !important;
+  width: 30px !important;
+  min-width: 30px !important;
+  max-width: 30px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
 
-  margin-top: 2px;
+  margin: 2px 0 0 !important;
+  padding: 0 !important;
 
-  border-radius: 50%;
-  background: #111111;
-  color: #ffffff;
+  border: 0 !important;
+  border-radius: 50% !important;
 
-  font-size: 18px;
-  line-height: 1;
-  font-weight: 900;
+  background: #111111 !important;
+  color: #ffffff !important;
+
+  font-size: 18px !important;
+  line-height: 30px !important;
+  font-weight: 900 !important;
+  text-align: center !important;
+
+  box-sizing: border-box !important;
 
   transition:
     transform 0.22s ease,
     background 0.22s ease,
-    color 0.22s ease;
+    color 0.22s ease !important;
 }
 
 .recruit-v2-card:hover .recruit-v2-arrow {
@@ -1153,10 +1164,19 @@
   transform: rotate(-6deg);
 }
 
-.recruit-v2-arrow-mark {
-  width: 23px;
-  height: 23px;
-  font-size: 14px;
+.recruit-v2-arrow .recruit-v2-arrow-mark {
+  flex-basis: 23px !important;
+  width: 23px !important;
+  min-width: 23px !important;
+  max-width: 23px !important;
+  height: 23px !important;
+  min-height: 23px !important;
+  max-height: 23px !important;
+
+  margin-top: 1px !important;
+
+  font-size: 14px !important;
+  line-height: 23px !important;
 }
 
     .recruit-v2-person {
