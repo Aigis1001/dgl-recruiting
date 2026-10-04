@@ -1,0 +1,596 @@
+/* =========================================================
+   VIDEO / DAISO LIFE
+========================================================= */
+
+.video-intro-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 70px 0 0;
+  background: #58b9a9 !important;
+  color: #111111;
+}
+
+.video-intro-inner {
+  position: relative;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+
+  display: grid;
+  grid-template-columns: 34% 66%;
+  align-items: stretch;
+
+  min-height: 760px;
+}
+
+
+/* =========================================================
+   LEFT / COPY
+========================================================= */
+
+.video-intro-copy {
+  position: relative;
+  z-index: 5;
+
+  min-width: 0;
+
+  padding: 0 35px 0 0;
+}
+
+.video-intro-label {
+  margin: 0 0 14px;
+
+  color: #111111;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+  font-style: italic;
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
+}
+
+.video-intro-title {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  line-height: 1.02;
+  font-weight: 900;
+
+  letter-spacing: -0.045em;
+}
+
+.video-intro-description {
+  margin: 24px 0 0;
+
+  color: #111111;
+
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  line-height: 1.9;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PERSON
+========================================================= */
+
+.video-intro-person-area {
+  position: relative;
+
+  width: 100%;
+  height: 520px;
+
+  margin-top: 45px;
+  margin-bottom: 0;
+
+  overflow: hidden;
+}
+
+.video-intro-person {
+  position: absolute !important;
+
+  left: 0 !important;
+  right: auto !important;
+  bottom: 0 !important;
+
+  display: block !important;
+
+  width: auto !important;
+  height: 100% !important;
+
+  max-width: none !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  object-fit: contain;
+  object-position: left bottom;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   VIDEO BUTTON
+========================================================= */
+
+.video-intro-more {
+  position: absolute !important;
+
+  left: calc(57% + 95px) !important;
+  top: 50% !important;
+
+  width: 190px !important;
+  height: 190px !important;
+
+  margin: 0 !important;
+  padding: 20px !important;
+
+  display: flex !important;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  box-sizing: border-box;
+
+  border: 4px solid #111111 !important;
+  border-radius: 50% !important;
+
+  background: #facc15 !important;
+  color: #111111 !important;
+
+  font-size: 20px !important;
+  line-height: 1.15 !important;
+  font-weight: 900 !important;
+
+  text-align: center;
+  text-decoration: none;
+
+  white-space: normal;
+
+  box-shadow: 10px 10px 0 #111111 !important;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-6deg) !important;
+
+  z-index: 10;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+}
+
+.video-intro-more:hover {
+  background: #ffffff !important;
+  color: #111111 !important;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(0deg) !important;
+
+  box-shadow: 3px 3px 0 #111111 !important;
+}
+
+
+/* =========================================================
+   RIGHT / VIDEO
+========================================================= */
+
+.video-intro-content {
+  position: relative;
+  z-index: 4;
+
+  min-width: 0;
+
+  padding: 25px 0 0 20px;
+
+  overflow: visible;
+}
+
+.video-intro-slider {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  padding: 10px 10px 18px 0;
+
+  box-sizing: border-box;
+
+  cursor: grab;
+
+  touch-action: none;
+
+  user-select: none;
+}
+
+.video-intro-slider.is-dragging {
+  cursor: grabbing;
+}
+
+.video-intro-track {
+  display: flex;
+  width: 100%;
+  gap: 18px;
+  transform: translate3d(0, 0, 0);
+  transition: none;
+  will-change: transform;
+}
+
+.video-intro-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.video-intro-slider.is-dragging {
+  cursor: grabbing;
+}
+
+
+/* =========================================================
+   VIDEO CARD
+========================================================= */
+
+.video-intro-card {
+  position: relative;
+
+  flex: 0 0 calc(
+    (100% - 36px) / 3
+  );
+
+  width: calc(
+    (100% - 36px) / 3
+  );
+
+  min-width: 0;
+
+  aspect-ratio: 9 / 16;
+
+  overflow: hidden;
+
+  background: #111111;
+
+  border: 3px solid #111111;
+
+  cursor: pointer;
+
+  scroll-snap-align: center;
+
+  box-sizing: border-box;
+
+  user-select: none;
+}
+
+.video-intro-card video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+.video-intro-card-number {
+  position: absolute;
+
+  top: 12px;
+  left: 12px;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 2px solid #111111;
+  border-radius: 50%;
+
+  background: #facc15;
+  color: #111111;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   VIDEO MODAL
+========================================================= */
+
+.video-intro-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.82);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.video-intro-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.video-intro-modal-inner {
+  position: relative;
+
+  width: min(900px, 90vw);
+  max-height: 90vh;
+}
+
+.video-intro-modal-video {
+  display: block;
+
+  width: 100%;
+  max-height: 85vh;
+
+  background: #000000;
+}
+
+.video-intro-modal-close {
+  position: absolute;
+
+  top: -45px;
+  right: 0;
+
+  width: 40px;
+  height: 40px;
+
+  border: 0;
+
+  background: transparent;
+  color: #ffffff;
+
+  font-size: 38px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .video-intro-inner {
+    grid-template-columns: 38% 62%;
+  }
+
+  .video-intro-copy {
+    padding-right: 25px;
+  }
+
+  .video-intro-title {
+    font-size: clamp(2.3rem, 4vw, 3.6rem);
+  }
+
+  .video-intro-person-area {
+    height: 450px;
+    overflow: hidden;
+  }
+
+  .video-intro-more {
+    left: calc(57% + 82px) !important;
+
+    width: 165px !important;
+    height: 165px !important;
+
+    font-size: 18px !important;
+  }
+
+  .video-intro-content {
+    padding-left: 15px;
+  }
+
+  .video-intro-card {
+    flex-basis: calc(
+      (100% - 18px) / 2
+    );
+
+    width: calc(
+      (100% - 18px) / 2
+    );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .video-intro-section {
+    padding: 50px 0 0;
+    background: #58b9a9 !important;
+  }
+
+  .video-intro-inner {
+    width: calc(100% - 24px);
+    margin: 0 12px;
+
+    display: block;
+
+    min-height: 0;
+  }
+
+
+  /* -----------------------------------------
+     COPY
+  ----------------------------------------- */
+
+  .video-intro-copy {
+    width: 100%;
+    padding: 0;
+  }
+
+  .video-intro-label {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+
+  .video-intro-title {
+    font-size: 2rem;
+    line-height: 1.08;
+  }
+
+  .video-intro-description {
+    margin-top: 18px;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+
+  /* -----------------------------------------
+     PERSON
+  ----------------------------------------- */
+
+  .video-intro-person-area {
+    height: 430px;
+
+    margin-top: 30px;
+    margin-bottom: 0;
+
+    overflow: hidden;
+  }
+
+  .video-intro-person {
+    height: 100% !important;
+
+    max-width: none !important;
+  }
+
+
+  /* -----------------------------------------
+     BUTTON
+  ----------------------------------------- */
+
+  .video-intro-more {
+    left: calc(72% + 62px) !important;
+    top: 50% !important;
+
+    width: 125px !important;
+    height: 125px !important;
+
+    font-size: 13px !important;
+
+    border-width: 3px !important;
+
+    box-shadow: 6px 6px 0 #111111 !important;
+  }
+
+
+  /* -----------------------------------------
+     VIDEO
+  ----------------------------------------- */
+
+  .video-intro-content {
+    padding: 55px 0 0;
+  }
+
+  .video-intro-slider {
+    width: 100%;
+
+    padding:
+      10px
+      10px
+      15px
+      0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+  }
+
+.video-intro-track {
+  gap: 12px;
+
+  width: 100%;
+}
+
+  .video-intro-card {
+    flex: 0 0 calc(
+      (100vw - 36px) / 2
+    );
+
+    width: calc(
+      (100vw - 36px) / 2
+    );
+
+  }
+
+  .video-intro-card-number {
+    top: 8px;
+    left: 8px;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 16px;
+  }
+
+
+  /* -----------------------------------------
+     MODAL
+  ----------------------------------------- */
+
+  .video-intro-modal {
+    padding: 15px;
+  }
+
+  .video-intro-modal-inner {
+    width: 100%;
+  }
+
+  .video-intro-modal-close {
+    top: -42px;
+    right: 0;
+  }
+
+}
