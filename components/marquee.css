@@ -10,6 +10,6 @@
 
 .animate-marquee {
   display: flex;
-  width: 200%;
+  width: max-content;
   animation: marquee 25s linear infinite;
 }
